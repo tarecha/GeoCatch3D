@@ -183,7 +183,7 @@ show_raster_array(axs[1, 2], fileDistancetoOutlet, "fileDistancetoOutlet")
 
 # wbt.stream_link_class(d8_pntr=cfg.filed8pointer,streams=cfg.fileExtractstreams, output=cfg.fileStreamslinkclass,zero_background=True)
 
-#
+#d
 
 #matrikFA[matrikFA >= dynamicthreshold] = 1
 # koordinat = np.column_stack(( *np.where(matrikFA > 0), matrikFA[np.where(matrikFA > 0)] ))
