@@ -1,0 +1,36 @@
+default_crs = "EPSG:4326"
+pathMaps = r'D:\maps'
+headerDem = 'ASTGTMV003_'
+pathTempMaps = r'D:\maps\temp'
+fileSeleksiDEM =  r'D:\maps\temp\fileSeleksiDEM.tif'
+fileBreachDepression = r'D:\maps\temp\fileBreachDepression.tif'
+fileFlowAccumulationBreachMDInf= r'D:\maps\temp\fileFlowAccumulationBreachMDInf.tif'
+fileFlowAccumulationBreachThresholdKetinggian= r'D:\maps\temp\fileFlowAccumulationBreachThresholdKetinggian.tif'
+fileFlowAccumulationBreachD8= r'D:\maps\temp\fileFlowAccumulationBreachD8.tif'
+
+fileSlope = r'D:\maps\temp\fileSlope.tif'
+fileResapan = r'D:\maps\temp\fileResapan.tif'
+fileFillDepression = r'D:\maps\temp\fileFillDepression.tif'
+fileFillDepressionSub = r'D:\maps\temp\fileFillDepressionSub.tif'
+fileFAdariFillDepressionSub = r'D:\maps\temp\fileFAdariFillDepressionSub.tif'
+fileTPI = r'D:\maps\temp\fileTPI.tif'
+fileTPINegatif = r'D:\maps\temp\fileTPINegatif.tif'
+fileoutput = r'D:\maps\temp\fileoutput.tif'
+filed8pointer = r'D:\maps\temp\filed8pointer.tif'
+radius = 50
+thresholdFlowAccumulation = 0
+percentile = 85
+batasmaskwatersedFA = 100 #nilai dari MDINF FA
+fileExtractstreams = r'D:\maps\temp\fileExtractstreams.tif'
+
+fileStreamslinkidentifier = r'D:\maps\temp\fileStreamslinkidentifier.tif'
+fileStreamslinkclass = r'D:\maps\temp\fileStreamslinkclass.tif'
+koefisien = 0.3
+curahhujan = 5
+filepourpoint = r'D:\maps\temp\filepourpoint.tif'
+filepourpointshp = r'D:\maps\temp\filepourpointshp.shp'
+filesnappourpointshp = r'D:\maps\temp\filesnappourpointshp.shp'
+filewatershed = r'D:\maps\temp\filewatershed.tif'
+fileBasins = r'D:\maps\temp\fileBasins.tif'
+fileFlowAccumulationOri = r'D:\maps\temp\fileFlowAccumulationOri.tif'
+fileDistancetoOutlet = r'D:\maps\temp\fileDistancetoOutlet.tif'
