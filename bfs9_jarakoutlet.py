@@ -58,7 +58,7 @@ terrain_colors[0] = [1, 1, 1, 1]
 custom_terrain = LinearSegmentedColormap.from_list("custom_terrain", terrain_colors)
 
 cmapfa = plt.get_cmap("bwr")(np.linspace(0, 1, 256))
-#cmapfa[0] = [1, 1, 1, 1]
+cmapfa[0] = [0, 0, 0, 1]
 custom_cmapfa = LinearSegmentedColormap.from_list("custom_cmapfa", cmapfa)
 from scipy.ndimage import label, generate_binary_structure, binary_dilation
 titikTengah = 912
@@ -104,13 +104,13 @@ for row in nilaiFAunik:
 print(f"nilaiFAunik {nilaiFAunik}")
 dynamicthreshold = np.percentile(nilaiFAunik, cfg.percentile)
 print(f"dynamicthreshold {dynamicthreshold}")
-matrikFA[matrikFA < dynamicthreshold] = 0
-matrikFAMDINF[matrikFAMDINF < dynamicthreshold] = 0
+matrikFA[matrikFA < dynamicthreshold] = 1
+matrikFAMDINF[matrikFAMDINF < dynamicthreshold] = 1
 matrikFAthresholdketinggiandynamic = matrikFA.copy()
 show_raster_array(axs[0, 1], matrikFA, "Percentile 85th threshold D8 FA")
 show_raster_array(axs[1, 1], matrikFAMDINF, "Percentile 85th threshold  MD∞ FA")
-matrikFA[matrikFA >= dynamicthreshold] = 1
-matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 1
+matrikFA[matrikFA >= dynamicthreshold] = 0
+matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 0
 
 
 
@@ -173,13 +173,14 @@ with rasterio.open(cfg.fileExtractstreams) as src:
 
 show_raster_array(axs[1, 1], fileExtractstreams, "fileExtractstreams")
 
+wbt.length_of_upstream_channels(d8_pntr=cfg.filed8pointer,streams=cfg.fileExtractstreams, output=cfg.filelength_of_upstream_channels, zero_background=True)
 wbt.distance_to_outlet(d8_pntr=cfg.filed8pointer,streams=cfg.fileExtractstreams, output=cfg.fileDistancetoOutlet, zero_background=True)
 
 
-with rasterio.open(cfg.fileDistancetoOutlet) as src:
-    fileDistancetoOutlet = src.read(1)
+with rasterio.open(cfg.filelength_of_upstream_channels) as src:
+    filelength_of_upstream_channels = src.read(1)
 
-show_raster_array(axs[1, 2], fileDistancetoOutlet, "fileDistancetoOutlet")
+show_raster_array(axs[1, 2], filelength_of_upstream_channels, "filelength_of_upstream_channels")
 
 # wbt.stream_link_class(d8_pntr=cfg.filed8pointer,streams=cfg.fileExtractstreams, output=cfg.fileStreamslinkclass,zero_background=True)
 

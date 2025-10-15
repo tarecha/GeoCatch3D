@@ -5,7 +5,7 @@ pathTempMaps = r'D:\maps\temp'
 fileSeleksiDEM =  r'D:\maps\temp\fileSeleksiDEM.tif'
 fileBreachDepression = r'D:\maps\temp\fileBreachDepression.tif'
 fileFlowAccumulationBreachMDInf= r'D:\maps\temp\fileFlowAccumulationBreachMDInf.tif'
-fileFlowAccumulationBreachThresholdKetinggian= r'D:\maps\temp\fileFlowAccumulationBreachThresholdKetinggian.tif'
+fileFlowAccumulationBreachD8Thresholdketinggian= r'D:\maps\temp\fileFlowAccumulationBreachD8Thresholdketinggian.tif'
 fileFlowAccumulationBreachD8= r'D:\maps\temp\fileFlowAccumulationBreachD8.tif'
 
 fileSlope = r'D:\maps\temp\fileSlope.tif'
@@ -20,6 +20,7 @@ filed8pointer = r'D:\maps\temp\filed8pointer.tif'
 radius = 50
 thresholdFlowAccumulation = 0
 percentile = 85
+deltaketinggian = 5
 batasmaskwatersedFA = 100 #nilai dari MDINF FA
 fileExtractstreams = r'D:\maps\temp\fileExtractstreams.tif'
 
@@ -34,3 +35,5 @@ filewatershed = r'D:\maps\temp\filewatershed.tif'
 fileBasins = r'D:\maps\temp\fileBasins.tif'
 fileFlowAccumulationOri = r'D:\maps\temp\fileFlowAccumulationOri.tif'
 fileDistancetoOutlet = r'D:\maps\temp\fileDistancetoOutlet.tif'
+filelength_of_upstream_channels = r'D:\maps\temp\filelength_of_upstream_channels.tif'
+filefilelongestflowpath = r'D:\maps\temp\filelongestflowpath.tif'

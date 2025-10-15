@@ -8,10 +8,6 @@ import os                       # Untuk operasi file & path
 from whitebox.whitebox_tools import WhiteboxTools  # Library untuk analisis geospasial
 
 
-
-
-
-
 # Raster tampilan
 
 
@@ -24,7 +20,8 @@ wbt = WhiteboxTools()
 wbt.set_working_dir(temp_dir)  # Set direktori kerja
 
 # Fungsi utama untuk menjalankan analisis Flow Accumulation menggunakan algoritma MD∞
-def analisisFlowAccumulation():
+
+def breachdepression():
     # --- Analisis Flow Accumulation dengan Whitebox (MD∞) ---
     # Breaching depressions (mengatasi cekungan palsu) pada DEM menggunakan metode least-cost
     wbt.breach_depressions_least_cost(
@@ -35,6 +32,16 @@ def analisisFlowAccumulation():
         flat_increment=0.01,
         dist=2
     )
+    if os.path.exists(cfg.fileBreachDepression):
+        with rasterio.open(cfg.fileBreachDepression) as src:
+            matrikbreachdepression = src.read(1)  # Ambil band pertama
+            #transformasi = src.transform
+    else:
+        raise FileNotFoundError("Hasil fileBreachDepression tidak ditemukan")
+
+    return matrikbreachdepression
+
+def analisisFlowAccumulation():
 
     # Hitung flow accumulation menggunakan metode MD∞ (Multiple-Direction Infinite)
     wbt.md_inf_flow_accumulation(
@@ -56,7 +63,6 @@ def analisisFlowAccumulation():
     if os.path.exists(cfg.fileFlowAccumulationBreachD8):
         with rasterio.open(cfg.fileFlowAccumulationBreachD8) as src:
             flow_accum_D8 = src.read(1)  # Ambil band pertama
-
             #transformasi = src.transform
     else:
         raise FileNotFoundError("Hasil flow_accum_MDInf tidak ditemukan")
@@ -64,7 +70,6 @@ def analisisFlowAccumulation():
     if os.path.exists(cfg.filed8pointer):
         with rasterio.open(cfg.filed8pointer) as src:
             d8fd = src.read(1)  # Ambil band pertama
-
             #transformasi = src.transform
     else:
         raise FileNotFoundError("Hasil flow_accum_MDInf tidak ditemukan")
@@ -95,6 +100,9 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         print(f"sum 2 {np.sum(matrikFA)}")
 
         # Nol-kan bagian yang nilainya di bawah titik tengah dari matrikKecil
+        # delta ketinggian titik tengah dengan outlet bisa di set
+        # hal ini akan terlihat bedanya di dataran rendah bisa tidak relevan jika deltanya beda dikit
+
         matrikKecil = np.flipud(matrikKecil)
         tinggi, lebar = matrikKecil.shape
         # matrikecil2 = matrikKecil.copy()
@@ -104,6 +112,13 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
                 if matrikKecil[i, j] <= titikTengah:
                     matrikFA[i, j] = 0
                     # matrikecil2[i, j] = 0
+
+
+        #simpan file tif FA dengan threshold ketinggian
+
+        fileHandler.eksporTIF2(matrikOut=matrikFA, fullPath=cfg.fileFlowAccumulationBreachD8Thresholdketinggian, transformasi=transformasi,
+                               crs=cfg.default_crs)
+
         # print(f"titik tengah {titikTengah}")
         # print(f"max matrik kecil {np.max(matrikecil2)}")
         # print(f"min matrik kecil {np.min(matrikecil2[matrikecil2>0])}")
@@ -173,6 +188,7 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         #clusters = max(values)  # jumlah cluster
         clusters = np.unique(stackstream[:, 2])
         print(clusters)
+        elv = 0
         flow_accum_MDINF = np.flipud(flow_accum_MDINF)#dibalik menyesuaikan pyvista baris 0 di bawah
         for cid in clusters:
             cluster_data = stackstream[stackstream[:, 2] == cid]
@@ -183,39 +199,42 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
             best_row, best_col = -1, -1
 
             for row, col, _ in cluster_data:
-                nilai = flow_accum_MDINF[int(row), int(col)]
+                nilai = matrikFA[int(row), int(col)]
                 print(f"row {row}, col {col}, nilai {nilai}")
                 if (nilai > max_FA) & (matrikKecil[row, col] > titikTengah):
                 #if (nilai > max_FA):
                     max_FA = nilai
+                    max_FAMDIF = flow_accum_MDINF[int(row), int(col)]
                     best_row, best_col = row, col
                     elv = matrikKecil[row, col]
                     luasdas = konverter.cells_to_km2(flow_accum_MDINF[row, col], latitude_deg)
 
-            outlet.append([best_row, best_col, cid, max_FA, elv, luasdas])
+            outlet.append([best_row, best_col, cid, max_FAMDIF, elv, luasdas])
             # print(f"outlet {outlet}")
             # for row in outlet:
             #     print(row)
 
-        print("\n1 Outlet sebelum diurutkan berdasarkan max_FA:")
-        for row in outlet:
-            print(row)
+        # print("\n1 Outlet sebelum diurutkan berdasarkan max_FA:")
+        # for row in outlet:
+        #     print(row)
         outlet = sorted(outlet, key=lambda x: x[3])
-        print("\n2 Outlet sebelum diurutkan berdasarkan cid:")
-        for row in outlet:
-            print(row)
+        # print("\n2 Outlet sebelum diurutkan berdasarkan cid:")
+        # for row in outlet:
+        #     print(row)
         for i, row in enumerate(outlet):
             row[2] = i + 1  # ubah CID di kolom ke-3
-        print("\n 3 Outlet setelah diurutkan berdasarkan max_FA:")
-        for row in outlet:
-            print(row)
+        # print("\n 3 Outlet setelah diurutkan berdasarkan max_FA:")
+        # for row in outlet:
+        #     print(row)
         koordinatpourpoint = np.array(outlet)
+        for row in koordinatpourpoint:
+            print(row)
+        print(f"koordinatpourpoint : {koordinatpourpoint}")
+
+
         if meshoption in ("watershed", "FAwatershed"):
             watershed.eksporshp(koordinatpourpoint, transformasi, radius)
-        # for row in koordinatpourpoint:
-        #     print(row)
-        #
-        # print(koordinatpourpoint)
+
         cellanaliss = (radius * 2)
         state.luasanalisis, state.panjanghorizontal, state.panjangvertikal = konverter.cells_to_km_dual(cellanaliss, latitude_deg)
 

@@ -58,8 +58,8 @@ state.latitude_input = "-7.942544012073396" #bedengan
 state.longitude_input = "112.54059325964216"
 state.user_defined_input =""
 state.user_defined_rainfall_input =""
-# state.latitude_input = "-7.674138046333068" #lapangan terbang grati
-# state.longitude_input = "113.03487552255457"
+state.latitude_input = "-8.311132" #lapangan terbang grati
+state.longitude_input = "112.499991"
 state.radius_input = str(cfg.radius)
 state.latitude = "-"
 state.longitude = "-"
@@ -184,7 +184,7 @@ def run_analysis():
         pixelKolomAwalKoordinat = kolomMatriks - radiusKolom
         print(f"pixelBarisAwalKoordinat {pixelBarisAwalKoordinat}")
         fileHandler.eksporTIF(matrikKecil, lat, lon, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat, cfg.fileSeleksiDEM, cfg.default_crs)
-
+        matrikKecil = analisis.breachdepression()
         matrikKecil = np.flipud(matrikKecil)
 
         kolomUtara = radiusKolom
