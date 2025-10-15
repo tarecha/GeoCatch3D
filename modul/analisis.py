@@ -227,6 +227,11 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         # for row in outlet:
         #     print(row)
         koordinatpourpoint = np.array(outlet)
+        
+
+
+
+
         for row in koordinatpourpoint:
             print(row)
         print(f"koordinatpourpoint : {koordinatpourpoint}")
