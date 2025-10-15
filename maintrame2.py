@@ -19,7 +19,7 @@ from pyvista.trame.ui import plotter_ui
 from trame.widgets import html, vuetify
 
 
-blue_red = LinearSegmentedColormap.from_list('blue_red', ['blue' ,'yellow','red'])
+blue_red = LinearSegmentedColormap.from_list('blue_red', ['blue','green','yellow','red'])
 # 2. Sampling jadi 64 warna (RGBA)
 cmapfa = blue_red(np.linspace(0, 1, 32))  # bentuk: (64, 4)
 # 3. Modifikasi warna pertama (misalnya jadi putih)
@@ -78,8 +78,8 @@ state.panjanghorizontal ="-"
 state.panjangvertikal = "-"
 state.jaraktitiktengah= "-"
 state.jumlahoutlet = "-"
-state.layout__title = "Geospatial Hydrological Analysis by Mochamad Agung Tarecha"
-state.trame__title = "Geospatial Hydrological Analysis by Mochamad Agung Tarecha"
+#state.layout__title = "Geospatial Hydrological Analysis by Mochamad Agung Tarecha"
+state.trame__title = "by Tarecha"
 state.elevasimin = "-"
 state.elevasimax = "-"
 
@@ -276,6 +276,7 @@ def run_analysis():
         state.loading = False
 
 with SinglePageLayout(server, toolbar=True, footer=False) as layout:
+    layout.title.set_text("Identifying Potential Locations for Small Reservoirs through Geospatial Hydrological Analysis Based on ASTER GDEM Data")
     with layout.content:
         with vuetify.VContainer(fluid=True):
             with vuetify.VRow():

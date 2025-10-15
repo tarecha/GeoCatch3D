@@ -20,7 +20,7 @@ filed8pointer = r'D:\maps\temp\filed8pointer.tif'
 radius = 50
 thresholdFlowAccumulation = 0
 percentile = 85
-deltaketinggian = 5
+thresholdojarakutletbedekatan = 2
 batasmaskwatersedFA = 100 #nilai dari MDINF FA
 fileExtractstreams = r'D:\maps\temp\fileExtractstreams.tif'
 

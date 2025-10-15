@@ -132,9 +132,9 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         # 0 atau 1 berarti tidak mengalir ke sel tersebut
         nilaiFAunik = np.unique(matrikFA.astype(int)) #cari nilai fa unik
         nilaiFAunik = nilaiFAunik[nilaiFAunik > 0][::-1] #urutkan yang terbesar
-        # print(f"nilaiFAunik {nilaiFAunik}")
-        # for row in nilaiFAunik:
-        #     print(row)
+        print(f"nilaiFAunik {nilaiFAunik}")
+        for row in nilaiFAunik:
+            print(row)
         print(nilaiFAunik.dtype)
         for row in nilaiFAunik: #cetak nilai fa unik dari yang terbesar
             print(f"nilaiFAunik {row}")
@@ -188,27 +188,23 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         #clusters = max(values)  # jumlah cluster
         clusters = np.unique(stackstream[:, 2])
         print(clusters)
-        flow_accum_D8 = np.flipud(flow_accum_D8)
+        elv = 0
         flow_accum_MDINF = np.flipud(flow_accum_MDINF)#dibalik menyesuaikan pyvista baris 0 di bawah
         for cid in clusters:
             cluster_data = stackstream[stackstream[:, 2] == cid]
             # print(f"cluster_data {cluster_data}, {cluster_data.dtype}")
             max_FA = -np.inf
-            elv = -np.inf
+            altitude = -np.inf
             luasdas = 0
             best_row, best_col = -1, -1
 
             for row, col, _ in cluster_data:
-                nilai = flow_accum_D8[int(row), int(col)]
+                nilai = matrikFA[int(row), int(col)]
                 print(f"row {row}, col {col}, nilai {nilai}")
                 if (nilai > max_FA) & (matrikKecil[row, col] > titikTengah):
                 #if (nilai > max_FA):
-
                     max_FA = nilai
                     max_FAMDIF = flow_accum_MDINF[int(row), int(col)]
-                    print(f"max_FA {max_FA}")
-                    print(f"max_FAMDIF {max_FAMDIF}")
-                    #max_FAMDIF = max_FA
                     best_row, best_col = row, col
                     elv = matrikKecil[row, col]
                     luasdas = konverter.cells_to_km2(flow_accum_MDINF[row, col], latitude_deg)
@@ -238,31 +234,22 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
 
 #==============================================================================
         # hapus pasangan titik yang berdekatan (keduanya dihapus)
-        # pastikan baris & kolom bertipe integer
-        koordinatpourpoint[:, 0:2] = koordinatpourpoint[:, 0:2].astype(int)
-
-        # untuk debugging: cek nilai baris dan kolom
-        print("\nKoordinat sebelum filter:")
-        for row in koordinatpourpoint:
-            print(*row)
-
-        # hapus pasangan titik yang berdekatan (keduanya dihapus)
         to_remove = set()
-        n = len(koordinatpourpoint)
-        for i in range(n):
-            r1, c1 = koordinatpourpoint[i, 0], koordinatpourpoint[i, 1]
-            for j in range(i + 1, n):
-                r2, c2 = koordinatpourpoint[j, 0], koordinatpourpoint[j, 1]
-                if abs(r1 - r2) <= cfg.thresholdojarakutletbedekatan and abs(c1 - c2) <= cfg.thresholdojarakutletbedekatan:
-                    print(f"Hapus pasangan dekat: index {i} ({r1},{c1}) dan {j} ({r2},{c2})")
+        for i, p1 in enumerate(koordinatpourpoint):
+            for j, p2 in enumerate(koordinatpourpoint):
+                if i >= j:
+                    continue
+                r1, c1 = p1[0], p1[1]
+                r2, c2 = p2[0], p2[1]
+                if abs(r1 - r2) <= 3 and abs(c1 - c2) <= 3:
                     to_remove.add(i)
                     to_remove.add(j)
 
-        koordinatpourpoint = np.delete(koordinatpourpoint, list(to_remove), axis=0)
-
-        print("\nKoordinat sesudah filter:")
-        for row in koordinatpourpoint:
-            print(*row)
+        # simpan hanya titik yang tidak termasuk pasangan berdekatan
+        koordinatpourpoint = np.array([
+            p for i, p in enumerate(koordinatpourpoint)
+            if i not in to_remove
+        ])
 # ==============================================================================
 
 

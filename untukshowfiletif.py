@@ -16,7 +16,7 @@ blue_red = LinearSegmentedColormap.from_list('blue_red', ['blue','red'])
 # 2. Sampling jadi 64 warna (RGBA)
 cmapfa = blue_red(np.linspace(0, 1, 32))  # bentuk: (64, 4)
 # 3. Modifikasi warna pertama (misalnya jadi putih)
-cmapfa[0] = [0, 0, 0, 1]  # R, G, B, A → putih solid
+cmapfa[0] = [0, 0, 0, 0]  # R, G, B, A → putih solid
 # 4. Buat colormap baru dari array warna
 custom_cmapfa1 = LinearSegmentedColormap.from_list('custom_cmapfa1', cmapfa)
 
