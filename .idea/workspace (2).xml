@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26d20978-3a03-4c76-b879-2d79a33d9fd7" name="Changes" comment="update titik berdekatan">
+      <change afterPath="$PROJECT_DIR$/lain-lain/ambilgambarsatelit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lain-lain/demnas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lain-lain/distibusigumbel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lain-lain/lakeregion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lain-lain/tifkepng.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modul/curahhujan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/area.geojson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacacurahhujan.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bacacurahhujan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacacurahhujan2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bacacurahhujan2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacacurahhujan3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bacacurahhujan3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacacurahhujan4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bacacurahhujan4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacacurahhujangabungfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bacacurahhujangabungfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs10a.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs10a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs6a.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs6a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs9.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs9_jarakoutlet.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bfs9_jarakoutlet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bola.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/bola.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/cnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coba.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/coba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cobates (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/cobates (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cobates.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/cobates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curah_hujan_maksimal_harian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/curah_hujan_maksimal_harian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lakeregion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/main5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintrame2.py" beforeDir="false" afterPath="$PROJECT_DIR$/maintrame2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintrame3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/maintrame3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/analisis.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/analisis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/analisis_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/analisis_backup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/fileHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/fileHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/konverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/konverter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/pilih.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/pilih.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/plotter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/rationalmethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/rationalmethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/visualCallBackTrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/visualCallBackTrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modul/watershed.py" beforeDir="false" afterPath="$PROJECT_DIR$/modul/watershed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srtm.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/srtm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untukshowfiletif.py" beforeDir="false" afterPath="$PROJECT_DIR$/lain-lain/untukshowfiletif.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="agung &lt;agung.tarecha@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/numpy/conftest.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/pyvista/core/utilities/points.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2uZHqly7oARr45IL5z0iDRfW6Bi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ambilgambarsatelit.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analisis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bacacurahhujan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bacacurahhujan2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bacacurahhujan3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bacacurahhujan4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bacacurahhujangabungfile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs10a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs11.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs6a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs9.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bfs9_jarakoutlet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bola.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cnn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.coba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cobates.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.curahhujan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demnas.executor&quot;: &quot;Run&quot;,
+    &quot;Python.distibusigumbel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fileHandler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generateFile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generatePolygonLimas.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generatefile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.konverter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lakeregion.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver70.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver71.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver73.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver76.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver77.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver78.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver79.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver83.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver92.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver94.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maintrame2ver96.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mapping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pilih.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plotter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rationalmethod.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run trame launcher .executor&quot;: &quot;Run&quot;,
+    &quot;Python.srtm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testrame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tifkepng.executor&quot;: &quot;Run&quot;,
+    &quot;Python.untitled2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.untitled2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.untukshowfiletif.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualCallBack.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualCallBackTrame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualcallback.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualisasipointer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.watershed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Agung/penelitian/programtesis/modul&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Agung\penelitian\programtesis\modul" />
+      <recent name="D:\Agung\penelitian\programtesis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Agung\penelitian\programtesis\lain-lain" />
+      <recent name="D:\Agung\penelitian\programtesis" />
+      <recent name="D:\Agung\penelitian\programtesis\modul" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="programtesis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (programtesis)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="programtesis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (programtesis)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26d20978-3a03-4c76-b879-2d79a33d9fd7" name="Changes" comment="" />
+      <created>1742449369950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742449369950</updated>
+      <workItem from="1742449370913" duration="8511000" />
+      <workItem from="1742651969346" duration="6234000" />
+      <workItem from="1742870074018" duration="861000" />
+      <workItem from="1742871078341" duration="9972000" />
+      <workItem from="1743062500822" duration="3863000" />
+      <workItem from="1743269803225" duration="755000" />
+      <workItem from="1743480887622" duration="903000" />
+      <workItem from="1743482190035" duration="36000" />
+      <workItem from="1743482262868" duration="626000" />
+      <workItem from="1743484072513" duration="537000" />
+      <workItem from="1743484870960" duration="21637000" />
+      <workItem from="1743550583861" duration="403000" />
+      <workItem from="1743551269993" duration="375000" />
+      <workItem from="1743551838339" duration="3390000" />
+      <workItem from="1743596678126" duration="7707000" />
+      <workItem from="1743653551901" duration="13146000" />
+      <workItem from="1743701134116" duration="1190000" />
+      <workItem from="1743781704506" duration="7997000" />
+      <workItem from="1743864636217" duration="9132000" />
+      <workItem from="1743959969291" duration="282000" />
+      <workItem from="1744163436971" duration="2697000" />
+      <workItem from="1744178208839" duration="11707000" />
+      <workItem from="1744266368468" duration="4873000" />
+      <workItem from="1744298820470" duration="478000" />
+      <workItem from="1744299439739" duration="1062000" />
+      <workItem from="1744327602905" duration="2296000" />
+      <workItem from="1744343156515" duration="21340000" />
+      <workItem from="1744587508115" duration="6315000" />
+      <workItem from="1744613183008" duration="902000" />
+      <workItem from="1744614147637" duration="2216000" />
+      <workItem from="1744690681051" duration="3393000" />
+      <workItem from="1744723384488" duration="162000" />
+      <workItem from="1744723609009" duration="3966000" />
+      <workItem from="1744762077917" duration="484000" />
+      <workItem from="1744762842429" duration="15327000" />
+      <workItem from="1744799790565" duration="7243000" />
+      <workItem from="1744812059637" duration="5559000" />
+      <workItem from="1744870817313" duration="4371000" />
+      <workItem from="1744919675037" duration="2368000" />
+      <workItem from="1744955690665" duration="14484000" />
+      <workItem from="1745056505071" duration="2303000" />
+      <workItem from="1745109781221" duration="12520000" />
+      <workItem from="1746427852168" duration="645000" />
+      <workItem from="1746498448013" duration="133000" />
+      <workItem from="1746959002117" duration="1642000" />
+      <workItem from="1747042454212" duration="3260000" />
+      <workItem from="1747089496103" duration="666000" />
+      <workItem from="1747090458083" duration="77000" />
+      <workItem from="1747188633817" duration="1002000" />
+      <workItem from="1747207008729" duration="8229000" />
+      <workItem from="1747227714238" duration="15632000" />
+      <workItem from="1747576251587" duration="4099000" />
+      <workItem from="1747639762745" duration="1982000" />
+      <workItem from="1747662219497" duration="91000" />
+      <workItem from="1748399329018" duration="1143000" />
+      <workItem from="1748648369288" duration="1686000" />
+      <workItem from="1748672724119" duration="6562000" />
+      <workItem from="1748764249930" duration="3055000" />
+      <workItem from="1748781295423" duration="3261000" />
+      <workItem from="1748845528028" duration="3452000" />
+      <workItem from="1748914730346" duration="5960000" />
+      <workItem from="1748965521417" duration="717000" />
+      <workItem from="1749219341377" duration="1265000" />
+      <workItem from="1749473854698" duration="6146000" />
+      <workItem from="1749516976821" duration="20000" />
+      <workItem from="1749525636905" duration="625000" />
+      <workItem from="1749609246365" duration="1868000" />
+      <workItem from="1749618152917" duration="2760000" />
+      <workItem from="1749638888392" duration="624000" />
+      <workItem from="1749780274485" duration="18140000" />
+      <workItem from="1750311756006" duration="2071000" />
+      <workItem from="1750385823049" duration="1799000" />
+      <workItem from="1750434144500" duration="2821000" />
+      <workItem from="1750452788892" duration="58000" />
+      <workItem from="1750452861883" duration="1262000" />
+      <workItem from="1750751468282" duration="8983000" />
+      <workItem from="1750815924589" duration="4806000" />
+      <workItem from="1750843167127" duration="5571000" />
+      <workItem from="1751077311956" duration="15985000" />
+      <workItem from="1751433041100" duration="44550000" />
+      <workItem from="1752028081798" duration="2226000" />
+      <workItem from="1752030592796" duration="233800000" />
+      <workItem from="1753157700067" duration="1531000" />
+      <workItem from="1753193664142" duration="9453000" />
+      <workItem from="1753295105519" duration="1123000" />
+      <workItem from="1753326223220" duration="22140000" />
+      <workItem from="1753615178848" duration="7107000" />
+      <workItem from="1754008030064" duration="3774000" />
+      <workItem from="1754132680149" duration="1002000" />
+      <workItem from="1754801827362" duration="3731000" />
+      <workItem from="1755104250090" duration="1248000" />
+      <workItem from="1755576637411" duration="734000" />
+      <workItem from="1755861777656" duration="2329000" />
+      <workItem from="1756335634034" duration="853000" />
+      <workItem from="1758073040863" duration="1280000" />
+      <workItem from="1758211588046" duration="5187000" />
+      <workItem from="1758688156305" duration="830000" />
+      <workItem from="1758773707245" duration="759000" />
+      <workItem from="1758787950789" duration="979000" />
+      <workItem from="1758819295440" duration="1406000" />
+      <workItem from="1758972738381" duration="811000" />
+      <workItem from="1759237925261" duration="8018000" />
+      <workItem from="1760185650873" duration="614000" />
+      <workItem from="1760494169663" duration="20331000" />
+      <workItem from="1760541345600" duration="3013000" />
+      <workItem from="1760945400029" duration="19591000" />
+      <workItem from="1761173348443" duration="34236000" />
+      <workItem from="1761412414981" duration="7511000" />
+      <workItem from="1761564437321" duration="3161000" />
+      <workItem from="1761663232685" duration="12899000" />
+      <workItem from="1762313945085" duration="975000" />
+      <workItem from="1762347880947" duration="27233000" />
+      <workItem from="1762768803488" duration="7316000" />
+      <workItem from="1763196297908" duration="2934000" />
+      <workItem from="1763471275260" duration="413000" />
+      <workItem from="1763725471838" duration="2507000" />
+      <workItem from="1764517246082" duration="63000" />
+      <workItem from="1768824226832" duration="3760000" />
+      <workItem from="1769307747981" duration="2121000" />
+      <workItem from="1769350536733" duration="8155000" />
+      <workItem from="1769434034277" duration="9811000" />
+      <workItem from="1769649351003" duration="7273000" />
+      <workItem from="1769788760618" duration="3267000" />
+      <workItem from="1769947917487" duration="9791000" />
+      <workItem from="1771055318832" duration="1174000" />
+      <workItem from="1771078177074" duration="1327000" />
+    </task>
+    <task id="LOCAL-00001" summary="awal">
+      <option name="closed" value="true" />
+      <created>1759290145883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759290145883</updated>
+    </task>
+    <task id="LOCAL-00002" summary="awal">
+      <option name="closed" value="true" />
+      <created>1759290168339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759290168339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="awal">
+      <option name="closed" value="true" />
+      <created>1759290181520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759290181520</updated>
+    </task>
+    <task id="LOCAL-00004" summary="awal">
+      <option name="closed" value="true" />
+      <created>1759290211556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759290211556</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update titik berdekatan">
+      <option name="closed" value="true" />
+      <created>1760519343449</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760519343449</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update titik berdekatan">
+      <option name="closed" value="true" />
+      <created>1760519370341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760519370341</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update titik berdekatan">
+      <option name="closed" value="true" />
+      <created>1760536223849</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760536223849</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="awal" />
+    <MESSAGE value="update titik berdekatan" />
+    <option name="LAST_COMMIT_MESSAGE" value="update titik berdekatan" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/fileHandler.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/mapping.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/mapping.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main3.py</url>
+          <line>196</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main3.py</url>
+          <line>191</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main3.py</url>
+          <line>158</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main4.py</url>
+          <line>163</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bola.py</url>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs2.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs3.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main4.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main4.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main4.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/main5.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/srtm.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs8.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs8.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs9.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/plotter.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs9.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs10.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs10a.py</url>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/bfs6.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/rationalmethod.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/rationalmethod.py</url>
+          <line>206</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/rationalmethod.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maintrame2.py</url>
+          <line>250</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/rationalmethod.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lain-lain/lakeregion.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modul/analisis.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="my_raster.configs.south" />
+        <watch expression="unik" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver92.coverage" NAME="maintrame2ver92 Coverage Results" MODIFIED="1750434961787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs11.coverage" NAME="bfs11 Coverage Results" MODIFIED="1762558129328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$srtm.coverage" NAME="srtm Coverage Results" MODIFIED="1752247347918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$untukshowfiletif.coverage" NAME="untukshowfiletif Coverage Results" MODIFIED="1769351040084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$demnas.coverage" NAME="demnas Coverage Results" MODIFIED="1769999238166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$visualisasipointer.coverage" NAME="visualisasipointer Coverage Results" MODIFIED="1754133014694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$distibusigumbel.coverage" NAME="distibusigumbel Coverage Results" MODIFIED="1761651818980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$visualCallBack.coverage" NAME="visualCallBack Coverage Results" MODIFIED="1751835727537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame.coverage" NAME="maintrame Coverage Results" MODIFIED="1749621600568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver71.coverage" NAME="maintrame2ver71 Coverage Results" MODIFIED="1750435037776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$cnn.coverage" NAME="cnn Coverage Results" MODIFIED="1743270326667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs8.coverage" NAME="bfs8 Coverage Results" MODIFIED="1760494906425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$main5.coverage" NAME="main5 Coverage Results" MODIFIED="1752797105219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$mapping.coverage" NAME="mapping Coverage Results" MODIFIED="1744587944395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$testrame.coverage" NAME="testrame Coverage Results" MODIFIED="1749475557896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs9_jarakoutlet.coverage" NAME="bfs9_jarakoutlet Coverage Results" MODIFIED="1759361544031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs2.coverage" NAME="bfs2 Coverage Results" MODIFIED="1760495028709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver83.coverage" NAME="maintrame2ver83 Coverage Results" MODIFIED="1750435109474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs5.coverage" NAME="bfs5 Coverage Results" MODIFIED="1760495048589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1752344476530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver77.coverage" NAME="maintrame2ver77 Coverage Results" MODIFIED="1750435250517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$fileHandler.coverage" NAME="fileHandler Coverage Results" MODIFIED="1752417552829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver70.coverage" NAME="maintrame2ver70 Coverage Results" MODIFIED="1750435023849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver76.coverage" NAME="maintrame2ver76 Coverage Results" MODIFIED="1750435270490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$visualCallBackTrame.coverage" NAME="visualCallBackTrame Coverage Results" MODIFIED="1762688137814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$analisis.coverage" NAME="analisis Coverage Results" MODIFIED="1771056154998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$visualcallback.coverage" NAME="visualcallback Coverage Results" MODIFIED="1744240143577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs6a.coverage" NAME="bfs6a Coverage Results" MODIFIED="1760494957256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$tifkepng.coverage" NAME="tifkepng Coverage Results" MODIFIED="1769992119810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver94.coverage" NAME="maintrame2ver94 Coverage Results" MODIFIED="1750434979969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$main4.coverage" NAME="main4 Coverage Results" MODIFIED="1752794962996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs7.coverage" NAME="bfs7 Coverage Results" MODIFIED="1759238368863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$generatefile.coverage" NAME="generatefile Coverage Results" MODIFIED="1742656217704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$generateFile.coverage" NAME="generateFile Coverage Results" MODIFIED="1744244544425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs6.coverage" NAME="bfs6 Coverage Results" MODIFIED="1760495169676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs10a.coverage" NAME="bfs10a Coverage Results" MODIFIED="1762557292325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$generatePolygonLimas.coverage" NAME="generatePolygonLimas Coverage Results" MODIFIED="1742654191177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1750453307420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bacacurahhujan.coverage" NAME="bacacurahhujan Coverage Results" MODIFIED="1758972837998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$ambilgambarsatelit.coverage" NAME="ambilgambarsatelit Coverage Results" MODIFIED="1762862847142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bacacurahhujan2.coverage" NAME="bacacurahhujan2 Coverage Results" MODIFIED="1758846753872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$main3.coverage" NAME="main3 Coverage Results" MODIFIED="1760527793707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver78.coverage" NAME="maintrame2ver78 Coverage Results" MODIFIED="1750435214797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs3.coverage" NAME="bfs3 Coverage Results" MODIFIED="1760495036244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bacacurahhujangabungfile.coverage" NAME="bacacurahhujangabungfile Coverage Results" MODIFIED="1761319009656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$plotter.coverage" NAME="plotter Coverage Results" MODIFIED="1753233436262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$untitled2.coverage" NAME="untitled2 Coverage Results" MODIFIED="1754132965415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2.coverage" NAME="maintrame2 Coverage Results" MODIFIED="1771078237370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bola.coverage" NAME="bola Coverage Results" MODIFIED="1749848325572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$coba.coverage" NAME="coba Coverage Results" MODIFIED="1743064884295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$config.coverage" NAME="config Coverage Results" MODIFIED="1752757068302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs4.coverage" NAME="bfs4 Coverage Results" MODIFIED="1769351155732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$pilih.coverage" NAME="pilih Coverage Results" MODIFIED="1762518230017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$rationalmethod.coverage" NAME="rationalmethod Coverage Results" MODIFIED="1761692932692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$bacacurahhujan4.coverage" NAME="bacacurahhujan4 Coverage Results" MODIFIED="1758774443426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$untitled2__1_.coverage" NAME="untitled2 (1) Coverage Results" MODIFIED="1754008598004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs10.coverage" NAME="bfs10 Coverage Results" MODIFIED="1762557297387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$watershed.coverage" NAME="watershed Coverage Results" MODIFIED="1752921132060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver79.coverage" NAME="maintrame2ver79 Coverage Results" MODIFIED="1750435128569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$bacacurahhujan3.coverage" NAME="bacacurahhujan3 Coverage Results" MODIFIED="1758773912673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$curahhujan.coverage" NAME="curahhujan Coverage Results" MODIFIED="1761567210136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$lakeregion.coverage" NAME="lakeregion Coverage Results" MODIFIED="1762557545210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$cobates.coverage" NAME="cobates Coverage Results" MODIFIED="1742650837621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver96.coverage" NAME="maintrame2ver96 Coverage Results" MODIFIED="1750435012185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$konverter.coverage" NAME="konverter Coverage Results" MODIFIED="1752028363334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modul" />
+    <SUITE FILE_PATH="coverage/programtesis$bfs9.coverage" NAME="bfs9 Coverage Results" MODIFIED="1762557460111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$maintrame2ver73.coverage" NAME="maintrame2ver73 Coverage Results" MODIFIED="1750435053119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/programtesis$main.coverage" NAME="main Coverage Results" MODIFIED="1745153153469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
