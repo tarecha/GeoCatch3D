@@ -13,5 +13,7 @@ untuk penggunaan komersil bisa menggubungi agung.tarecha@gmail.com untuk perjanj
 
 
 bisa gunakan pycharm
+
+
 pip install pyvista trame trame-vuetify trame-vtk rasterio whitebox matplotlib PyOpenGL PyQt5
 
