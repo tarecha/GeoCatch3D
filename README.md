@@ -11,3 +11,7 @@ https://tarecha.wordpress.com/wp-content/uploads/2026/05/suratciptaan_ec00202606
 bebas digunakan untuk penelitian dengan tetap menjadikan kode sumber turunan opensource.
 untuk penggunaan komersil bisa menggubungi agung.tarecha@gmail.com untuk perjanjian lisesni.
 
+
+bisa gunakan pycharm
+pip install pyvista trame trame-vuetify trame-vtk rasterio whitebox matplotlib PyOpenGL PyQt5
+
