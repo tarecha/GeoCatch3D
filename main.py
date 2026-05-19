@@ -8,7 +8,7 @@ import re
 import time
 
 import matplotlib.colors as mcolors
-# Modul lokal
+# Modul lokal AGUNG
 import modul.config as cfg
 from modul import plotter as pla, curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
 import modul.konverter as knv
