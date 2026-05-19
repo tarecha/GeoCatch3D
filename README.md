@@ -29,3 +29,7 @@ atau edit pada file module\config.py untuk pathnya
 
 GDEM ASTER versi 3 terbaru dirilis pada tahun 2019 dan tersedia tanpa biaya. Produk data ASTER ASTGTM.003 diambil dari Data Pool daring, milik NASA Land Processes Distributed Active Archive Center (LP DAAC), USGS Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, https://www.earthdata.nasa.gov/data/tools/data-pool . Selain dari Data Pool daring tersebut dapat juga diunduh melalui https://search.earthdata.nasa.gov/search. Dataset yang diperlukan dapat diunduh kemudian di ekstrak pada folder D:\maps.
 
+
+Perangkat lunak ini disediakan “as is” tanpa jaminan dalam bentuk apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan kelayakan penggunaan, kesesuaian untuk tujuan tertentu, dan non-pelanggaran hak.
+
+Pengguna bertanggung jawab penuh atas segala risiko yang timbul dari penggunaan perangkat lunak ini. Pengembang tidak bertanggung jawab atas kerusakan, kehilangan data, kesalahan hasil analisis, maupun dampak lain yang ditimbulkan dari penggunaan perangkat lunak ini.
