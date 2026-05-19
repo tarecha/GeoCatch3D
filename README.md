@@ -17,3 +17,8 @@ bisa gunakan pycharm
 
 pip install pyvista trame trame-vuetify trame-vtk rasterio whitebox matplotlib PyOpenGL PyQt5
 
+
+
+sampel file GDEM ASTER V3
+https://drive.google.com/drive/folders/1I1kSE6V8pxy0Ox9FnMJopjOLXfiUxmKl?usp=sharing 
+
