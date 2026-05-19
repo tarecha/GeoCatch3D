@@ -1,5 +1,8 @@
 Selengkapnya disini
-https://tarecha.wordpress.com/publikasi-ilmiah/
+https://tarecha.wordpress.com/publikasi-ilmiah/ 
+
+dan
+
 https://ieeexplore.ieee.org/document/11326317
 
 pencatatan Ciptaan
