@@ -1,9 +1,6 @@
-Selengkapnya disini
-https://tarecha.wordpress.com/publikasi-ilmiah/ 
+GeoCatch 3D - Sistem Analisis Identifikasi Lokasi Potensial Embung dan DAS
+Uraian Singkat	Karya cipta ini merupakan program komputer yang merupakan hasil penelitian tesis S2 dari Mochamad Agung Tarecha. Karya cipta ini yang juga telah dipublikasikan dalam Conference CENIM IEEE https://ieeexplore.ieee.org/document/11326317 6th International Conference on Computer Engineering, Network, and Intelligent Multimedia 2025 penyelenggara ITS Surabaya pada 25-26 November 2025 di Novotel Samator East Surabaya Hotel. Karya cipta ini dapat digunakan untuk identifikasi lokasi potensial embung maupun analisis Daerah Aliran Sungai dan dipublikasikan pada https://tarecha.wordpress.com/publikasi-ilmiah/
 
-dan
-
-https://ieeexplore.ieee.org/document/11326317
 
 pencatatan Ciptaan
 https://tarecha.wordpress.com/wp-content/uploads/2026/05/suratciptaan_ec002026065878.pdf 
