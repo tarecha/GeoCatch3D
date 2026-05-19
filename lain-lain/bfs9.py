@@ -15,8 +15,6 @@ def show_raster(ax, path, title):
         ax.imshow(data, cmap=custom_cmapfa)
         ax.set_title(title)
         ax.axis("off")
-        alt = data[57,80]
-        print(f"ketinggian {alt}")
 
 def show_raster_array(ax, array, title):
     # data = src.read(1)
@@ -43,7 +41,7 @@ def show_histogram(ax, path, title):
     ax.set_ylabel('Frekuensi (log)')
 
 # Tampilkan subplot 2x2
-fig, axs = plt.subplots(2, 4, figsize=(5, 5))
+fig, axs = plt.subplots(2, 3, figsize=(8, 8))
 D8_to_vector = {
 
     1: (1, 0),    # East
@@ -59,8 +57,8 @@ terrain_colors = plt.get_cmap("seismic")(np.linspace(0, 1, 1024))
 terrain_colors[0] = [1, 1, 1, 1]
 custom_terrain = LinearSegmentedColormap.from_list("custom_terrain", terrain_colors)
 
-cmapfa = plt.get_cmap("coolwarm")(np.linspace(0, 1, 2048))
-#cmapfa[0] = [1, 1, 1, 1]
+cmapfa = plt.get_cmap("bwr")(np.linspace(0, 1, 256))
+cmapfa[0] = [0, 0, 0, 1]
 custom_cmapfa = LinearSegmentedColormap.from_list("custom_cmapfa", cmapfa)
 from scipy.ndimage import label, generate_binary_structure, binary_dilation
 titikTengah = 912
@@ -105,14 +103,15 @@ for row in nilaiFAunik:
     print(f"nilaiFAunik {row}")
 print(f"nilaiFAunik {nilaiFAunik}")
 dynamicthreshold = np.percentile(nilaiFAunik, cfg.percentile)
+dynamicthreshold = 50
 print(f"dynamicthreshold {dynamicthreshold}")
 matrikFA[matrikFA < dynamicthreshold] = 0
 matrikFAMDINF[matrikFAMDINF < dynamicthreshold] = 0
 matrikFAthresholdketinggiandynamic = matrikFA.copy()
-show_raster_array(axs[0, 1], matrikFA, "Percentile 90th threshold D8 FA")
-show_raster_array(axs[1, 1], matrikFAMDINF, "Percentile 90th threshold  MD∞ FA")
+show_raster_array(axs[0, 1], matrikFA, "Percentile 85th threshold D8 FA")
+show_raster_array(axs[1, 1], matrikFAMDINF, "Percentile 85th threshold  MD∞ FA")
 matrikFA[matrikFA >= dynamicthreshold] = 1
-matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 1
+matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 2
 
 
 
@@ -209,8 +208,8 @@ print(hasil_akhir)
 
 
 # Raster tampilan
-show_raster(axs[0, 3], cfg.fileSeleksiDEM, "ketinggian")
-#show_raster_array(axs[0, 1], matrikFAthresholdketinggian, "Threshold ketinggian")
+# show_raster(axs[0, 0], cfg.fileFlowAccumulationBreachD8, "flow accumulation D8")
+# show_raster_array(axs[0, 1], matrikFAthresholdketinggian, "Threshold ketinggian")
 # show_raster_array(axs[0, 2], matrikFAthresholdketinggiandynamic, "Threshold ketinggian + dynamic")
 # show_raster_array(axs[1, 0], matrikFA, "Threshold ketinggian + dynamic + ekstrak")
 # show_raster(axs[1, 1], cfg.fileExtractstreams, "ekstrak stream")

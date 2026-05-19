@@ -6,16 +6,14 @@ import rasterio, os
 import matplotlib.pyplot as plt
 import modul.config as cfg
 
-from modul import mapping, seleksiRHD, seleksiBF, pilih, interpolasiLinier, visualCallBack, fileHandler, analisis
-from scipy.ndimage import median_filter
-from skimage.feature import canny
-from scipy.spatial import ConvexHull
+from modul import mapping, seleksiRHD, seleksiBF, pilih, visualCallBack, fileHandler, analisis
+
 # Parameter visualisasi
 nama = 'deteksi wilayah air gunung rinjani'
 
-latitude =    -7.9535971422581335
-longitude =  112.46697402028734
-radius = 100
+latitude =  -0.77528
+longitude =  100.66889
+radius = 10
 seleksi = 'RHD'
 
 deteksiAir = '0'
@@ -51,9 +49,7 @@ for i in range(ukuran_baris):
 
 pixelBarisAwalKoordinat = barisMatriks - radiusBaris
 pixelKolomAwalKoordinat = kolomMatriks - radiusKolom
-#fileHandler.eksporTIF(matrikKecil, latitude, longitude, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat, cfg.fileFlowAccumulationBreachThresholdKetinggian,cfg.default_crs)
-fileHandler.eksporTIF(matrikKecil, latitude, longitude, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat, cfg.fileSeleksiDEM, cfg.default_crs)
-
+fileHandler.eksporTIF(matrikKecil, latitude, longitude, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat, cfg.default_crs)
 matrikKecil = np.flipud(matrikKecil) #pembalikan karena (0,0) di matrik dari kiri atas sedangkan grafik dari kiribawah
 
 
@@ -73,7 +69,7 @@ X, Y = np.meshgrid(x, y)
 # Buat StructuredGrid untuk PyVista
 #b_fixed = np.flipud(np.rot90(b, k=1))
 #b = b_fixed
-grid = pv.StructuredGrid(X, Y, matrikKecil,force_float=False)
+grid = pv.StructuredGrid(X, Y, matrikKecil)
 
 # Visualisasi dengan PyVista
 plotter = pv.Plotter()
@@ -95,6 +91,13 @@ custom_terrain = LinearSegmentedColormap.from_list("custom_terrain", terrain_col
 
 
 
+
+callback = visualCallBack.make_callback(
+    plotter, latitude, longitude,
+    radiusBaris, radiusKolom, barisMatriks, kolomMatriks
+)
+
+plotter.enable_point_picking(callback=callback, use_picker=True, show_point=True, color="red", point_size=15, show_message=False)
 
 
 
@@ -131,19 +134,7 @@ plotter.add_mesh(coneUtara, color="magenta",specular=1.0,show_edges=True)
 #     print('\t'.join(f"{val:>3}" for val in row))
 
 
-koordinatCekungan, matrikFAasli, matrikFAthresholdketinggian = analisis.importFlowAccumulation(matrikKecil, ketinggianTitikTengah,latitude)
-fileHandler.eksporTIF(matrikFAthresholdketinggian, latitude, longitude, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat,  cfg.fileFlowAccumulationBreachThresholdKetinggian,cfg.default_crs)
-#matrikFAaslicallback = np.rot90(matrikFAasli.copy(), k=-1)
-matrikFAaslicallback = np.flipud(matrikFAasli.copy())
-callback = visualCallBack.make_callback(
-    plotter, latitude, longitude,
-    radiusBaris, radiusKolom, barisMatriks, kolomMatriks, matrikFAaslicallback
-)
-
-plotter.enable_point_picking(callback=callback, use_picker=True, show_point=True, color="red", point_size=15, show_message=False)
-
-
-
+koordinatCekungan, matrikFAasli = analisis.importFlowAccumulation(matrikKecil,ketinggianTitikTengah)
 for row in koordinatCekungan:
     px = row[1]
     py = row[0]
@@ -169,24 +160,11 @@ else:
 #grid2 = pv.StructuredGrid(X, Y, filebreach)
 
 #print(f"ztitik: {ketinggianTitikTengah}, barisTengah: {barisTengah}, kolomTengah: {kolomTengah}")
-#plotter.add_mesh(grid.copy(), scalars=np.rot90(matrikFAasli, k=-1) ,show_edges=False, cmap='coolwarm', opacity=1,show_scalar_bar=False)
-#plotter.add_mesh(grid.elevation(), cmap=custom_terrain, show_edges=True,pickable=True, show_scalar_bar=False)
-# Salin mesh dan beri data ke cell_data
-grid_copy = grid.copy()
-grid_copy.cell_data["flow"] = np.rot90(matrikFAasli, k=-1).ravel(order="F")
+#plotter.add_mesh(grid.copy(), scalars=np.rot90(matrikFAasli, k=-1) , cmap='coolwarm', opacity=1)
+plotter.add_mesh(grid.elevation(), cmap=custom_terrain, show_edges=True,pickable=True, show_scalar_bar=False)
 
-# Tampilkan mesh dengan data dari sel
-plotter.add_mesh(
-    grid_copy,
-    scalars="flow",              # referensi nama di cell_data
-    cmap="coolwarm",
-    show_edges=False,
-    opacity=1,
-    show_scalar_bar=False
-)
-
-#plotter.show_axes()  # Menampilkan sumbu X, Y, Z
-#plotter.show_bounds(xtitle='Longitude', ytitle='Latitude', ztitle='Ketinggian (m)')
+plotter.show_axes()  # Menampilkan sumbu X, Y, Z
+plotter.show_bounds(xtitle='Longitude', ytitle='Latitude', ztitle='Ketinggian (m)')
 #plotter.show_axes_all()
 plotter.view_xy()
 plotter.show()

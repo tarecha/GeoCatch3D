@@ -19,10 +19,25 @@ terrain_colors = plt.get_cmap("seismic")(np.linspace(0, 1, 1024))
 terrain_colors[0] = [1, 1, 1, 1]
 custom_terrain = LinearSegmentedColormap.from_list("custom_terrain", terrain_colors)
 
+
+#==================================================================================
 cmapfa = plt.get_cmap("bwr")(np.linspace(0, 1, 256))
 cmapfa[0] = [1, 1, 1, 1]
 custom_cmapfa = LinearSegmentedColormap.from_list("custom_cmapfa", cmapfa)
+#======================================================================================
 
+
+#===========================================================
+# rubah cmap agar nilai paling rendah warna putih
+"""
+blue_red = LinearSegmentedColormap.from_list('blue_red', ['blue','yellow','red'])
+# 2. Sampling jadi 64 warna (RGBA)
+cmapfa = blue_red(np.linspace(0, 1, 32))  # bentuk: (64, 4)
+# 3. Modifikasi warna pertama (misalnya jadi putih)
+cmapfa[0] = [1, 1, 1, 1]  # R, G, B, A → putih solid
+custom_cmapfa = LinearSegmentedColormap.from_list('custom_cmapfa1', cmapfa)
+"""
+#===========================================================
 
 
 def d8_to_uv(d8_array):
@@ -72,7 +87,9 @@ def plot(matrikplot, judul, z):
     plt.figure(figsize=(6, 6))
     # Tampilkan dengan colormap custom dan tanpa interpolasi halus
     im = plt.imshow(matrikplot, cmap=custom_cmapfa, interpolation='none')
-
+    ax = plt.gca()  # ambil current axes
+    ax.ticklabel_format(style='plain', axis='both')
+    ax.format_coord = lambda x, y: f"x={x:.2f}, y={y:.2f}"  # tampilkan dua digit desimal
     if z != "none":
         # Buat dan atur colorbar
         cbar = plt.colorbar(im)

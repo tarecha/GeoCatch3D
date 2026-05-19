@@ -3,7 +3,7 @@ from whitebox.whitebox_tools import WhiteboxTools
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 from matplotlib.colors import LinearSegmentedColormap
-
+from modul import plotter as pla
 plt.switch_backend('qt5agg')
 from modul import config as cfg
 import rasterio
@@ -15,6 +15,8 @@ def show_raster(ax, path, title):
         ax.imshow(data, cmap=custom_cmapfa)
         ax.set_title(title)
         ax.axis("off")
+        alt = data[57,80]
+        print(f"ketinggian {alt}")
 
 def show_raster_array(ax, array, title):
     # data = src.read(1)
@@ -41,7 +43,7 @@ def show_histogram(ax, path, title):
     ax.set_ylabel('Frekuensi (log)')
 
 # Tampilkan subplot 2x2
-fig, axs = plt.subplots(2, 3, figsize=(8, 8))
+fig, axs = plt.subplots(2, 4, figsize=(5, 5))
 D8_to_vector = {
 
     1: (1, 0),    # East
@@ -57,8 +59,8 @@ terrain_colors = plt.get_cmap("seismic")(np.linspace(0, 1, 1024))
 terrain_colors[0] = [1, 1, 1, 1]
 custom_terrain = LinearSegmentedColormap.from_list("custom_terrain", terrain_colors)
 
-cmapfa = plt.get_cmap("bwr")(np.linspace(0, 1, 256))
-#cmapfa[0] = [1, 1, 1, 1]
+cmapfa = plt.get_cmap("viridis")(np.linspace(0, 1, 5))
+cmapfa[0] = [1, 1, 1, 1]
 custom_cmapfa = LinearSegmentedColormap.from_list("custom_cmapfa", cmapfa)
 from scipy.ndimage import label, generate_binary_structure, binary_dilation
 titikTengah = 912
@@ -85,12 +87,12 @@ matrikFA[np.isnan(matrikFA)] = 0
 matrikFA[np.isinf(matrikFA)] = 0
 print(f"sum 2 {np.sum(matrikFA)}")
 tinggi, lebar = matrikKecil.shape
-for i in range(tinggi):
-    for j in range(lebar):
-        #print(f"i {i}, j {j}")
-        if matrikKecil[i, j] <= titikTengah:
-            matrikFA[i, j] = 0
-            matrikFAMDINF[i, j] = 0
+# for i in range(tinggi):
+#     for j in range(lebar):
+#         #print(f"i {i}, j {j}")
+#         if matrikKecil[i, j] <= titikTengah:
+#             matrikFA[i, j] = 0
+#             matrikFAMDINF[i, j] = 0
 
 show_raster_array(axs[0, 0], matrikFA, "Altitude threshold D8 FA")
 show_raster_array(axs[1, 0], matrikFAMDINF, "Altitude threshold MD∞ FA")
@@ -103,6 +105,7 @@ for row in nilaiFAunik:
     print(f"nilaiFAunik {row}")
 print(f"nilaiFAunik {nilaiFAunik}")
 dynamicthreshold = np.percentile(nilaiFAunik, cfg.percentile)
+dynamicthreshold = 100
 print(f"dynamicthreshold {dynamicthreshold}")
 matrikFA[matrikFA < dynamicthreshold] = 0
 matrikFAMDINF[matrikFAMDINF < dynamicthreshold] = 0
@@ -110,13 +113,22 @@ matrikFAthresholdketinggiandynamic = matrikFA.copy()
 show_raster_array(axs[0, 1], matrikFA, "Percentile 85th threshold D8 FA")
 show_raster_array(axs[1, 1], matrikFAMDINF, "Percentile 85th threshold  MD∞ FA")
 matrikFA[matrikFA >= dynamicthreshold] = 1
-matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 1
+matrikFAMDINF[matrikFAMDINF >= dynamicthreshold] = 2
 
 
+
+# buat mask hanya untuk nilai > 0
+mask = (matrikFA > 0 )| (matrikFAMDINF > 0)
+
+# gabungkan dua array di area yang bernilai > 0
+combined = np.zeros_like(mask, dtype=np.int8)
+combined[mask] = matrikFA[mask] + matrikFAMDINF[mask]
 
 
 show_raster_array(axs[0, 2], matrikFA, "Stream extraction D8 FA")
-show_raster_array(axs[1, 2], matrikFAMDINF, "Stream extraction MD∞ FA")
+show_raster_array(axs[1, 2], matrikFAMDINF, "Stream extraction MD FA")
+show_raster_array(axs[1, 3], combined, "Gabungan D8 dam MDInf")
+pla.plot(combined, "Gabungan D8 dam MDInf","D8 = 1, MDINF = 2, Gabungan = 3")
 with rasterio.open(
         cfg.fileExtractstreams, 'w',
         driver='GTiff',
@@ -207,8 +219,8 @@ print(hasil_akhir)
 
 
 # Raster tampilan
-# show_raster(axs[0, 0], cfg.fileFlowAccumulationBreachD8, "flow accumulation D8")
-# show_raster_array(axs[0, 1], matrikFAthresholdketinggian, "Threshold ketinggian")
+show_raster(axs[0, 3], cfg.fileSeleksiDEM, "ketinggian")
+#show_raster_array(axs[0, 1], matrikFAthresholdketinggian, "Threshold ketinggian")
 # show_raster_array(axs[0, 2], matrikFAthresholdketinggiandynamic, "Threshold ketinggian + dynamic")
 # show_raster_array(axs[1, 0], matrikFA, "Threshold ketinggian + dynamic + ekstrak")
 # show_raster(axs[1, 1], cfg.fileExtractstreams, "ekstrak stream")

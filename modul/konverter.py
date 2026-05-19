@@ -1,4 +1,4 @@
-import numpy as np
+import math,numpy as np
 
 def cells_to_km_dual(dimensi, latitude_deg):
 
@@ -44,15 +44,15 @@ def cells_to_km2(n_cells, latitude_deg):
     # Ukuran piksel dalam meter
     pixel_height_m = res_deg * deg_lat_m
     pixel_width_m  = res_deg * deg_lon_m
-
+    pixel_diagonal_m = math.sqrt(pixel_height_m**2 + pixel_width_m**2)
     # Luas 1 piksel dalam m²
     area_per_pixel_m2 = pixel_height_m * pixel_width_m
 
     # Luas total dalam km²
     luas_km2 = round((n_cells * area_per_pixel_m2) / 1_000_000,4)
-    return luas_km2
+    return luas_km2, round(area_per_pixel_m2,2), round(pixel_height_m,2), round(pixel_width_m,2), round(pixel_diagonal_m,2)
 
-#digunakan bila out_type mdinf FA adalah "ca"
+#digunakan bila out_type mdinf FA adalah "ca" . ini tidak digunakan karena kita prefer pakai cell
 def deg2_to_km2(area_deg2, latitude_deg):
     """
     Mengonversi luas area dari derajat kuadrat (°²) ke kilometer persegi (km²),

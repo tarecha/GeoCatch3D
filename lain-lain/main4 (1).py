@@ -6,10 +6,8 @@ import rasterio, os
 import matplotlib.pyplot as plt
 import modul.config as cfg
 
-from modul import mapping, seleksiRHD, seleksiBF, pilih, interpolasiLinier, visualCallBack, fileHandler, analisis
-from scipy.ndimage import median_filter
-from skimage.feature import canny
-from scipy.spatial import ConvexHull
+from modul import mapping, seleksiRHD, seleksiBF, pilih, visualCallBack, fileHandler, analisis
+
 # Parameter visualisasi
 nama = 'deteksi wilayah air gunung rinjani'
 

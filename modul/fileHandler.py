@@ -50,7 +50,8 @@ def eksporTIF(matrikOut, latitude, longitude,
             height=matrikOut.shape[0],
             width=matrikOut.shape[1],
             count=1,
-            dtype=matrikOut.dtype,
+            dtype='int16',
+            #dtype=matrikOut.dtype,
             crs=crs,
             transform=transform,
             nodata=0,
@@ -68,7 +69,8 @@ def eksporTIF2(matrikOut,fullPath, transformasi, crs='EPSG:4326' ):
         # Cek bentuk array
         if matrikOut.ndim != 2:
             raise ValueError("matrikOut harus 2 dimensi")
-
+        minout = np.min(matrikOut)
+        print(f"matrikOut.dtype {matrikOut.dtype}, minout {minout}")
 
         # print(f"""
         # pixelBarisAwalKoordinat:  {pixelBarisAwalKoordinat}
@@ -98,7 +100,8 @@ def eksporTIF2(matrikOut,fullPath, transformasi, crs='EPSG:4326' ):
             height=matrikOut.shape[0],
             width=matrikOut.shape[1],
             count=1,
-            dtype=matrikOut.dtype,
+            dtype='int16',
+            #dtype=matrikOut.dtype,
             crs=crs,
             transform=transformasi,
             nodata=0,
@@ -111,3 +114,72 @@ def eksporTIF2(matrikOut,fullPath, transformasi, crs='EPSG:4326' ):
     except Exception as e:
         print(f"[ERROR] Gagal menyimpan GeoTIFF: {e}")
 
+def eksporTIF3(matrikOut, fullPath, transformasi, cmap_obj, crs='EPSG:4326'):
+    try:
+        if matrikOut.ndim != 2:
+            raise ValueError("matrikOut harus 2 dimensi")
+
+        matrikOut = matrikOut.astype(float)
+
+        mask_nan = np.isnan(matrikOut)
+
+        minout = np.nanmin(matrikOut)
+        maxout = np.nanmax(matrikOut)
+
+        print(f"matrikOut.dtype {matrikOut.dtype}, minout {minout}, maxout {maxout}")
+
+        os.makedirs(os.path.dirname(fullPath), exist_ok=True)
+
+        # ---------------- NORMALISASI ---------------- #
+        if maxout > minout:
+            matrik_norm = (matrikOut - minout) / (maxout - minout)
+        else:
+            matrik_norm = np.zeros_like(matrikOut, dtype=float)
+
+        matrik_norm = np.clip(matrik_norm, 0, 1)
+
+        # ---------------- COLORMAP ---------------- #
+        matrik_warna = cmap_obj(matrik_norm)
+        matrik_warna[mask_nan] = [0, 0, 0, 0]
+
+        matrik_rgb = (matrik_warna[:, :, :3] * 255).astype('uint8')
+
+        # ================= TAMBAHAN TITIK MERAH ================= #
+        H, W = matrik_rgb.shape[:2]
+
+        cy = H // 2
+        cx = W // 2
+
+        radius = int(min(H, W) * 0.01)  # 3%
+
+        # buat grid koordinat
+        y, x = np.ogrid[:H, :W]
+
+        # mask lingkaran
+        mask_circle = (x - cx)**2 + (y - cy)**2 <= radius**2
+
+        # apply warna merah
+        matrik_rgb[mask_circle] = [255, 0, 0]
+        # ======================================================== #
+
+        # ---------------- WRITE TIFF ---------------- #
+        with rasterio.open(
+                fullPath,
+                'w',
+                driver='GTiff',
+                height=H,
+                width=W,
+                count=3,
+                dtype='uint8',
+                crs=crs,
+                transform=transformasi,
+                nodata=None,
+        ) as dst:
+            dst.write(matrik_rgb[:, :, 0], 1)
+            dst.write(matrik_rgb[:, :, 1], 2)
+            dst.write(matrik_rgb[:, :, 2], 3)
+
+        print("filehandler 3 oke")
+
+    except Exception as e:
+        print(f"[ERROR] Gagal menyimpan GeoTIFF: {e}")

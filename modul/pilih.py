@@ -39,7 +39,9 @@ def readgeoraster(file_path):
     if os.path.exists(file_path):
         with rasterio.open(file_path) as src:
             print("file ada")
-            return src.read(1)
+            fileDEM = src.read(1)
+            print(f"fileDEM.dtype {fileDEM.dtype}")
+            return fileDEM
 
     else:
         print("file tidak ada")
@@ -140,6 +142,9 @@ def pilih(baris, kolom, latitude, longitude):
 
     # Gabungkan 4 kuadran
     A = np.block([[A1, A2], [A4, A3]])
-
+    ketinggianmax = np.max(A)
+    print(f"ketinggianmax {ketinggianmax}")
+    if ketinggianmax == 0:
+        raise ValueError(f"Tidak ditemukan daratan. Cek input koordinat apakah lautan ? atau cek keberadaan file dataset GDEM ASTER. {fileA1} {fileA2} {fileA3} {fileA4}")
 
     return A, baris, kolom

@@ -21,14 +21,15 @@ im1 = axs[0, 0].imshow(matrik, cmap='coolwarm')
 axs[0, 0].set_title("DEM ASLI")
 axs[0, 0].axis('on')
 fig.colorbar(im1, ax=axs[0, 0], shrink=0.8)
-
+tif_path = "D:\\cc\\DEMNAS_1607-43_v1.0.tif"
+tif_pathout = "D:\\cc\\oke pakai iniDEMNAS_1607-43_v1.0out.tif"
 #==============================================================================
 wbt.breach_depressions(
-    cfg.fileSeleksiDEM,
-    cfg.fileoutput
+    tif_path,
+    tif_pathout
 )
 
-with rasterio.open(cfg.fileoutput) as dem_src:
+with rasterio.open(tif_pathout) as dem_src:
     matrik= dem_src.read(1)
 
 im1 = axs[0, 1].imshow(matrik, cmap='coolwarm')

@@ -127,7 +127,6 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
 
 
         #simpan file tif FA dengan threshold ketinggian
-        print(f"fa threshold elevasi 1")
         pla.plot(matrikFA,"FA threshold elevasi", "Flow Accumulation Cell Count")
         fileHandler.eksporTIF2(matrikOut=matrikFA, fullPath=cfg.fileFlowAccumulationBreachD8Thresholdketinggian, transformasi=transformasi,
                                crs=cfg.default_crs)
@@ -196,9 +195,6 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         matrikKecil = np.flipud(matrikKecil)
         # flow_accum_MDINF = np.flipud(flow_accum_MDINF)
 
-
-        #==========================================================================
-        #bagian mengurutkan titik FA yang besar dari setiap aliran kemudian menghapusnya jika merupakan aliran cabang
         rows, cols = np.nonzero(matrikstreamkinkidentifier)
         values = matrikstreamkinkidentifier[rows, cols]
         # print(f"values {values}")
@@ -269,7 +265,6 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
             print(*row)
 
         # hapus pasangan titik yang berdekatan (keduanya dihapus)
-        #menghapus aliran percabangan
         to_remove = set()
         n = len(koordinatpourpoint)
         for i in range(n):
