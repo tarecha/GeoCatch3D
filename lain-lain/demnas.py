@@ -84,7 +84,7 @@ for i in range(ukuran_baris):
 
 
 plotter = pv.Plotter()
-plotter.lighting = 'None'
+#plotter.lighting = 'None'
 plotter.set_scale(1, 1, 0.125)
 matrikKecil = np.flipud(matrikKecil)
 x = np.arange(0, ukuran_kolom, dtype=np.float32)
