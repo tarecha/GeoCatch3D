@@ -30,5 +30,5 @@ https://drive.google.com/drive/folders/1I1kSE6V8pxy0Ox9FnMJopjOLXfiUxmKl?usp=sha
 copykan ke drive D:\maps 
 atau edit pada file module\config.py untuk pathnya
 
-GDEM ASTER versi 3 terbaru dirilis pada tahun 2019 dan tersedia tanpa biaya. Produk data ASTER ASTGTM.003 diambil dari Data Pool daring, milik NASA Land Processes Distributed Active Archive Center (LP DAAC), USGS Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, https://www.earthdata.nasa.gov/data/tools/data-pool . Selain dari Data Pool daring tersebut dapat juga diunduh melalui https://search.earthdata.nasa.gov/search. Dataset yang diperlukan diunduh kemudian di ekstrak pada folder D:\maps.
+GDEM ASTER versi 3 terbaru dirilis pada tahun 2019 dan tersedia tanpa biaya. Produk data ASTER ASTGTM.003 diambil dari Data Pool daring, milik NASA Land Processes Distributed Active Archive Center (LP DAAC), USGS Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, https://www.earthdata.nasa.gov/data/tools/data-pool . Selain dari Data Pool daring tersebut dapat juga diunduh melalui https://search.earthdata.nasa.gov/search. Dataset yang diperlukan dapat diunduh kemudian di ekstrak pada folder D:\maps.
 
