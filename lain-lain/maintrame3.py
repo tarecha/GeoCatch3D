@@ -75,7 +75,7 @@ state.elevasimin = "-"
 state.elevasimax = "-"
 
 plotter = pv.Plotter(off_screen=True)
-plotter.lighting = 'None'
+#plotter.lighting = 'None'
 plotter.set_scale(1, 1, 0.03333333)
 # plotter.set_background("white")  # atau "gray"
 # plotter.enable_lightkit()
@@ -244,7 +244,7 @@ def run_analysis():
         plotter.reset_camera()
         state.alert_message = "✅ Analisis berhasil dirender ulang "
         state.alert_show = True
-        print("Lighting mode:", plotter.lighting)
+        #print("Lighting mode:", plotter.lighting)
         print("Actor saat ini:", len(plotter.renderer.actors))
     except Exception as e:
         state.alert_message = f"❌ Gagal: {str(e)}"

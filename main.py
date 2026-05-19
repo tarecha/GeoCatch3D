@@ -369,7 +369,7 @@ def run_analysis():
 
 
 
-        print("Lighting mode:", plotter.lighting)
+        #print("Lighting mode:", plotter.lighting)
         print("Actor saat ini:", len(plotter.renderer.actors))
     except Exception as e:
         state.alert_message = f"❌ Gagal: {str(e)}"
