@@ -22,3 +22,6 @@ pip install pyvista trame trame-vuetify trame-vtk rasterio whitebox matplotlib P
 sampel file GDEM ASTER V3
 https://drive.google.com/drive/folders/1I1kSE6V8pxy0Ox9FnMJopjOLXfiUxmKl?usp=sharing 
 
+copykan ke drive D:\maps 
+atau edit pada file module\config.py untuk pathnya
+
