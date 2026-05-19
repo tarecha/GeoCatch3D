@@ -220,7 +220,7 @@ def run_analysis():
         pixelBarisAwalKoordinat = barisMatriks - radiusBaris
         pixelKolomAwalKoordinat = kolomMatriks - radiusKolom
         print(f"pixelBarisAwalKoordinat {pixelBarisAwalKoordinat}")
-        #ganti matrik kecil yang merupakan dem original dengan dem yang sudah di breach depression
+        #ganti mssatrik kecil yang merupakan dem original dengan dem yang sudah di breach depression
         fileHandler.eksporTIF(matrikKecil, lat, lon, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat, cfg.fileSeleksiDEM, cfg.default_crs)
         matrikKecil = analisis.breachdepression()
 
