@@ -11,6 +11,11 @@ https://tarecha.wordpress.com/wp-content/uploads/2026/05/suratciptaan_ec00202606
 bebas digunakan untuk penelitian dengan tetap menjadikan kode sumber turunan opensource.
 untuk penggunaan komersil bisa menggubungi agung.tarecha@gmail.com untuk perjanjian lisensi.
 
+Comprehensive documentation and source code are freely
+available at https://tarecha.wordpress.com/publikasi-ilmiah/;
+these open-access resources may be used without restriction–provided that their status as publicly accessible open
+source tools is maintained–to foster broader and more sustainable contributions
+
 
 bisa gunakan pycharm
 
