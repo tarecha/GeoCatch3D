@@ -35,6 +35,6 @@ Perangkat lunak ini disediakan “as is” tanpa jaminan dalam bentuk apa pun, b
 Pengguna bertanggung jawab penuh atas segala risiko yang timbul dari penggunaan perangkat lunak ini. Pengembang tidak bertanggung jawab atas kerusakan, kehilangan data, kesalahan hasil analisis, maupun dampak lain yang ditimbulkan dari penggunaan perangkat lunak ini.
 
 
-file utama <\br>
-mainVUEv2.py <\br>
+file utama <br>
+mainVUEv2.py <br>
 mainVUEv3.py ==> VUE versi 3. gunakan ini lebih baru. 
