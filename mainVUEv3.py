@@ -395,7 +395,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         html.Div("5. Klik kanan = pilih sel.")
 
                         vuetify.VCardTitle("Catatan Penting")
-                        html.Div("1. Luas watershed (DAS) valid bila tidak terpotong tepi area analisis.")
+                        html.Div("1. Luas watershed / DAS valid bila tidak terpotong tepi area analisis.")
                         html.Div("2. Lokasi outlet valid bila tidak berada di tepi area analisis.")
 
                         vuetify.VCardTitle("Display Mode")
@@ -428,6 +428,8 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                href="https://tarecha.wordpress.com/wp-content/uploads/2026/05/suratciptaan_ec002026065878.pdf",
                                target="_blank",
                                style="color: blue; text-decoration: underline;")
+                        html.Div(
+                            "Vue v3")
                 with vuetify.VCol(cols=3):
                     with vuetify.VCard(class_="mb-3"):
                         vuetify.VCardTitle("Input Parameter")
@@ -447,7 +449,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Pilih Koefisien C SNI 2415:2016 ",
                             outlined=True,
                             dense=True,
-                            style="margin-bottom: 5px;",
+
                             no_data_text="No data available",
                         )
 
@@ -457,7 +459,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Masukkan Koefisien C manual",
                             outlined=True,
                             dense=True,
-                            style="margin-bottom: 5px;",
+
                             # INI KUNCINYA: tampilkan hanya jika 'selected_option' adalah 'user_defined'
                             v_show="selected_option === 'user_defined'",
                         )
@@ -472,7 +474,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Pilih Curah Hujan (mm/hari)",
                             outlined=True,
                             dense=True,
-                            style="margin-bottom: 5px;",
+
                             no_data_text="No data available",
                         )
 
@@ -482,7 +484,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Masukkan curah hujan manual (mm/hari)",
                             outlined=True,
                             dense=True,
-                            style="margin-bottom: 5px;",
+
                             # INI KUNCINYA: tampilkan hanya jika 'selected_option' adalah 'user_defined'
                             v_show="selected_option_rainfall === 'user_defined'",
                         )
@@ -541,7 +543,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         html.Div("Luas 1 sel : '{{ area_per_pixel_m2 }}' m²")
                         html.Div("Jumlah D8 FA: '{{ FlowAccum }}' sel")
                         html.Div("Jumlah MD∞ FA: '{{ FlowAccumMDInf }}' sel")
-                        html.Div("Luas watershed (MD∞ * luas 1 sel): '{{ luasdas }}' km²")
+                        html.Div("Luas DAS (MD∞ * luas 1 sel): '{{ luasdas }}' km²")
                         html.Div("Dynamic Threshold FA: '{{ dynamicthreshold }}' sel")
 
 
