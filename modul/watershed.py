@@ -2,7 +2,7 @@ import numpy as np
 import rasterio
 import os
 
-from main import state
+#from main import state
 from modul import config as cfg, fileHandler
 from whitebox.whitebox_tools import WhiteboxTools
 
