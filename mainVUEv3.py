@@ -1,28 +1,30 @@
-# maintrame_trame.py (versi lengkap siap copy-paste dengan GUI radio button dan penyimpanan screenshot)
+# --- LETAKKAN DI BARIS PALING ATAS (BARIS 1) ---
+from trame.app import get_server
+server = get_server(client_type="vue3")
+state, ctrl = server.state, server.controller
 
+# --- IMPORT MODULE LAINNYA DI BAWAHNYA ---
 import numpy as np
 import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
 import time
-
 import matplotlib.colors as mcolors
+
 # Modul lokal AGUNG222
 import modul.config as cfg
 from modul import plotter as pla, curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
 import modul.konverter as knv
 
-# Trame (UI Web)
-from trame.app import get_server
-from trame.ui.vuetify import SinglePageLayout
+# Import Trame UI (Pastikan pakai vuetify3)
+from trame.ui.vuetify3 import SinglePageLayout
 from pyvista.trame.ui import plotter_ui
-from trame.widgets import html, vuetify
-# Konfigurasi Trame Server
+from trame.widgets import html, vuetify3 as vuetify
+
+# ... (Lanjutkan kodemu)
 
 
-server = get_server(client_type="vue2")
-state, ctrl = server.state, server.controller
 state.items_list = curahhujan.tabelkoefisien
 state.rainfall= curahhujan.tabelcurahhujan
 
@@ -440,7 +442,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             v_model=("selected_option", None),
                             # 3) items juga tuple (nama, default)
                             items=("items_list", ctrl.items_list),
-                            item_text="text",  # tampilkan field `text`
+                            item_title="text",  # tampilkan field `text`
                             item_value="value",  # gunakan field `value` sebagai v-model
                             label="Pilih Koefisien C SNI 2415:2016 ",
                             outlined=True,
@@ -465,7 +467,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             v_model=("selected_option_rainfall", None),
                             # 3) items juga tuple (nama, default)
                             items=("rainfall", ctrl.rainfall),
-                            item_text="text",  # tampilkan field `text`
+                            item_title="text",  # tampilkan field `text`
                             item_value="value",  # gunakan field `value` sebagai v-model
                             label="Pilih Curah Hujan (mm/hari)",
                             outlined=True,
@@ -569,4 +571,4 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                style="color: blue; text-decoration: underline;")
 
 if __name__ == "__main__":
-    server.start(port=8556, address="0.0.0.0")
+    server.start(port=8555, address="0.0.0.0")
