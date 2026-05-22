@@ -37,4 +37,5 @@ Pengguna bertanggung jawab penuh atas segala risiko yang timbul dari penggunaan 
 
 file utama
 mainVUEv2.py
+
 mainVUEv3.py ==> VUE versi 3. gunakan ini lebih baru. 
