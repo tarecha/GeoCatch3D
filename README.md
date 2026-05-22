@@ -33,3 +33,8 @@ GDEM ASTER versi 3 terbaru dirilis pada tahun 2019 dan tersedia tanpa biaya. Pro
 Perangkat lunak ini disediakan “as is” tanpa jaminan dalam bentuk apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan kelayakan penggunaan, kesesuaian untuk tujuan tertentu, dan non-pelanggaran hak.
 
 Pengguna bertanggung jawab penuh atas segala risiko yang timbul dari penggunaan perangkat lunak ini. Pengembang tidak bertanggung jawab atas kerusakan, kehilangan data, kesalahan hasil analisis, maupun dampak lain yang ditimbulkan dari penggunaan perangkat lunak ini.
+
+
+file utama
+mainVUEv2.py
+mainVUEv3.py ==> VUE versi 3. gunakan ini lebih baru. 
