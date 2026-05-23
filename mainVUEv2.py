@@ -260,6 +260,7 @@ def run_analysis():
 
         coneTengah = pv.Cone(center=(kolomTengah, barisTengah, zConeTengah), radius=radiuscone, height=tingicone,
                              direction=(0, 0, -1))
+        
         coneUtara = pv.Cone(center=(kolomUtara, barisUtara - 1, zConeUtara), radius=radiuscone, height=tingicone,
                             direction=(0, 0, -1))
 
@@ -574,4 +575,4 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                style="color: blue; text-decoration: underline;")
 
 if __name__ == "__main__":
-    server.start(port=8556, address="0.0.0.0")
+    server.start(port=80, host="0.0.0.0")

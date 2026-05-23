@@ -574,4 +574,4 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                style="color: blue; text-decoration: underline;")
 
 if __name__ == "__main__":
-    server.start(port=8555, address="0.0.0.0")
+    server.start(port=80, host="0.0.0.0")
