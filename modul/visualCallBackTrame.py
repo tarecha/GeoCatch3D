@@ -126,10 +126,10 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
             matrikScalar = np.rot90(watershed, k=-1)
 
             #matrikScalar = np.flipud(np.rot90(tampilflowaccum, k=1))
-            plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False,
-                             pickable=False)
-            plotter.add_mesh(coneUtara, color="magenta", specular=1.0, show_edges=True, smooth_shading=False,
-                             pickable=False)
+            #plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False,
+            #                 pickable=False)
+            #plotter.add_mesh(coneUtara, color="magenta", specular=1.0, show_edges=True, smooth_shading=False,
+            #                 pickable=False)
 
             plotter.add_mesh(grid, scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True,
                              pickable=True, show_scalar_bar=False, smooth_shading=False, lighting=False)
@@ -147,11 +147,11 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
                 px, py = int(kolomCone), int(barisCone)
                 pz = matrikKecil[py, px]
                 print(f"titik cone baru px {px} py {py} pz {pz}")
-                cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone / 4,
+                cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone,
                                height=tingicone * 2)
                 print(f"baris error 1")
                 plotter.add_mesh(cone, color='cyan', smooth_shading=False, pickable=False, lighting=False,
-                                 show_edges=False)
+                                 show_edges=True)
                 print(f"baris error 2")
             viewer.update()
             ctrl.view_update()

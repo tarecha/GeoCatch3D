@@ -10,7 +10,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
 import time
-import matplotlib.colors as mcolors
+
 
 # Modul lokal AGUNG222
 import modul.config as cfg
@@ -22,7 +22,6 @@ from trame.ui.vuetify3 import SinglePageLayout
 from pyvista.trame.ui import plotter_ui
 from trame.widgets import html, vuetify3 as vuetify
 
-# ... (Lanjutkan kodemu)
 
 
 state.items_list = curahhujan.tabelkoefisien
@@ -253,16 +252,18 @@ def run_analysis():
         state.ketinggiantitiktengah = round(ketinggianTengah,2)
         ketinggianUtara = matrikKecil[barisUtara - 1, kolomUtara]
 
-        tingicone = max(rad * 0.5, 30)  # tinggi minimal 3 unit (agar tetap terlihat)
-        radiuscone = tingicone * 0.1  # radius = 10% dari tinggi (proporsional)
+        rasio = max(rad * 0.5, 20)  # tinggi minimal 3 unit (agar tetap terlihat)
+        radiuscone = (rasio * 0.05)  # radius = 10% dari tinggi (proporsional)
+        tingicone = rasio * 2
 
         # Penempatan z: letakkan cone agar base-nya menempel terrain
         zConeTengah = ketinggianTengah + tingicone / 2
         zConeUtara = ketinggianUtara + tingicone / 2
         print(f"tingicone {tingicone}, radiuscone {radiuscone}")
 
-        coneTengah = pv.Cone(center=(kolomTengah, barisTengah, zConeTengah), radius=radiuscone, height=tingicone, direction=(0, 0, 1))
-        coneUtara = pv.Cone(center=(kolomUtara, barisUtara - 1, zConeUtara), radius=radiuscone, height=tingicone, direction=(0, 0, 1))
+        coneTengah = pv.Cone(center=(kolomTengah, barisTengah, zConeTengah), radius=radiuscone, height=tingicone, direction=(0, 0, -1))
+        coneUtara = pv.Cone(center=(kolomUtara, barisUtara - 1, zConeUtara), radius=radiuscone, height=tingicone, direction=(0, 0, -1))
+
         plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False,pickable=False)
         plotter.add_mesh(coneUtara, color="magenta", specular=1.0, show_edges=True, smooth_shading=False,pickable=False)
         meshoption = state.mesh_option
@@ -283,8 +284,8 @@ def run_analysis():
             for row in koordinatCekungan:
                 px, py = int(row[1]), int(row[0])
                 pz = matrikKecil[py, px]
-                cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone/4, height=tingicone*2)
-                plotter.add_mesh(cone, color='cyan', smooth_shading=False,pickable=False, lighting=False,show_edges=False)
+                cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone, height=tingicone*2)
+                plotter.add_mesh(cone, color='cyan', smooth_shading=False,pickable=False, lighting=False,show_edges=True)
                 time.sleep(0.05)
 
 
