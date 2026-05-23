@@ -575,5 +575,5 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
 
 if __name__ == "__main__":
     print(f"Akses melalui webrowser dari PC lain dengan IP : ")
-    os.system("ipconfig | findstr IPv4")  # Ini akan langsung mencetak IP kamu di terminal
+    os.system("ipconfig | findstr IPv4")  # Ini akan langsung mencetak IP kamu dsi terminal
     server.start(host="0.0.0.0", port=80, argv=[])
