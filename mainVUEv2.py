@@ -5,7 +5,7 @@ import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
-import time
+import time, os
 
 import matplotlib.colors as mcolors
 # Modul lokal AGUNG222
@@ -575,4 +575,6 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                style="color: blue; text-decoration: underline;")
 
 if __name__ == "__main__":
-    server.start(port=80, host="0.0.0.0")
+    print(f"Akses melalui webrowser dari PC lain dengan IP : ")
+    os.system("ipconfig | findstr IPv4")  # Ini akan langsung mencetak IP kamu di terminal
+    server.start(host="0.0.0.0", port=80, argv=[])
