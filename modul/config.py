@@ -1,3 +1,5 @@
+hostportv2 = 81
+hostportv3 = 80
 latitude= "-7.942544" #bedengan
 longitude= "112.540593"
 defaultmeshoption = "FAwatershed"

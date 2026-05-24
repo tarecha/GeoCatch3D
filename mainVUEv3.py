@@ -8,9 +8,10 @@ import numpy as np
 import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
-import re
-import time, os
-
+import re, subprocess
+import time
+import webbrowser
+import threading
 
 # Modul lokal AGUNG222
 import modul.config as cfg
@@ -573,7 +574,42 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         html.A(v_bind_href="estimasi_url", v_text="estimasi_text", target="_blank",
                                style="color: blue; text-decoration: underline;")
 
+
+
+# ... (pastikan import library server Anda tetap ada) ...
+
+def buka_browser(ip, port=80):
+    # Jika port bukan 80, tambahkan titik dua dan port. Jika 80, hilangkan.
+    if port == 80:
+        url = f"http://{ip}"
+    else:
+        url = f"http://{ip}:{port}"
+
+    webbrowser.open(url)
+
+
 if __name__ == "__main__":
-    print(f"Akses melalui webrowser dari PC lain dengan IP : ")
-    os.system("ipconfig | findstr IPv4")  # Ini akan langsung mencetak IP kamu dsi terminal
-    server.start(host="0.0.0.0", port=80, argv=[])
+    print("Akses melalui web browser dari PC lain dengan link berikut:")
+
+    hasil = subprocess.run("ipconfig | findstr IPv4", shell=True, capture_output=True, text=True)
+    daftar_ip = re.findall(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', hasil.stdout)
+
+
+
+
+    if daftar_ip:
+        # Menjalankan fungsi buka_browser dengan jeda 1.5 detik
+        # Kita ambil IP pertama (daftar_ip[0]) untuk dibuka otomatis di PC ini
+        for ip in daftar_ip:
+            if cfg.hostportv3 == 80:
+                print(f" -> http://{ip}")
+                threading.Timer(1.5, buka_browser, args=(ip,)).start()
+
+            else:
+                print(f" -> http://{ip}:{cfg.hostportv3}")
+                threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
+
+
+
+    # Jalankan server
+    server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
