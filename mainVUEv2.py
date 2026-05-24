@@ -147,13 +147,16 @@ def run_analysis():
         return
     reset_plotter()
     try:
+
+
+        # 1. Bersihkan semua input dari spasi berlebih
         lat_str = state.latitude_input.strip()
         lon_str = state.longitude_input.strip()
         rad_str = state.radius_input.strip()
-
         c_str = state.user_defined_input.strip()
         rainfall_str = state.user_defined_rainfall_input.strip()
 
+        # 2. Validasi Koordinat dan Radius
         if not re.match(r"^-?\d+(\.\d+)?$", lat_str):
             raise ValueError("Latitude harus berupa angka desimal.")
         if not re.match(r"^-?\d+(\.\d+)?$", lon_str):
@@ -161,47 +164,51 @@ def run_analysis():
         if not rad_str.isdigit():
             raise ValueError("Radius harus berupa bilangan bulat positif.")
 
-        if state.selected_option == None:
-            raise ValueError("Pilih koefisien")
-        if (state.selected_option == "user_defined") & (c_str == ""):
-            raise ValueError("Isi koefisien manual")
-        if state.selected_option_rainfall == None:
-            raise ValueError("Pilih curah hujan")
+        # Konversi koordinat dan radius (karena sudah pasti valid)
+        lat = float(lat_str)
+        lon = float(lon_str)
+        rad = int(rad_str)
 
-        print(f"rainfall_str {rainfall_str} state.rainfall {state.selected_option_rainfall}")
-        if (state.selected_option_rainfall == "user_defined") and not rainfall_str.replace('.', '', 1).isdigit():
-            raise ValueError("Curah hujan harus berupa angka positif.")
+        # 3. Validasi dan Pengisian Koefisien (C)
+        if state.selected_option is None:
+            raise ValueError("Pilih koefisien!")
 
-        if c_str != "":
-            # 1. Pastikan input adalah angka (mencegah error jika diisi huruf)
+        if state.selected_option == "user_defined":
+            if c_str == "":
+                raise ValueError("Koefisien harus pecahan 0 < C <= 1")
             if not c_str.replace('.', '', 1).isdigit():
                 raise ValueError("Koefisien harus pecahan 0 < C <= 1")
 
             c_val = float(c_str)
-
-            # 2. Pastikan nilainya > 0 dan <= 1
             if c_val <= 0 or c_val > 1:
                 raise ValueError("Koefisien harus pecahan 0 < C <= 1")
-
             cfg.koefisien = c_val
-
-        elif state.selected_option != "user_defined":
+        else:
+            # Jika memilih dari dropdown (bukan user_defined)
             cfg.koefisien = float(state.selected_option)
 
-
-        print(f"koefisien di selek {cfg.koefisien}")
         state.koefisien = cfg.koefisien
+        print(f"Koefisien diselek: {cfg.koefisien}")
 
-        if rainfall_str != "":
+        # 4. Validasi dan Pengisian Curah Hujan
+        if state.selected_option_rainfall is None:
+            raise ValueError("Pilih curah hujan!")
+
+        if state.selected_option_rainfall == "user_defined":
+            if rainfall_str == "":
+                raise ValueError("Curah hujan harus berupa angka positif.")
+            if not rainfall_str.replace('.', '', 1).isdigit():
+                raise ValueError("Curah hujan harus berupa angka positif.")
+
             cfg.curahhujan = float(rainfall_str)
-        elif (state.selected_option != "user_defined"):
+        else:
+            # Jika memilih dari dropdown
             cfg.curahhujan = float(state.selected_option_rainfall)
-        print(f"curah hujan  di selek {cfg.curahhujan}")
-        state.curahhujan = cfg.curahhujan
 
-        lat = float(lat_str)
-        lon = float(lon_str)
-        rad = int(rad_str)
+        state.curahhujan = cfg.curahhujan
+        print(f"Curah hujan diselek: {cfg.curahhujan}")
+
+
 
         state.loading = True
         state.alert_show = False
@@ -531,7 +538,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         )
                         vuetify.VBtn("Analysys", color="primary", click=ctrl.run_analysis)
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple", class_="mt-3")
-                        vuetify.VAlert(type="info", v_model="alert_show", v_text="alert_message", class_="mt-3")
+                        vuetify.VAlert(type="info", v_model="alert_show", v_text="alert_message", class_="mt-3 pa-2 text-caption",density=True)
 
                     with vuetify.VCard():
                         vuetify.VCardTitle("Informasi Titik")
