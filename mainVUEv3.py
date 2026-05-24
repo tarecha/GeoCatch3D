@@ -537,7 +537,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple", class_="mt-3")
                         #vuetify.VAlert(type="info", v_model="alert_show", v_text="alert_message", class_="mt-3 text-wrap",density="compact",style="white-space: normal; word-break: break-word;")
                     # Pastikan Anda sudah mengimport 'html' dari trame.widgets
-                    # from trame.widgets import html, vuetify
+                    # from trame.widgets import html, vuetifyd
 
                         with vuetify.VAlert(type="info", v_model="alert_show", density="compact", class_="mt-3"):
                             # Teks diletakkan di dalam Div, dan CSS pelipat teks diterapkan langsung ke Div ini
