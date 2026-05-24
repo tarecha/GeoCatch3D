@@ -169,15 +169,26 @@ def run_analysis():
             raise ValueError("Pilih curah hujan")
 
         print(f"rainfall_str {rainfall_str} state.rainfall {state.selected_option_rainfall}")
-        if (state.selected_option_rainfall == "user_defined") & ((rainfall_str == "") or not (rainfall_str.isdigit())):
-            raise ValueError("Curah hujan harus berupa bilangan bulat positif.")
+        if (state.selected_option_rainfall == "user_defined") and not rainfall_str.replace('.', '', 1).isdigit():
+            raise ValueError("Curah hujan harus berupa angka positif.")
 
         if c_str != "":
-            if float(c_str) < 0 or float(c_str) > 1:
+            # 1. Pastikan input adalah angka (mencegah error jika diisi huruf)
+            if not c_str.replace('.', '', 1).isdigit():
                 raise ValueError("Koefisien harus pecahan 0 < C <= 1")
-            cfg.koefisien = float(c_str)
-        elif (state.selected_option != "user_defined"):
+
+            c_val = float(c_str)
+
+            # 2. Pastikan nilainya > 0 dan <= 1
+            if c_val <= 0 or c_val > 1:
+                raise ValueError("Koefisien harus pecahan 0 < C <= 1")
+
+            cfg.koefisien = c_val
+
+        elif state.selected_option != "user_defined":
             cfg.koefisien = float(state.selected_option)
+
+
         print(f"koefisien di selek {cfg.koefisien}")
         state.koefisien = cfg.koefisien
 
