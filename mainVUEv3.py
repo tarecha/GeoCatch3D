@@ -224,10 +224,13 @@ def run_analysis():
         pixelBarisAwal = baris - radiusBaris
         pixelKolomAwal = kolom - radiusKolom
 
-        matrikKecil = np.zeros((ukuran_baris, ukuran_kolom), dtype=np.float32)
-        for i in range(ukuran_baris):
-            for j in range(ukuran_kolom):
-                matrikKecil[i, j] = matrikBesar[i + pixelBarisAwal, j + pixelKolomAwal]
+        # matrikKecil = np.zeros((ukuran_baris, ukuran_kolom), dtype=np.float32)
+        # for i in range(ukuran_baris):
+        #     for j in range(ukuran_kolom):
+        #         matrikKecil[i, j] = matrikBesar[i + pixelBarisAwal, j + pixelKolomAwal]
+        matrikKecil = matrikBesar[pixelBarisAwal: pixelBarisAwal + ukuran_baris,
+                      pixelKolomAwal: pixelKolomAwal + ukuran_kolom].astype(np.float32).copy()
+
 
         ketinggianmaxmatrikKecil = np.max(matrikKecil)
         print(f"ketinggianmax {ketinggianmaxmatrikKecil}")
@@ -612,24 +615,44 @@ def buka_browser(ip, port=80):
 if __name__ == "__main__":
     print("Akses melalui web browser dari PC lain dengan link berikut:")
 
-    hasil = subprocess.run("ipconfig | findstr IPv4", shell=True, capture_output=True, text=True)
-    daftar_ip = re.findall(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', hasil.stdout)
+    import socket
 
 
+    def dapatkan_ip_lokal():
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            # Tidak perlu koneksi internet, ini hanya memancing interface jaringan aktif
+            s.connect(('10.255.255.255', 1))
+            IP = s.getsockname()[0]
+        except Exception:
+            IP = '127.0.0.1'
+        finally:
+            s.close()
+        return IP
 
 
-    if daftar_ip:
+    # Ambil IP dan jadikan bentuk list agar tetap kompatibel dengan loop for Anda
+    ip_lokal = dapatkan_ip_lokal()
+    daftar_ip = [ip_lokal]
+
+    if daftar_ip and ip_lokal != '127.0.0.1':
         # Menjalankan fungsi buka_browser dengan jeda 1.5 detik
-        # Kita ambil IP pertama (daftar_ip[0]) untuk dibuka otomatis di PC ini
+        # Kita ambil IP pertama untuk dibuka otomatis di PC ini
         for ip in daftar_ip:
             if cfg.hostportv3 == 80:
                 print(f" -> http://{ip}")
                 threading.Timer(1.5, buka_browser, args=(ip,)).start()
-
             else:
                 print(f" -> http://{ip}:{cfg.hostportv3}")
                 threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
-
+    elif ip_lokal == '127.0.0.1':
+        print(" -> Perangkat tidak terhubung ke jaringan (Offline). Menggunakan localhost.")
+        if cfg.hostportv3 == 80:
+            print(f" -> http://127.0.0.1")
+            threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
+        else:
+            print(f" -> http://127.0.0.1:{cfg.hostportv3}")
+            threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
 
 
     # Jalankan server
