@@ -116,14 +116,17 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         # hal ini akan terlihat bedanya di dataran rendah bisa tidak relevan jika deltanya beda dikit
 
         matrikKecil = np.flipud(matrikKecil)
-        tinggi, lebar = matrikKecil.shape
+        #tinggi, lebar = matrikKecil.shape
         # matrikecil2 = matrikKecil.copy()
-        for i in range(tinggi):
-            for j in range(lebar):
-               #print(f"i {i}, j {j}")
-                if matrikKecil[i, j] <= titikTengah:
-                    matrikFA[i, j] = 0
-                    # matrikecil2[i, j] = 0
+        # for i in range(tinggi):
+        #     for j in range(lebar):
+        #        #print(f"i {i}, j {j}")
+        #         if matrikKecil[i, j] <= titikTengah:
+        #             matrikFA[i, j] = 0
+        #             # matrikecil2[i, j] = 0
+
+        # KODE OPTIMASI (Seketika selesai) kode baru gantikan loop bersyarat diatas
+        matrikFA[matrikKecil <= titikTengah] = 0
 
 
         #simpan file tif FA dengan threshold ketinggian
@@ -215,26 +218,70 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
         for cid in clusters:
             cluster_data = stackstream[stackstream[:, 2] == cid]
             # print(f"cluster_data {cluster_data}, {cluster_data.dtype}")
+            # max_FA = -np.inf
+            # elv = -np.inf
+            # luasdas = 0
+            # best_row, best_col = -1, -1
+            #
+            # for row, col, _ in cluster_data:
+            #     nilai = flow_accum_D8[int(row), int(col)]
+            #     print(f"row {row}, col {col}, nilai {nilai}")
+            #     if (nilai > max_FA) & (matrikKecil[row, col] > titikTengah):
+            #     #if (nilai > max_FA):
+            #
+            #         max_FA = nilai
+            #         max_FAMDIF = flow_accum_MDINF[int(row), int(col)]
+            #         print(f"max_FA {max_FA}")
+            #         print(f"max_FAMDIF {max_FAMDIF}")
+            #         #max_FAMDIF = max_FA
+            #         best_row, best_col = row, col
+            #         elv = matrikKecil[row, col]
+            #         luasdas = konverter.cells_to_km2(flow_accum_MDINF[row, col], latitude_deg)[0]
+            #
+            # outlet.append([best_row, best_col, cid, max_FAMDIF, elv, luasdas])
+
+            #optimasi kecepatan kode
+            # Inisialisasi nilai bawaan jika tidak ada yang memenuhi syarat
             max_FA = -np.inf
+            max_FAMDIF = 0  # Tambahkan inisialisasi ini agar tidak error saat di-append jika tidak ada yang valid
             elv = -np.inf
             luasdas = 0
             best_row, best_col = -1, -1
 
-            for row, col, _ in cluster_data:
-                nilai = flow_accum_D8[int(row), int(col)]
-                print(f"row {row}, col {col}, nilai {nilai}")
-                if (nilai > max_FA) & (matrikKecil[row, col] > titikTengah):
-                #if (nilai > max_FA):
+            # Konversi kolom menjadi integer array agar bisa dipakai sebagai indeks
+            rows_idx = cluster_data[:, 0].astype(int)
+            cols_idx = cluster_data[:, 1].astype(int)
 
-                    max_FA = nilai
-                    max_FAMDIF = flow_accum_MDINF[int(row), int(col)]
-                    print(f"max_FA {max_FA}")
-                    print(f"max_FAMDIF {max_FAMDIF}")
-                    #max_FAMDIF = max_FA
-                    best_row, best_col = row, col
-                    elv = matrikKecil[row, col]
-                    luasdas = konverter.cells_to_km2(flow_accum_MDINF[row, col], latitude_deg)[0]
+            # Ambil array nilai FA dan Ketinggian secara simultan tanpa loop
+            nilai_fa_arr = flow_accum_D8[rows_idx, cols_idx]
+            ketinggian_arr = matrikKecil[rows_idx, cols_idx]
 
+            # Buat kondisi mask (hanya yang elevasi > titikTengah)
+            valid_mask = ketinggian_arr > titikTengah
+
+            if np.any(valid_mask):
+                # Ekstrak data yang valid saja (yang elevasinya di atas titikTengah)
+                valid_rows = rows_idx[valid_mask]
+                valid_cols = cols_idx[valid_mask]
+                valid_fa = nilai_fa_arr[valid_mask]
+
+                # Temukan index dari nilai FA tertinggi di dalam array yang sudah divalidasi
+                best_idx = np.argmax(valid_fa)
+
+                # Assign nilai akhir berdasarkan index terbaik
+                max_FA = valid_fa[best_idx]
+                best_row = valid_rows[best_idx]
+                best_col = valid_cols[best_idx]
+
+                elv = matrikKecil[best_row, best_col]
+                max_FAMDIF = flow_accum_MDINF[best_row, best_col]
+                luasdas = konverter.cells_to_km2(max_FAMDIF, latitude_deg)[0]
+
+                # (Opsional) Jika ingin tetap print nilai max seperti kode asli:
+                print(f"max_FA {max_FA}")
+                print(f"max_FAMDIF {max_FAMDIF}")
+
+            # Masukkan ke list outlet
             outlet.append([best_row, best_col, cid, max_FAMDIF, elv, luasdas])
             # print(f"outlet {outlet}")
             # for row in outlet:
