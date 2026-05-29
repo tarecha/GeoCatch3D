@@ -146,8 +146,10 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
 
         # Hitung nilai unik dan jumlah kemunculannya ambil nilai yang lebih dari 1
         # 0 atau 1 berarti tidak mengalir ke sel tersebut
-        nilaiFAunik = np.unique(matrikFA.astype(int)) #cari nilai fa unik
-        nilaiFAunik = nilaiFAunik[nilaiFAunik > 0][::-1] #urutkan yang terbesar
+        # Ambil hanya piksel yang ada aliran airnya (hemat memori sangat drastis)
+        matrikFA_valid = matrikFA[matrikFA > 0].astype(int)
+        # Cari nilai unik hanya dari data yang sudah disaring
+        nilaiFAunik = np.unique(matrikFA_valid)[::-1]
         # print(f"nilaiFAunik {nilaiFAunik}")
         # for row in nilaiFAunik:
         #     print(row)
@@ -317,16 +319,35 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
 
         # hapus pasangan titik yang berdekatan (keduanya dihapus)
         #menghapus aliran percabangan
-        to_remove = set()
-        n = len(koordinatpourpoint)
-        for i in range(n):
-            r1, c1 = koordinatpourpoint[i, 0], koordinatpourpoint[i, 1]
-            for j in range(i + 1, n):
-                r2, c2 = koordinatpourpoint[j, 0], koordinatpourpoint[j, 1]
-                if abs(r1 - r2) <= cfg.thresholdojarakutletbedekatan and abs(c1 - c2) <= cfg.thresholdojarakutletbedekatan:
-                    print(f"Hapus pasangan dekat: index {i} ({r1},{c1}) dan {j} ({r2},{c2})")
-                    to_remove.add(i)
-                    to_remove.add(j)
+        # to_remove = set()
+        # n = len(koordinatpourpoint)
+        # for i in range(n):
+        #     r1, c1 = koordinatpourpoint[i, 0], koordinatpourpoint[i, 1]
+        #     for j in range(i + 1, n):
+        #         r2, c2 = koordinatpourpoint[j, 0], koordinatpourpoint[j, 1]
+        #         if abs(r1 - r2) <= cfg.thresholdojarakutletbedekatan and abs(c1 - c2) <= cfg.thresholdojarakutletbedekatan:
+        #             print(f"Hapus pasangan dekat: index {i} ({r1},{c1}) dan {j} ({r2},{c2})")
+        #             to_remove.add(i)
+        #             to_remove.add(j)
+
+        #optimasi
+            # Ekstrak kolom baris dan kolom saja
+            coords = koordinatpourpoint[:, 0:2].astype(int)
+
+            # Hitung selisih jarak absolut (baris dan kolom) untuk semua kombinasi titik sekaligus
+            diff_row = np.abs(coords[:, 0, None] - coords[:, 0])
+            diff_col = np.abs(coords[:, 1, None] - coords[:, 1])
+
+            # Cek kondisi threshold
+            close_mask = (diff_row <= cfg.thresholdojarakutletbedekatan) & (
+                        diff_col <= cfg.thresholdojarakutletbedekatan)
+
+            # Abaikan jarak titik dengan dirinya sendiri (diagonal matriks bernilai False)
+            np.fill_diagonal(close_mask, False)
+
+            # Dapatkan index titik mana saja yang melanggar kondisi
+            to_remove_arr = np.where(close_mask)[0]
+            to_remove = set(to_remove_arr)
 
         koordinatpourpoint = np.delete(koordinatpourpoint, list(to_remove), axis=0)
 

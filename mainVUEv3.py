@@ -9,11 +9,10 @@ import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
-import time
 import webbrowser
 import threading
 import socket
-
+import glob, os
 # Modul lokal AGUNG222
 import modul.config as cfg
 from modul import curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
@@ -35,6 +34,7 @@ ctrl.selected_option = cfg.defautselected_option
 #state.custom_option_input = []
 state.curahhujan ="-"
 state.koefisien = "-"
+
 state.latitude_input = str(cfg.latitude)
 state.longitude_input = str(cfg.longitude)
 # state.latitude_input = "-8.302212" #tambakrejo1
@@ -93,7 +93,7 @@ dummy_awal = pv.Cube()
 plotter.add_mesh(dummy_awal, name="dummy_awal", opacity=0.0)
 plotter.render() #
 viewer = None
-@ctrl.add("view_update")
+@ctrl.set("view_update")
 def view_update():
     # kosong, hanya untuk trigger remote viewer
     pass
@@ -111,7 +111,16 @@ def reset_plotter():
     print("Actor saat ini:", len(plotter.renderer.actors))
     print("Renderer props setelah clear:", len(plotter.renderer._actors))
     #plotter.reset_camera()
-    time.sleep(0.5)
+
+
+def bersihkan_ramdisk():
+    # Mengambil semua file di dalam folder temp
+    files = glob.glob(os.path.join(cfg.pathTempMaps, '*'))
+    for f in files:
+        try:
+            os.remove(f)
+        except Exception as e:
+            pass # Abaikan jika ada file yang sedang dikunci/digunakan
 
 
 def clear_state(state):
@@ -139,16 +148,21 @@ def clear_state(state):
     state.kemiringan = "-"
 @ctrl.set("run_analysis")
 def run_analysis():
-
-
-    clear_state(state)
-    global plotter, viewer
-
-    if not viewer:
-        print("❗ Viewer belum siap. Analisis dibatalkan.")
-        return
-    reset_plotter()
     try:
+
+        state.loading = True
+
+        state.alert_show = False
+        bersihkan_ramdisk()
+
+        clear_state(state)
+        global plotter, viewer
+
+        if not viewer:
+            print("❗ Viewer belum siap. Analisis dibatalkan.")
+            return
+        reset_plotter()
+
 
 
         # 1. Bersihkan semua input dari spasi berlebih
@@ -210,8 +224,7 @@ def run_analysis():
         state.curahhujan = cfg.curahhujan
         print(f"Curah hujan diselek: {cfg.curahhujan}")
 
-        state.loading = True
-        state.alert_show = False
+
 
 
         radiusBaris = rad
@@ -256,7 +269,7 @@ def run_analysis():
         x = np.arange(0, ukuran_kolom, dtype=np.float32)
         y = np.arange(0, ukuran_baris, dtype=np.float32)
         X, Y = np.meshgrid(x, y)
-        grid = pv.StructuredGrid(X.copy(), Y.copy(), matrikKecil.copy())
+        grid = pv.StructuredGrid(X, Y, matrikKecil)
 
         terrain_colors = plt.get_cmap("terrain")(np.linspace(0, 1, 256))
         zmin = np.min(matrikKecil)
@@ -307,7 +320,7 @@ def run_analysis():
                 pz = matrikKecil[py, px]
                 cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone, height=tingicone*2)
                 plotter.add_mesh(cone, color='cyan', smooth_shading=False,pickable=False, lighting=False,show_edges=True)
-                time.sleep(0.05)
+
 
 
         #rubah cmap agar nilai paling rendah warna putih
@@ -382,12 +395,12 @@ def run_analysis():
         plotter.reset_camera()
         state.alert_message = "✅ Analisis berhasil dirender ulang "
         state.alert_show = True
-        time.sleep(0.5)
+
         callback = visualCallBackTrame.make_callback(lat, lon, radiusBaris, radiusKolom, barisMatriks, kolomMatriks,
                                                      state, ketinggianTengah, flow_accum_MDInf, flow_accum_D8,
                                                      matriktributaryidentifier, matrikKecil.copy(),transformasi, plotter, custom_cmapfa1,grid,coneTengah, coneUtara,tingicone,pv,radiuscone, viewer, ctrl)
         plotter.disable_picking()
-        time.sleep(0.5)
+
         plotter.enable_point_picking(callback=callback, tolerance=0.025, use_picker=True, show_point=True, color="red", point_size=25,
                                      show_message=False)
 
@@ -537,7 +550,9 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
 
                             v_show="mesh_option === 'watershedinteractive'",
                         )
-                        vuetify.VBtn("Analysys", color="primary", click=ctrl.run_analysis)
+
+                        # Contoh pada tombol Anda:
+                        vuetify.VBtn("Analysys", color="primary", click=ctrl.run_analysis, disabled=("loading", False), loading=("loading", False))
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple", class_="mt-3")
                         #vuetify.VAlert(type="info", v_model="alert_show", v_text="alert_message", class_="mt-3 text-wrap",density="compact",style="white-space: normal; word-break: break-word;")
                     # Pastikan Anda sudah mengimport 'html' dari trame.widgets
@@ -614,46 +629,50 @@ def buka_browser(ip, port=80):
 
 
 if __name__ == "__main__":
-    print("Akses melalui web browser dari PC lain dengan link berikut:")
+    try:
+        print("Akses melalui web browser dari PC lain dengan link berikut:")
 
 
+        def dapatkan_ip_lokal():
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            try:
+                # Tidak perlu koneksi internet, ini hanya memancing interface jaringan aktif
+                s.connect(('10.255.255.255', 1))
+                IP = s.getsockname()[0]
+            except Exception:
+                IP = '127.0.0.1'
+            finally:
+                s.close()
+            return IP
 
-    def dapatkan_ip_lokal():
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        try:
-            # Tidak perlu koneksi internet, ini hanya memancing interface jaringan aktif
-            s.connect(('10.255.255.255', 1))
-            IP = s.getsockname()[0]
-        except Exception:
-            IP = '127.0.0.1'
-        finally:
-            s.close()
-        return IP
 
+        # Ambil IP dan jadikan bentuk list agar tetap kompatibel dengan loop for Anda
+        ip_lokal = dapatkan_ip_lokal()
+        daftar_ip = [ip_lokal]
 
-    # Ambil IP dan jadikan bentuk list agar tetap kompatibel dengan loop for Anda
-    ip_lokal = dapatkan_ip_lokal()
-    daftar_ip = [ip_lokal]
-
-    if daftar_ip and ip_lokal != '127.0.0.1':
-        # Menjalankan fungsi buka_browser dengan jeda 1.5 detik
-        # Kita ambil IP pertama untuk dibuka otomatis di PC ini
-        for ip in daftar_ip:
+        if daftar_ip and ip_lokal != '127.0.0.1':
+            # Menjalankan fungsi buka_browser dengan jeda 1.5 detik
+            # Kita ambil IP pertama untuk dibuka otomatis di PC ini
+            for ip in daftar_ip:
+                if cfg.hostportv3 == 80:
+                    print(f" -> http://{ip}")
+                    threading.Timer(1.5, buka_browser, args=(ip,)).start()
+                else:
+                    print(f" -> http://{ip}:{cfg.hostportv3}")
+                    threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
+        elif ip_lokal == '127.0.0.1':
+            print(" -> Perangkat tidak terhubung ke jaringan (Offline). Menggunakan localhost.")
             if cfg.hostportv3 == 80:
-                print(f" -> http://{ip}")
-                threading.Timer(1.5, buka_browser, args=(ip,)).start()
+                print(f" -> http://127.0.0.1")
+                threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
             else:
-                print(f" -> http://{ip}:{cfg.hostportv3}")
-                threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
-    elif ip_lokal == '127.0.0.1':
-        print(" -> Perangkat tidak terhubung ke jaringan (Offline). Menggunakan localhost.")
-        if cfg.hostportv3 == 80:
-            print(f" -> http://127.0.0.1")
-            threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
-        else:
-            print(f" -> http://127.0.0.1:{cfg.hostportv3}")
-            threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
+                print(f" -> http://127.0.0.1:{cfg.hostportv3}")
+                threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
 
+        # Jalankan server
+        server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
 
-    # Jalankan server
-    server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
+    except Exception as e:
+        raise ValueError(f"Terjadi error: {e}")
+        print(f"Terjadi error: {e}")
+
