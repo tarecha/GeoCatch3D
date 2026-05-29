@@ -5,7 +5,6 @@ import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
-import time
 import webbrowser
 import threading
 import socket
@@ -21,7 +20,7 @@ from trame.ui.vuetify import SinglePageLayout
 from pyvista.trame.ui import plotter_ui
 from trame.widgets import html, vuetify
 # Konfigurasi Trame Server
-
+import glob, os
 
 server = get_server(client_type="vue2")
 state, ctrl = server.state, server.controller
@@ -110,7 +109,15 @@ def reset_plotter():
     print("Actor saat ini:", len(plotter.renderer.actors))
     print("Renderer props setelah clear:", len(plotter.renderer._actors))
     #plotter.reset_camera()
-    time.sleep(0.5)
+
+def bersihkan_ramdisk():
+    # Mengambil semua file di dalam folder temp
+    files = glob.glob(os.path.join(cfg.pathTempMaps, '*'))
+    for f in files:
+        try:
+            os.remove(f)
+        except Exception as e:
+            pass # Abaikan jika ada file yang sedang dikunci/digunakan
 
 
 def clear_state(state):
@@ -138,7 +145,7 @@ def clear_state(state):
     state.kemiringan = "-"
 @ctrl.set("run_analysis")
 def run_analysis():
-
+    bersihkan_ramdisk()
 
     clear_state(state)
     global plotter, viewer
@@ -309,7 +316,7 @@ def run_analysis():
                 pz = matrikKecil[py, px]
                 cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone, height=tingicone*2)
                 plotter.add_mesh(cone, color='cyan', smooth_shading=False,pickable=False, lighting=False,show_edges=True)
-                time.sleep(0.05)
+
 
 
         #rubah cmap agar nilai paling rendah warna putih
@@ -384,12 +391,12 @@ def run_analysis():
         plotter.reset_camera()
         state.alert_message = "✅ Analisis berhasil dirender ulang "
         state.alert_show = True
-        time.sleep(0.5)
+
         callback = visualCallBackTrame.make_callback(lat, lon, radiusBaris, radiusKolom, barisMatriks, kolomMatriks,
                                                      state, ketinggianTengah, flow_accum_MDInf, flow_accum_D8,
                                                      matriktributaryidentifier, matrikKecil.copy(),transformasi, plotter, custom_cmapfa1,grid,coneTengah, coneUtara,tingicone,pv,radiuscone, viewer, ctrl)
         plotter.disable_picking()
-        time.sleep(0.5)
+
         plotter.enable_point_picking(callback=callback, tolerance=0.025, use_picker=True, show_point=True, color="red", point_size=25,
                                      show_message=False)
 
