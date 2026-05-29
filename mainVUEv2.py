@@ -4,14 +4,15 @@ import numpy as np
 import pyvista as pv
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
-import re, subprocess
+import re
 import time
 import webbrowser
 import threading
+import socket
 import matplotlib.colors as mcolors
 # Modul lokal AGUNG222
 import modul.config as cfg
-from modul import plotter as pla, curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
+from modul import curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
 import modul.konverter as knv
 
 # Trame (UI Web)
@@ -610,7 +611,7 @@ def buka_browser(ip, port=80):
 if __name__ == "__main__":
     print("Akses melalui web browser dari PC lain dengan link berikut:")
 
-    import socket
+
 
 
     def dapatkan_ip_lokal():
