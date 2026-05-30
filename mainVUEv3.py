@@ -15,7 +15,6 @@ import threading
 import socket
 import glob, os
 import time
-
 # Modul lokal AGUNG222
 import modul.config as cfg
 from modul import curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
@@ -33,7 +32,7 @@ ctrl.rainfall = cfg.defautrainfall
 ctrl.selected_option = cfg.defautselected_option
 state.curahhujan = "-"
 state.koefisien = "-"
-
+state.mulai_analisis = False
 state.latitude_input = str(cfg.latitude)
 state.longitude_input = str(cfg.longitude)
 state.user_defined_input = ""
@@ -137,11 +136,17 @@ def clear_state(state):
     state.kemiringan = "-"
 
 
-@ctrl.set("run_analysis")
-def run_analysis():
+#@ctrl.set("run_analysis")
+#def run_analysis():
+@state.change("mulai_analisis")
+def run_analysis(mulai_analisis, **kwargs):
+    # Jika sinyalnya False, abaikan
+    if not mulai_analisis:
+        return
     try:
-        state.loading = True
-        state.alert_show = False
+        #state.loading = True
+
+
 
         bersihkan_ramdisk()
 
@@ -400,6 +405,7 @@ def run_analysis():
         print(f"Terjadi error: {e}")
     finally:
         state.loading = False
+        state.mulai_analisis = False
 
 
 with SinglePageLayout(server, toolbar=True, footer=False) as layout:
@@ -528,7 +534,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         )
 
                         # PERBAIKAN 3: Tombol analisis kembali pakai standar Trame (akan bekerja sinkron dengan yield)
-                        vuetify.VBtn("Analysys", color="primary", click=ctrl.run_analysis, disabled=("loading", False),
+                        vuetify.VBtn("Analysys", color="primary", click="loading = true; mulai_analisis = true", disabled=("loading", False),
                                      loading=("loading", False))
 
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple",
