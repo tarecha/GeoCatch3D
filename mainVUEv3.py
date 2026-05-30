@@ -102,7 +102,7 @@ def reset_plotter():
     plotter.clear_actors()
     plotter.remove_actor("*")
     plotter.renderer.RemoveAllViewProps()
-    plotter.set_scale(1, 1, 0.033333)
+    #plotter.set_scale(1, 1, 0.033333)
     #if viewer:
     #    plotter.reset_camera()
     #    viewer.update()
@@ -161,7 +161,7 @@ def run_analysis():
         if not viewer:
             print("❗ Viewer belum siap. Analisis dibatalkan.")
             return
-        reset_plotter()
+
 
 
 
@@ -298,8 +298,6 @@ def run_analysis():
         coneTengah = pv.Cone(center=(kolomTengah, barisTengah, zConeTengah), radius=radiuscone, height=tingicone, direction=(0, 0, -1))
         coneUtara = pv.Cone(center=(kolomUtara, barisUtara - 1, zConeUtara), radius=radiuscone, height=tingicone, direction=(0, 0, -1))
 
-        plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False,pickable=False)
-        plotter.add_mesh(coneUtara, color="magenta", specular=1.0, show_edges=True, smooth_shading=False,pickable=False)
         meshoption = state.mesh_option
         print(f"meshoption {meshoption}")
         koordinatCekungan, flow_accum_MDInf,flow_accum_D8,matriktributaryidentifier,transformasi, matrikFAD8elevasi = analisis.importFlowAccumulation(matrikKecil.copy(), ketinggianTengah, lat, rad,meshoption, state)
@@ -312,7 +310,13 @@ def run_analysis():
         print(f"min tampilflowaccumelevation {np.min(tampilflowaccumelevation)}")
         tampilflowaccumelevation = np.where(tampilflowaccumelevation < 0, 0, tampilflowaccumelevation)
 
-       #fileHandler.eksporTIF(matrikFAthresholdketinggian, lat, lon, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat,  cfg.fileFlowAccumulationBreachThresholdKetinggian,cfg.default_crs)
+        reset_plotter()
+
+
+        plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False, pickable=False)
+        plotter.add_mesh(coneUtara, color="magenta", specular=1.0, show_edges=True, smooth_shading=False, pickable=False)
+
+#fileHandler.eksporTIF(matrikFAthresholdketinggian, lat, lon, pixelKolomAwalKoordinat, pixelBarisAwalKoordinat,  cfg.fileFlowAccumulationBreachThresholdKetinggian,cfg.default_crs)
          #jika Watershednya dipilih interaktif gk perlu calon embung ditampilkan
         if state.mesh_option != "watershedinteractive":
             for row in koordinatCekungan:
@@ -553,8 +557,18 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
 
                         # Contoh pada tombol Anda:
                         vuetify.VBtn("Analysys", color="primary", click=ctrl.run_analysis, disabled=("loading", False), loading=("loading", False))
+                        # vuetify.VBtn(
+                        #     "Analysys",
+                        #     color="primary",
+                        #     # INI KUNCINYA: Eksekusi JS 'loading = true' dulu, baru panggil Python!
+                        #     click=["loading = true", ctrl.run_analysis],
+                        #     disabled=("loading", False),
+                        #     loading=("loading", False)
+                        # )
+
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple", class_="mt-3")
                         #vuetify.VAlert(type="info", v_model="alert_show", v_text="alert_message", class_="mt-3 text-wrap",density="compact",style="white-space: normal; word-break: break-word;")
+
                     # Pastikan Anda sudah mengimport 'html' dari trame.widgets
                     # from trame.widgets import html, vuetifyd
 

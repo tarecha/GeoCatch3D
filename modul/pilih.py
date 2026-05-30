@@ -1,9 +1,3 @@
-import numpy as np
-import rasterio
-import os
-from modul.generateFile import generateFileDEM
-
-
 # %{
 # kolom
 # 0          1800          3600
@@ -34,19 +28,45 @@ from modul.generateFile import generateFileDEM
 # laut diberi matrix 3601 x 3601 bernilai 0.
 # %}
 
-def readgeoraster(file_path):
-    """Fungsi untuk membaca file raster."""
+
+#improvemen menyimpan max 8 tile file dalam ram. jadi di lokasi yang sama tidak perlu baca dari
+#disk terus. menghemat waktu. memori kurang lebih 200 mb dipakai
+
+import numpy as np
+import rasterio
+import os
+from functools import lru_cache
+from modul.generateFile import generateFileDEM
+
+
+# 1. Fungsi inti yang dibungkus lru_cache (Hanya jalan jika data TIDAK ADA di RAM)
+@lru_cache(maxsize=8)
+def _baca_harddisk(file_path):
     if os.path.exists(file_path):
         with rasterio.open(file_path) as src:
-            print("file ada")
-            fileDEM = src.read(1)
-            print(f"fileDEM.dtype {fileDEM.dtype}")
-            return fileDEM
-
+            print(f"💾 Membaca dari HDD: {file_path}")
+            return src.read(1)
     else:
-        print("file tidak ada")
+        print(f"⚠️ File tidak ada, membuat array 0: {file_path}")
         return np.zeros((3601, 3601), dtype=np.int16)
 
+
+# 2. Fungsi perantara untuk mendeteksi dan memunculkan tulisan (HDD vs RAM)
+def readgeoraster(file_path):
+    # Cek rekam jejak memori (hits) sebelum fungsi dijalankan
+    hits_sebelum = _baca_harddisk.cache_info().hits
+
+    # Jalankan pencarian file
+    fileDEM = _baca_harddisk(file_path)
+
+    # Cek rekam jejak memori (hits) setelah fungsi dijalankan
+    hits_sesudah = _baca_harddisk.cache_info().hits
+
+    # Jika angka hits bertambah, berarti data berhasil "dicuri" dari RAM!
+    if hits_sesudah > hits_sebelum:
+        print(f"⚡ Membaca dari RAM: {file_path}")
+
+    return fileDEM
 
 def pilih(baris, kolom, latitude, longitude):
     """Fungsi untuk memilih dan menggabungkan 4 file DEM sesuai posisi baris dan kolom."""
