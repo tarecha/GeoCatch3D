@@ -381,7 +381,7 @@ def run_analysis(mulai_analisis, **kwargs):
             print(f"✅ Viewer update selesai. Siap di render")
 
         plotter.reset_camera()
-        state.alert_message = "✅ Analisis berhasil dirender."
+        state.alert_message = "✅ Rendering is done."
         state.alert_show = True
         print("Actor saat ini:", len(plotter.renderer.actors))
 
@@ -415,7 +415,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
             with vuetify.VRow():
                 with vuetify.VCol(cols=9, style="height: 100vh;"):
                     viewer = plotter_ui(plotter, height="100%", return_viewer=True, interactive=True,
-                                        default_server_rendering=True)
+                                        default_server_rendering=True, local_rendering=False)
                     with vuetify.VCard():
                         vuetify.VCardTitle("Informasi Kontrol")
                         html.Div("1. Klik kiri drag = rotasi bebas.")
@@ -534,7 +534,7 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         )
 
                         # PERBAIKAN 3: Tombol analisis kembali pakai standar Trame (akan bekerja sinkron dengan yield)
-                        vuetify.VBtn("Analysys", color="primary", click="loading = true; mulai_analisis = true,alert_message='Proses render',alert_show = True ", disabled=("loading", False),
+                        vuetify.VBtn("Analysys", color="primary", click="loading = true; mulai_analisis = true,alert_message='Rendering in progress',alert_show = True ", disabled=("loading", False),
                                      loading=("loading", False))
 
                         vuetify.VProgressLinear(indeterminate=True, v_show="loading", color="deep-purple",
