@@ -12,6 +12,7 @@ default_crs = "EPSG:4326"
 # --- KONFIGURASI FOLDER ---
 pathMaps = r'D:\maps'
 headerDem = 'ASTGTMV003_'
+footerDem = '_dem.tif'
 pathTempMaps = r'R:\temp'    # bisa gunakan ramdisk agar lebih cepat https://sourceforge.net/projects/aim-toolkit/f
 
 # --- KONFIGURASI FILE PATH (Otomatis mengikuti pathTempMaps) ---

@@ -11,7 +11,7 @@ def generateFileDEM(latitude, longitude):
 
     nama1 = cfg.headerDem
 
-    nama2 = '_dem.tif'
+    nama2 = cfg.footerDem
 
     # Penyesuaian longitude untuk batas -180 hingga 180
     if longitude >= 180:
