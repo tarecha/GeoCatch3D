@@ -469,14 +469,21 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         vuetify.VCardTitle("Input Parameter")
 
                         vuetify.VTextField(v_model="latitude_input", label="Latitude", outlined=True, dense=True,
-                                           type="number",
-                                           step="any",
+                                           type="text",
+                                           inputmode="decimal",
+                                           # Tambahkan huruf r di luar tanda kutip
+                                           keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
                         vuetify.VTextField(v_model="longitude_input", label="Longitude", outlined=True, dense=True,
-                                           type="number",
-                                           step="any",
+                                           type="text",
+                                           inputmode="decimal",
+                                           # Tambahkan huruf r di luar tanda kutip
+                                           keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
-                        vuetify.VTextField(v_model="radius_input", label="Radius (interval approx 30m)", type="number",
+                        vuetify.VTextField(v_model="radius_input", label="Radius (interval approx 30m)", type="number", step=1,
+                                           keydown="if($event.key === '.' || $event.key === ',') $event.preventDefault();",
+                                           # Memblokir desimal
+
                                            outlined=True, dense=True, hide_details=True, class_="mb-3",
                                            style="margin-bottom: 10px;")
 
@@ -494,8 +501,10 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         vuetify.VTextField(
                             v_model="user_defined_input",
                             label="Masukkan Koefisien C manual",
-                            type="number",
-                            step="any",
+                            type="text",
+                            inputmode="decimal",
+                            # Tambahkan huruf r di luar tanda kutip
+                            keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                             outlined=True,
                             dense=True,
                             v_show="selected_option === 'user_defined'",
@@ -517,8 +526,10 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Masukkan curah hujan manual (mm/hari)",
                             outlined=True,
                             dense=True,
-                            type="number",
-                            step="any",
+                            type="text",
+                            inputmode="decimal",
+                            # Tambahkan huruf r di luar tanda kutip
+                            keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                             v_show="selected_option_rainfall === 'user_defined'",
                         )
 
