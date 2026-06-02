@@ -86,7 +86,7 @@ def getwatershed():
             print(watershed.min(), watershed.max())
             # transformasi = src.transform
     else:
-        raise FileNotFoundError("Hasil watershed tidak ditemukan.")
+        raise FileNotFoundError("Hasil watershed tidak ditemukan")
 
     print(f"max {np.max(watershed)} min {np.min(watershed)}")
     watershed[watershed < 0] = 0
@@ -104,7 +104,7 @@ def getFAwatershed(matrikFA):
 
             # transformasi = src.transform
     else:
-        raise FileNotFoundError("Hasil watershed tidak ditemukan.")
+        raise FileNotFoundError("Hasil watershed tidak ditemukan")
 
 
 
@@ -165,7 +165,7 @@ def getFAwatershedinteractive(matrikFA):
 
             # transformasi = src.transform
     else:
-        raise FileNotFoundError("Hasil watershed tidak ditemukan.")
+        raise FileNotFoundError("Hasil watershed tidak ditemukan")
 
 
 
