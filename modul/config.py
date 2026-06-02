@@ -53,7 +53,9 @@ filefilelongestflowpath = os.path.join(pathTempMaps, 'filelongestflowpath.tif')
 
 # --- PARAMETER HIDROLOGI & KONFIGURASI LAINNYA ---
 radius = 50
+maxRadius = 450
 percentile = 85
+
 #percentilemin = 10
 thresholdojarakutletbedekatan = 2
 threshodwaktuTC_jam = 0.3 # thereshold agar TC kirpich untuk mononobe masuk akal I mm/jam tidak lebih besar dari R24 mm/hari
