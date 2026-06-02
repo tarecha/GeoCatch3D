@@ -157,10 +157,10 @@ def run_analysis(mulai_analisis, **kwargs):
             print("❗ Viewer belum siap. Analisis dibatalkan.")
             return
 
-        # =========================================================================
-        # 1. VALIDASI DAN PERSIAPAN INPUT PARAMETER
-        # =========================================================================
-        # Bersihkan semua input dari spasi berlebih
+            # =========================================================================
+            # 1. VALIDASI DAN PERSIAPAN INPUT PARAMETER
+            # =========================================================================
+            # Bersihkan semua input dari spasi berlebih
         lat_str = state.latitude_input.strip()
         lon_str = state.longitude_input.strip()
         rad_str = state.radius_input.strip()
@@ -173,7 +173,10 @@ def run_analysis(mulai_analisis, **kwargs):
         if not re.match(r"^-?\d+(\.\d+)?$", lon_str):
             raise ValueError("Longitude harus berupa angka desimal.")
         if not rad_str.isdigit():
-            raise ValueError("Radius harus berupa bilangan bulat positif.")
+            raise ValueError(f"Radius harus berupa bilangan bulat positif. Min 1 dan max {cfg.maxRadius}")
+
+        if int(rad_str) > cfg.maxRadius or int(rad_str) <= 0:
+            raise ValueError(f"Radius harus berupa bilangan bulat positif. Min 1 dan max {cfg.maxRadius}")
 
         # Konversi koordinat dan radius
         lat = float(lat_str)
@@ -466,8 +469,12 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         vuetify.VCardTitle("Input Parameter")
 
                         vuetify.VTextField(v_model="latitude_input", label="Latitude", outlined=True, dense=True,
+                                           type="number",
+                                           step="any",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
                         vuetify.VTextField(v_model="longitude_input", label="Longitude", outlined=True, dense=True,
+                                           type="number",
+                                           step="any",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
                         vuetify.VTextField(v_model="radius_input", label="Radius (interval approx 30m)", type="number",
                                            outlined=True, dense=True, hide_details=True, class_="mb-3",
@@ -487,6 +494,8 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                         vuetify.VTextField(
                             v_model="user_defined_input",
                             label="Masukkan Koefisien C manual",
+                            type="number",
+                            step="any",
                             outlined=True,
                             dense=True,
                             v_show="selected_option === 'user_defined'",
@@ -508,6 +517,8 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                             label="Masukkan curah hujan manual (mm/hari)",
                             outlined=True,
                             dense=True,
+                            type="number",
+                            step="any",
                             v_show="selected_option_rainfall === 'user_defined'",
                         )
 
