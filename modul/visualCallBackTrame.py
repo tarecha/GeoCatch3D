@@ -149,16 +149,16 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
                 print(f"titik cone baru px {px} py {py} pz {pz}")
                 cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone,
                                height=tingicone * 2)
-                print(f"baris error 1")
+                #print(f"baris error 1")
                 plotter.add_mesh(cone, color='cyan', smooth_shading=False, pickable=False, lighting=False,
                                  show_edges=True)
-                print(f"baris error 2")
+                #print(f"baris error 2")
             viewer.update()
             ctrl.view_update()
 
 
 
         state.flush()
-        print(f"baris error 3")
+        #print(f"baris error 3")
 
     return callback
