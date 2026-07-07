@@ -679,8 +679,4 @@ if __name__ == "__main__":
         print(f"Terjadi error : {e}")
         raise ValueError(f"Terjadi error : {e}")
 
-    #update branch main sajasssda 123dsssss
-    #cek cek
-    #halo ini single update
-    #ini diupdate dari web
-    #coba updaye pakai pycharm
+
