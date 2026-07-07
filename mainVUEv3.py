@@ -679,4 +679,4 @@ if __name__ == "__main__":
         print(f"Terjadi error : {e}")
         raise ValueError(f"Terjadi error : {e}")
 
-    #update branch main sajass
+    #update branch main sajasssda 123
