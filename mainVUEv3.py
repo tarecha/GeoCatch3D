@@ -640,6 +640,7 @@ if __name__ == "__main__":
 
         ip_lokal = dapatkan_ip_lokal()
         daftar_ip = [ip_lokal]
+
         print("Akses melalui web browser dari PC lain dengan link berikut : ")
         for ip in daftar_ip:
             if cfg.hostportv3 == 80:
@@ -677,3 +678,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Terjadi error : {e}")
         raise ValueError(f"Terjadi error : {e}")
+
+    #update branch main sajasssda 123d
