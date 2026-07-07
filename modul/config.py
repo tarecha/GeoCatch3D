@@ -2,6 +2,8 @@ import os
 
 hostportv2 = 81
 hostportv3 = 80
+bukabrowser = True
+demomode = True
 latitude= "-7.942544" #bedengan
 longitude= "112.540593"
 defaultmeshoption = "FAwatershed"
@@ -52,7 +54,7 @@ filelength_of_upstream_channels = os.path.join(pathTempMaps, 'filelength_of_upst
 filefilelongestflowpath = os.path.join(pathTempMaps, 'filelongestflowpath.tif')
 
 # --- PARAMETER HIDROLOGI & KONFIGURASI LAINNYA ---
-radius = 50
+radius = 150
 maxRadius = 450
 percentile = 85
 

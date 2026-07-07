@@ -625,15 +625,13 @@ def buka_browser(ip, port=80):
 
 if __name__ == "__main__":
     try:
-        print("Akses melalui web browser dari PC lain dengan link berikut:")
-
 
         def dapatkan_ip_lokal():
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             try:
                 s.connect(('10.255.255.255', 1))
                 IP = s.getsockname()[0]
-            except Exception:
+            except:
                 IP = '127.0.0.1'
             finally:
                 s.close()
@@ -642,26 +640,40 @@ if __name__ == "__main__":
 
         ip_lokal = dapatkan_ip_lokal()
         daftar_ip = [ip_lokal]
-
-        if daftar_ip and ip_lokal != '127.0.0.1':
-            for ip in daftar_ip:
-                if cfg.hostportv3 == 80:
-                    print(f" -> http://{ip}")
-                    threading.Timer(1.5, buka_browser, args=(ip,)).start()
-                else:
-                    print(f" -> http://{ip}:{cfg.hostportv3}")
-                    threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
-        elif ip_lokal == '127.0.0.1':
-            print(" -> Perangkat tidak terhubung ke jaringan (Offline). Menggunakan localhost.")
+        print("Akses melalui web browser dari PC lain dengan link berikut : ")
+        for ip in daftar_ip:
             if cfg.hostportv3 == 80:
-                print(f" -> http://127.0.0.1")
-                threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
+                print(f" -> http://{ip}")
             else:
-                print(f" -> http://127.0.0.1:{cfg.hostportv3}")
-                threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
+                print(f" -> http://{ip}:{cfg.hostportv3}")
 
-        server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
+
+        if cfg.bukabrowser:
+
+            if daftar_ip and ip_lokal != '127.0.0.1':
+                for ip in daftar_ip:
+                    if cfg.hostportv3 == 80:
+                        #print(f" -> http://{ip}")
+                        threading.Timer(1.5, buka_browser, args=(ip,)).start()
+                    else:
+                        #print(f" -> http://{ip}:{cfg.hostportv3}")
+                        threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
+            elif ip_lokal == '127.0.0.1':
+                print(" -> Perangkat tidak terhubung ke jaringan (offline). Menggunakan localhost.")
+                if cfg.hostportv3 == 80:
+                    print(f" -> http://127.0.0.1")
+                    threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
+                else:
+                    print(f" -> http://127.0.0.1:{cfg.hostportv3}")
+                    threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
+            server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
+        else:
+            print(f"Konfifurasi buka browser : {cfg.bukabrowser}")
+            server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[],open_browser=False)
+
+
+
 
     except Exception as e:
-        print(f"Terjadi error: {e}")
-        raise ValueError(f"Terjadi error: {e}")
+        print(f"Terjadi error : {e}")
+        raise ValueError(f"Terjadi error : {e}")
