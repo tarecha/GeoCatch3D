@@ -676,4 +676,4 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"Terjadi error: {e}")
-        raise ValueError(f"Terjadi error: {e}")
+        raise ValueError(f"Terjadi error : {e}")
