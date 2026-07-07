@@ -131,7 +131,8 @@ def importFlowAccumulation(matrikKecil, titikTengah, latitude_deg, radius, mesho
 
         #simpan file tif FA dengan threshold ketinggian
         print(f"fa threshold elevasi 1")
-        pla.plot(matrikFA,"FA threshold elevasi", "Flow Accumulation Cell Count")
+        if cfg.demomode:
+            pla.plot(matrikFA,"FA threshold elevasi", "Flow Accumulation Cell Count")
         fileHandler.eksporTIF2(matrikOut=matrikFA, fullPath=cfg.fileFlowAccumulationBreachD8Thresholdketinggian, transformasi=transformasi,
                                crs=cfg.default_crs)
         matrikFAD8elevasi = matrikFA.copy()

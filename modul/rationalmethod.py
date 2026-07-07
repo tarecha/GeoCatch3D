@@ -60,7 +60,8 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
     maskelevasi = np.ma.masked_where(~mask, matrikKecil)
     maskeFA= np.ma.masked_where(~mask, flow_accum_D8)
     #plt.plot_file(file=cfg.fileFlowAccumulationBreachD8, judul="fileFlowAccumulationBreachD8", z="upstream cell")
-    plt.plot(matrikplot=mask, judul="Panjang aliran utama", z="")
+    if cfg.demomode:
+        plt.plot(matrikplot=mask, judul="Panjang aliran utama", z="")
     #plt.plot(matrikplot=maskelevasi, judul="Mask panjang aliran utama", z="threshold")
     fileHandler.eksporTIF2(maskeFA,cfg.filemaskFAhilirhulu, trasnformasi,cfg.default_crs)
     if barishulu==None and kolomhulu == None:
