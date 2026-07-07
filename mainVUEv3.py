@@ -659,7 +659,7 @@ if __name__ == "__main__":
                         #print(f" -> http://{ip}:{cfg.hostportv3}")
                         threading.Timer(1.5, buka_browser, args=(ip, cfg.hostportv3)).start()
             elif ip_lokal == '127.0.0.1':
-                print(" -> Perangkat tidak terhubung ke jaringan (Offline). Menggunakan localhost.")
+                print(" -> Perangkat tidak terhubung ke jaringan (offline). Menggunakan localhost.")
                 if cfg.hostportv3 == 80:
                     print(f" -> http://127.0.0.1")
                     threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
