@@ -3,7 +3,7 @@ import os
 hostportv2 = 81
 hostportv3 = 80
 bukabrowser = True
-demomode = True
+demomode = False
 latitude= "-7.942544" #bedengan
 longitude= "112.540593"
 defaultmeshoption = "FAwatershed"
