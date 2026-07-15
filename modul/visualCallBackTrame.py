@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np, random
 
 from modul import konverter
 from modul import mapping, rationalmethod, watershed as wts, config as cfg
@@ -91,27 +91,32 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
         print(f"titik tengah : {ketinggiantengah} ")
         print("latitude longitude ketinggian link ketinggiantitiktengah")
         print(state.latitude, state.longitude, state.ketinggian, state.maps_url, state.ketinggiantitiktengah)
+        print(f"di call back barisFA {barisFA} dan  kolomFA {kolomFA}")
 
+        nonlocal outlet
+        if state.multidas_option and state.mesh_option == "watershedinteractive":
+            outlet.append([barisFA, kolomFA, countklik])
+        else:
+            outlet.clear()
+            outlet.append([barisFA, kolomFA, 1])
+            # 1. Cari dan kumpulkan semua nama actor yang berawalan "actor_pointer"
+            daftar_hapus = [nama for nama in plotter.actors.keys() if nama.startswith('actor_pointer')]
+
+            # 2. Hapus actor tersebut dari plotter satu per satu
+            for nama in daftar_hapus:
+                plotter.remove_actor(nama)
+                print(f"{nama} berhasil dihapus.")
+
+            # (Opsional) Render ulang plotter agar perubahannya langsung terlihat di layar
+            plotter.render()
+
+        koordinatpourpoint = np.array(outlet)
+        print(f"koordinatpourpoint all")
 
         if state.mesh_option == "watershedinteractive":
-
-            print(f"di call back barisFA {barisFA} dan  kolomFA {kolomFA}")
-            nonlocal outlet
-            if state.multidas_option:
-                outlet.append([barisFA, kolomFA, countklik])
-            else:
-                outlet.clear()
-                outlet.append([barisFA, kolomFA, 1])
-            koordinatpourpoint = np.array(outlet)
-            print(f"koordinatpourpoint all")
             for row in koordinatpourpoint:
                 print(" ".join(str(int(x)) if float(x).is_integer() else str(x) for x in row))
             wts.eksporshpinteraktive(koordinatpourpoint, transformasi, radiusBaris,state)
-
-
-
-
-            
             print("Actor saat ini:", len(plotter.renderer.actors))
             plotter.clear_actors()
             print("Actor saat ini setelah di remove:", len(plotter.renderer.actors))
@@ -141,20 +146,40 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
 
              # merubah orientasi karena pyvista 0,0 di kiri bawah
 
-            for row in koordinatpourpoint:
-                barisCone = ((radiusBaris * 2)) - int(row[0])
-                kolomCone = row[1]
-                px, py = int(kolomCone), int(barisCone)
-                pz = matrikKecil[py, px]
-                print(f"titik cone baru px {px} py {py} pz {pz}")
-                cone = pv.Cone(center=(px, py, pz + tingicone), direction=(0, 0, -1), radius=radiuscone,
-                               height=tingicone * 2)
-                #print(f"baris error 1")
-                plotter.add_mesh(cone, color='cyan', smooth_shading=False, pickable=False, lighting=False,
-                                 show_edges=True)
+
                 #print(f"baris error 2")
-            viewer.update()
-            ctrl.view_update()
+        actorid = 0
+        daftar_warna = [
+            'red', 'green', 'blue', 'yellow', 'cyan', 'magenta',
+            'orange', 'lime', 'hotpink', 'dodgerblue', 'gold',
+            'springgreen', 'blueviolet', 'crimson'
+        ]
+        for row in koordinatpourpoint:
+            actorid += 1
+            barisCone = ((radiusBaris * 2)) - int(row[0])
+            kolomCone = row[1]
+            px, py = int(kolomCone), int(barisCone)
+            pz = matrikKecil[py, px]
+            print(f"titik cone baru px {px} py {py} pz {pz}")
+            cone = pv.Cone(center=(px, py, pz + tingicone+10), direction=(0, 0, -1), radius=radiuscone*0.8,
+                           height=tingicone * 2+20)
+            print(f"add actor_pointer{actorid}")
+
+
+            if actorid == 1 :
+                warna_urut = 'orange'
+            else:
+                indeks_warna = (actorid - 1) % len(daftar_warna)
+                warna_urut = daftar_warna[indeks_warna]
+
+            plotter.add_mesh(cone, name=f'actor_pointer{actorid}', color=warna_urut, smooth_shading=False, pickable=False, lighting=False,
+                             show_edges=True)
+        viewer.update()
+        ctrl.view_update()
+        print("--- Daftar Actor di Plotter ---")
+        # Mencetak semua nama actor yang ada di plotter
+        print("Daftar nama actor:", list(plotter.actors.keys()))
+
 
 
 
