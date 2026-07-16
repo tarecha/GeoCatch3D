@@ -3,7 +3,7 @@ import os
 hostportv2 = 81
 hostportv3 = 80
 bukabrowser = True
-demomode = False
+demomode = True
 latitude= "-7.942544" #bedengan
 longitude= "112.540593"
 defaultmeshoption = "FAwatershed"
@@ -71,3 +71,5 @@ curahhujan = 5
 maps_url = 'https://www.google.com/maps?q='
 estimasi_url = 'https://script.google.com/macros/s/AKfycbyWbFrK8eai3RRK722uyd1BxsSLJeWiRwnKEonzs-90CLel62hYNjmpLaEuQT-wUCb7/exec?'
 linkestimasi = 'https://docs.google.com/spreadsheets/d/1pO6E4mPjNkIWdhkCKyxpAHFGcoLdlqLGcbJVKKLC4OE/edit?gid=1680581913#gid=1680581913'
+
+filetidakada = []

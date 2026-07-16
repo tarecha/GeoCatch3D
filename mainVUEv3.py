@@ -244,8 +244,10 @@ def run_analysis(mulai_analisis, **kwargs):
         print(f"ketinggianmax {ketinggianmaxmatrikKecil}")
         if ketinggianmaxmatrikKecil == 0:
             raise ValueError(
-                f"Tidak ditemukan daratan. Cek input koordinat apakah lautan ? atau cek keberadaan file dataset GDEM ASTER.")
-
+                f"Tidak ditemukan daratan. "
+                f"Cek input koordinat apakah berada di lautan atau cek keberadaan file dataset GDEM ASTER.\n\n"
+                f"File yang tidak ditemukan:\n- " + "\n- ".join(cfg.filetidakada)
+            )
         pixelBarisAwalKoordinat = barisMatriks - radiusBaris
         pixelKolomAwalKoordinat = kolomMatriks - radiusKolom
         print(f"pixelBarisAwalKoordinat {pixelBarisAwalKoordinat}")

@@ -37,7 +37,7 @@ import rasterio
 import os
 from functools import lru_cache
 from modul.generateFile import generateFileDEM
-
+from modul import config as cfg
 
 # 1. Fungsi inti yang dibungkus lru_cache (Hanya jalan jika data TIDAK ADA di RAM)
 @lru_cache(maxsize=8)
@@ -48,6 +48,7 @@ def _baca_harddisk(file_path):
             return src.read(1)
     else:
         print(f"⚠️ File tidak ada, membuat array 0: {file_path}")
+        cfg.filetidakada.append(file_path)
         return np.zeros((3601, 3601), dtype=np.int16)
 
 
@@ -144,7 +145,7 @@ def pilih(baris, kolom, latitude, longitude):
         kolom += 3600
         #print("#10")
 
-
+    cfg.filetidakada = []
     print(f"fileA1 : {fileA1}")
     print(f"fileA2 : {fileA2}")
     print(f"fileA3 : {fileA3}")
