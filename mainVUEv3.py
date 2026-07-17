@@ -474,13 +474,15 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                            type="text",
                                            inputmode="decimal",
                                            # Tambahkan huruf r di luar tanda kutip
-                                           keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
+                                           keydown=r"if(!$event.ctrlKey && !$event.metaKey && !/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
+                                          #keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
                         vuetify.VTextField(v_model="longitude_input", label="Longitude", outlined=True, dense=True,
                                            type="text",
                                            inputmode="decimal",
                                            # Tambahkan huruf r di luar tanda kutip
-                                           keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
+                                           keydown=r"if(!$event.ctrlKey && !$event.metaKey && !/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
+                                           #keydown=r"if(!/^[0-9.\-]$/.test($event.key) && $event.key.length === 1) $event.preventDefault();",
                                            hide_details=True, class_="mb-3", style="margin-bottom: 10px;")
                         vuetify.VTextField(v_model="radius_input", label="Radius (interval approx 30m)", type="number", step=1,
                                            keydown="if($event.key === '.' || $event.key === ',') $event.preventDefault();",
