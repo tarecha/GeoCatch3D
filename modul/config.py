@@ -11,7 +11,7 @@ defautrainfall = None
 defautselected_option = None
 default_crs = "EPSG:4326"
 
-# --- KONFIGURASI FOLDER ----
+# --- KONFIGURASI FOLDER gg ----
 pathMaps = r'D:\maps'
 headerDem = 'ASTGTMV003_'
 footerDem = '_dem.tif'
