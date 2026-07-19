@@ -114,7 +114,7 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
 
     jarakintervaltotal_m = jarakintervalhorizontal + jarakintervalvertikal + jarakintervaldiagonal
     state.jarakaAliranUtama_km = round(jarakintervaltotal_m / 1000,2)
-    print(f"jarakaAliranUtama_km {state.jarakaAliranUtama_km}")
+    print(f"jarakaAliranUtama  km {state.jarakaAliranUtama_km}")
 
     if jarakintervaltotal_m > 0:
         tc = kirpich_tc_from_intervals(jarakintervaltotal_m, elevasiHulu, elevasiHilir)
