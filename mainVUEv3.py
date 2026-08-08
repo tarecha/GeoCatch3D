@@ -648,9 +648,9 @@ if __name__ == "__main__":
         print("Akses melalui web browser dari PC lain dengan link berikut : ")
         for ip in daftar_ip:
             if cfg.hostportv3 == 80:
-                print(f" -> http://{ip}")
+                print(f" -> CTRL + klik http://{ip}")
             else:
-                print(f" -> http://{ip}:{cfg.hostportv3}")
+                print(f" -> CTRL + klik http://{ip}:{cfg.hostportv3}")
 
 
         if cfg.bukabrowser:
@@ -666,10 +666,10 @@ if __name__ == "__main__":
             elif ip_lokal == '127.0.0.1':
                 print("Perangkat tidak terhubung ke jaringan (offline). Menggunakan localhost.")
                 if cfg.hostportv3 == 80:
-                    print(f" -> http://127.0.0.1")
+                    print(f" -> CTRL + klik http://127.0.0.1")
                     threading.Timer(1.5, buka_browser, args=('127.0.0.1',)).start()
                 else:
-                    print(f" -> http://127.0.0.1:{cfg.hostportv3}")
+                    print(f" -> CTRL + klik http://127.0.0.1:{cfg.hostportv3}")
                     threading.Timer(1.5, buka_browser, args=('127.0.0.1', cfg.hostportv3)).start()
             server.start(host="0.0.0.0", port=cfg.hostportv3, argv=[])
         else:
