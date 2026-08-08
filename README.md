@@ -1,4 +1,5 @@
 Petunjuk Instalasi "TUTORIAL INITIAL SETUP GEOCATCH 3D.pdf"
+https://github.com/tarecha/GeoCatch3D/blob/main/TUTORIAL%20INITIAL%20SETUP%20GEOCATCH%203D.pdf
 
 GeoCatch 3D - Sistem Analisis Identifikasi Lokasi Potensial Embung dan DAS
 Uraian Singkat	Karya cipta ini merupakan program komputer yang merupakan hasil penelitian tesis S2 dari Mochamad Agung Tarecha. Karya cipta ini yang juga telah dipublikasikan dalam Conference CENIM IEEE https://ieeexplore.ieee.org/document/11326317 6th International Conference on Computer Engineering, Network, and Intelligent Multimedia 2025 penyelenggara ITS Surabaya pada 25-26 November 2025 di Novotel Samator East Surabaya Hotel. Karya cipta ini dapat digunakan untuk identifikasi lokasi potensial embung maupun analisis Daerah Aliran Sungai dan dipublikasikan pada https://tarecha.wordpress.com/publikasi-ilmiah/
