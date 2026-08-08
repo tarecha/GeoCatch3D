@@ -15,7 +15,7 @@ default_crs = "EPSG:4326"
 pathMaps = r'D:\maps'
 headerDem = 'ASTGTMV003_'
 footerDem = '_dem.tif'
-pathTempMaps = r'R:\temp'    # bisa gunakan ramdisk agar lebih cepat https://sourceforge.net/projects/aim-toolkit/
+pathTempMaps = r'D:\maps\temp'    # bisa gunakan ramdisk agar lebih cepat https://sourceforge.net/projects/aim-toolkit/
 
 # --- KONFIGURASI FILE PATH (Otomatis mengikuti pathTempMaps) ---
 fileSeleksiDEM = os.path.join(pathTempMaps, 'fileSeleksiDEM.tif')
