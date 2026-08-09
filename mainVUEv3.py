@@ -645,25 +645,17 @@ if __name__ == "__main__":
 
                     if alamat.family == socket.AF_INET:
                         ip = alamat.address
-
                         # Abaikan localhost
                         if ip == "127.0.0.1":
                             continue
-
                         # Abaikan IPv4 link-local / APIPA
                         # 169.254.0.0 - 169.254.255.255
                         if ip.startswith("169.254."):
                             continue
-
                         daftar_ip.append((nama_interface, ip))
-
             return daftar_ip
-
-
         daftar_ip = dapatkan_semua_ip_lokal()
-
         print("Akses melalui web browser dari PC lain dengan link berikut : ")
-
         if daftar_ip:
             for nama_interface, ip in daftar_ip:
                 if cfg.hostportv3 == 80:
@@ -674,51 +666,21 @@ if __name__ == "__main__":
             print(" -> Tidak ditemukan IP jaringan. Menggunakan localhost.")
 
 
-
-
         if daftar_ip:
-            # Buka browser menggunakan IP jaringan pertama
             nama_interface, ip_lokal = daftar_ip[0]
-
-            if cfg.hostportv3 == 80:
-                threading.Timer(
-                    1.5,
-                    buka_browser,
-                    args=(ip_lokal,)
-                ).start()
-            else:
-                threading.Timer(
-                    1.5,
-                    buka_browser,
-                    args=(ip_lokal, cfg.hostportv3)
-                ).start()
+            threading.Timer(
+                1.5,
+                buka_browser,
+                args=(ip_lokal, cfg.hostportv3)
+            ).start()
 
         else:
             # Tidak ada IP jaringan, gunakan localhost
-            print(
-                "Perangkat tidak terhubung ke jaringan (offline). "
-                "Menggunakan localhost."
+            print(f"Perangkat tidak terhubung ke jaringan (offline). Menggunakan localhost:{cfg.hostportv3}"
             )
+            print(f" -> Localhost CTRL + klik http://127.0.0.1:{cfg.hostportv3}")
 
-            if cfg.hostportv3 == 80:
-                print(" -> CTRL + klik http://127.0.0.1")
-
-                threading.Timer(
-                    1.5,
-                    buka_browser,
-                    args=("127.0.0.1",)
-                ).start()
-
-            else:
-                print(
-                    f" -> CTRL + klik http://127.0.0.1:{cfg.hostportv3}"
-                )
-
-                threading.Timer(
-                    1.5,
-                    buka_browser,
-                    args=("127.0.0.1", cfg.hostportv3)
-                ).start()
+            threading.Timer(1.5, buka_browser, args=("127.0.0.1", cfg.hostportv3)).start()
 
         server.start(
             host="0.0.0.0",
