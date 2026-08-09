@@ -618,12 +618,8 @@ with SinglePageLayout(server, toolbar=True, footer=False) as layout:
                                style="color: blue; text-decoration: underline; display: block;")
 
 
-def buka_browser(ip, port=80):
-    if port == 80:
-        url = f"http://{ip}"
-    else:
-        url = f"http://{ip}:{port}"
-
+def buka_browser(ip, port):
+    url = f"http://{ip}:{port}"
     webbrowser.open(url)
 
 
@@ -642,7 +638,6 @@ if __name__ == "__main__":
 
             for nama_interface, alamat_interface in psutil.net_if_addrs().items():
                 for alamat in alamat_interface:
-
                     if alamat.family == socket.AF_INET:
                         ip = alamat.address
                         # Abaikan localhost
@@ -658,10 +653,7 @@ if __name__ == "__main__":
         print("Akses melalui web browser dari PC lain dengan link berikut : ")
         if daftar_ip:
             for nama_interface, ip in daftar_ip:
-                if cfg.hostportv3 == 80:
-                    print(f" -> {nama_interface}: CTRL + klik http://{ip}")
-                else:
-                    print(f" -> {nama_interface}: CTRL + klik http://{ip}:{cfg.hostportv3}")
+                print(f" -> {nama_interface}: CTRL + klik http://{ip}:{cfg.hostportv3}")
         else:
             print(" -> Tidak ditemukan IP jaringan. Menggunakan localhost.")
 
