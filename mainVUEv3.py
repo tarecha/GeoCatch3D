@@ -7,13 +7,14 @@ state, ctrl = server.state, server.controller
 # --- IMPORT MODULE LAINNYA DI BAWAHNYA ---
 import numpy as np
 import pyvista as pv
+
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 import re
 import webbrowser
 import threading
 import socket, psutil
-import glob, os
+import glob, os, gc
 import time
 # Modul lokal AGUNG222
 import modul.config as cfg
@@ -99,10 +100,12 @@ def reset_plotter():
     plotter.renderer.RemoveAllViewProps()
     print("Actor saat ini:", len(plotter.renderer.actors))
     print("Renderer props setelah clear:", len(plotter.renderer._actors))
+    gc.collect()
 
 
 def bersihkan_ramdisk():
     # Mengambil semua file di dalam folder temp
+    gc.collect()
     files = glob.glob(os.path.join(cfg.pathTempMaps, '*'))
     for f in files:
         try:
