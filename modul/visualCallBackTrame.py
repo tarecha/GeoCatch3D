@@ -85,7 +85,7 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
         state.longitude = format(longitudePoint, ".6f")
         state.ketinggian = round(ketinggianKlik,2)
         state.deltaelevasioutlet_pointer = round(ketinggianKlik - ketinggiantengah,2)
-        state.estimasi_url = f"{cfg.estimasi_url} B1={state.Qp}&B2={state.TC}"
+        state.estimasi_url = f"{cfg.estimasi_url}B1={state.Qp}&B2={state.TC}"
         state.maps_url = f"{cfg.maps_url}{state.latitude},{state.longitude}"
         state.maps_text = "Link Google Maps"
         print(f"titik tengah : {ketinggiantengah} ")

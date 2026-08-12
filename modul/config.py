@@ -1,5 +1,6 @@
 import os
 
+log="app_log.txt"
 hostportv2 = 81
 hostportv3 = 80
 bukabrowser = True

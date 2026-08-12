@@ -16,6 +16,7 @@ import threading
 import socket, psutil
 import glob, os, gc
 import time
+import sys, datetime, traceback
 # Modul lokal AGUNG222
 import modul.config as cfg
 from modul import curahhujan, mapping, seleksiRHD, pilih, visualCallBackTrame, fileHandler, analisis, watershed as wts
@@ -25,6 +26,38 @@ import modul.konverter as knv
 from trame.ui.vuetify3 import SinglePageLayout
 from pyvista.trame.ui import plotter_ui
 from trame.widgets import html, vuetify3 as vuetify
+
+# --- SETUP LOGGING KE FILE (agar print & error tetap tercatat walau console tertutup) ---
+_log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), cfg.log)
+_log_file = open(_log_path, "a", buffering=1, encoding="utf-8")
+
+
+class _Tee:
+    def __init__(self, *streams):
+        self.streams = streams
+
+    def write(self, data):
+        for s in self.streams:
+            try:
+                s.write(data)
+                s.flush()
+            except Exception:
+                pass
+
+    def flush(self):
+        for s in self.streams:
+            try:
+                s.flush()
+            except Exception:
+                pass
+
+
+sys.stdout = _Tee(sys.stdout, _log_file)
+sys.stderr = _Tee(sys.stderr, _log_file)
+print(f"\n=== Server dimulai: {datetime.datetime.now().isoformat(timespec='seconds')} ===")
+# --- AKHIR SETUP LOGGING ---
+
+
 
 state.items_list = curahhujan.tabelkoefisien
 state.rainfall = curahhujan.tabelcurahhujan
@@ -681,13 +714,17 @@ if __name__ == "__main__":
             host="0.0.0.0",
             port=cfg.hostportv3,
             argv=[],
-            open_browser=cfg.bukabrowser
+            open_browser=cfg.bukabrowser,
+            timeout=0  # 0 = nonaktifkan auto-shutdown wslink saat client idle/terputus (default 300 detik)
         )
 
 
 
     except Exception as e:
         print(f"Terjadi error : {e}")
+        traceback.print_exc()
         raise ValueError(f"Terjadi error : {e}")
+    finally:
+        print(f"=== Server berhenti: {datetime.datetime.now().isoformat(timespec='seconds')} ===")
 
 

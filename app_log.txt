@@ -1,0 +1,4195 @@
+
+=== Server dimulai: 2026-08-12T21:13:29 ===
+Akses melalui web browser dari PC lain dengan link berikut : 
+ -> Wi-Fi: CTRL + klik http://192.168.3.6:80
+
+App running at:
+ - Local:   http://0.0.0.0:80/
+ - Network: http://0.0.0.0:80/
+
+Note that for multi-users you need to use and configure a launcher.
+And to prevent your browser from opening, add '--server' to your command line.
+Koefisien diselek: 0.15
+Curah hujan diselek: 174.67
+-7.942544 112.540593
+fileA1 : D:\maps\ASTGTMV003_S08E112_dem.tif
+fileA2 : D:\maps\ASTGTMV003_S08E113_dem.tif
+fileA3 : D:\maps\ASTGTMV003_S09E113_dem.tif
+fileA4 : D:\maps\ASTGTMV003_S09E112_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S08E112_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S08E113_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S09E113_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S09E112_dem.tif
+ketinggianmax 3667
+Waktu Proses pilih: 1.2873 detik
+ketinggianmax 2021.0
+pixelBarisAwalKoordinat 3243
+transform2 | 0.00, 0.00, 112.50|
+| 0.00, 0.00,-7.90|
+| 0.00, 0.00, 1.00|
+.\whitebox_tools.exe --run="BreachDepressionsLeastCost" --wd="D:\maps\temp" --dem='D:\maps\temp\fileSeleksiDEM.tif' --output='D:\maps\temp\fileBreachDepression.tif' --dist='2' --min_dist --flat_increment='0.01' --fill -v --compress_rasters=False
+
+*****************************************
+* Welcome to BreachDepressionsLeastCost *
+* Powered by WhiteboxTools              *
+* www.whiteboxgeo.com                   *
+*****************************************
+Reading data...
+Finding pits: 0%
+Finding pits: 1%
+Finding pits: 2%
+Finding pits: 3%
+Finding pits: 4%
+Finding pits: 5%
+Finding pits: 6%
+Finding pits: 7%
+Finding pits: 8%
+Finding pits: 9%
+Finding pits: 10%
+Finding pits: 11%
+Finding pits: 12%
+Finding pits: 13%
+Finding pits: 14%
+Finding pits: 15%
+Finding pits: 16%
+Finding pits: 17%
+Finding pits: 18%
+Finding pits: 19%
+Finding pits: 20%
+Finding pits: 21%
+Finding pits: 22%
+Finding pits: 23%
+Finding pits: 24%
+Finding pits: 25%
+Finding pits: 26%
+Finding pits: 27%
+Finding pits: 28%
+Finding pits: 29%
+Finding pits: 30%
+Finding pits: 31%
+Finding pits: 32%
+Finding pits: 33%
+Finding pits: 34%
+Finding pits: 35%
+Finding pits: 36%
+Finding pits: 37%
+Finding pits: 38%
+Finding pits: 39%
+Finding pits: 40%
+Finding pits: 41%
+Finding pits: 42%
+Finding pits: 43%
+Finding pits: 44%
+Finding pits: 45%
+Finding pits: 46%
+Finding pits: 47%
+Finding pits: 48%
+Finding pits: 49%
+Finding pits: 50%
+Finding pits: 51%
+Finding pits: 52%
+Finding pits: 53%
+Finding pits: 54%
+Finding pits: 55%
+Finding pits: 56%
+Finding pits: 57%
+Finding pits: 58%
+Finding pits: 59%
+Finding pits: 60%
+Finding pits: 61%
+Finding pits: 62%
+Finding pits: 63%
+Finding pits: 64%
+Finding pits: 65%
+Finding pits: 66%
+Finding pits: 67%
+Finding pits: 68%
+Finding pits: 69%
+Finding pits: 70%
+Finding pits: 71%
+Finding pits: 72%
+Finding pits: 73%
+Finding pits: 74%
+Finding pits: 75%
+Finding pits: 76%
+Finding pits: 77%
+Finding pits: 78%
+Finding pits: 79%
+Finding pits: 80%
+Finding pits: 81%
+Finding pits: 82%
+Finding pits: 83%
+Finding pits: 84%
+Finding pits: 85%
+Finding pits: 86%
+Finding pits: 87%
+Finding pits: 88%
+Finding pits: 89%
+Finding pits: 90%
+Finding pits: 91%
+Finding pits: 92%
+Finding pits: 93%
+Finding pits: 94%
+Finding pits: 95%
+Finding pits: 96%
+Finding pits: 97%
+Finding pits: 98%
+Finding pits: 99%
+Finding pits: 100%
+Breaching: 0%
+Breaching: 1%
+Breaching: 2%
+Breaching: 3%
+Breaching: 4%
+Breaching: 5%
+Breaching: 6%
+Breaching: 7%
+Breaching: 8%
+Breaching: 9%
+Breaching: 10%
+Breaching: 11%
+Breaching: 12%
+Breaching: 13%
+Breaching: 14%
+Breaching: 15%
+Breaching: 16%
+Breaching: 17%
+Breaching: 18%
+Breaching: 19%
+Breaching: 20%
+Breaching: 21%
+Breaching: 22%
+Breaching: 23%
+Breaching: 24%
+Breaching: 25%
+Breaching: 26%
+Breaching: 27%
+Breaching: 28%
+Breaching: 29%
+Breaching: 30%
+Breaching: 31%
+Breaching: 32%
+Breaching: 33%
+Breaching: 34%
+Breaching: 35%
+Breaching: 36%
+Breaching: 37%
+Breaching: 38%
+Breaching: 39%
+Breaching: 40%
+Breaching: 41%
+Breaching: 42%
+Breaching: 43%
+Breaching: 44%
+Breaching: 45%
+Breaching: 46%
+Breaching: 47%
+Breaching: 48%
+Breaching: 49%
+Breaching: 50%
+Breaching: 51%
+Breaching: 52%
+Breaching: 53%
+Breaching: 54%
+Breaching: 55%
+Breaching: 56%
+Breaching: 57%
+Breaching: 58%
+Breaching: 59%
+Breaching: 60%
+Breaching: 61%
+Breaching: 62%
+Breaching: 63%
+Breaching: 64%
+Breaching: 65%
+Breaching: 66%
+Breaching: 67%
+Breaching: 68%
+Breaching: 69%
+Breaching: 70%
+Breaching: 71%
+Breaching: 72%
+Breaching: 73%
+Breaching: 74%
+Breaching: 75%
+Breaching: 76%
+Breaching: 77%
+Breaching: 78%
+Breaching: 79%
+Breaching: 80%
+Breaching: 81%
+Breaching: 82%
+Breaching: 83%
+Breaching: 84%
+Breaching: 85%
+Breaching: 86%
+Breaching: 87%
+Breaching: 88%
+Breaching: 89%
+Breaching: 90%
+Breaching: 91%
+Breaching: 92%
+Breaching: 93%
+Breaching: 94%
+Breaching: 95%
+Breaching: 96%
+Breaching: 97%
+Breaching: 98%
+Breaching: 99%
+Breaching: 100%
+Num. solved pits: 2073
+Num. unsolved pits: 166
+Filling remaining depressions...
+Finding pit cells: 12%
+Finding pit cells: 25%
+Finding pit cells: 37%
+Finding pit cells: 50%
+Finding pit cells: 62%
+Finding pit cells: 75%
+Finding pit cells: 87%
+Finding pit cells: 100%
+Filling depressions: 0%
+Filling depressions: 1%
+Filling depressions: 2%
+Filling depressions: 3%
+Filling depressions: 4%
+Filling depressions: 5%
+Filling depressions: 6%
+Filling depressions: 7%
+Filling depressions: 8%
+Filling depressions: 9%
+Filling depressions: 10%
+Filling depressions: 11%
+Filling depressions: 12%
+Filling depressions: 13%
+Filling depressions: 14%
+Filling depressions: 15%
+Filling depressions: 16%
+Filling depressions: 17%
+Filling depressions: 18%
+Filling depressions: 19%
+Filling depressions: 20%
+Filling depressions: 21%
+Filling depressions: 22%
+Filling depressions: 23%
+Filling depressions: 24%
+Filling depressions: 25%
+Filling depressions: 26%
+Filling depressions: 27%
+Filling depressions: 28%
+Filling depressions: 29%
+Filling depressions: 30%
+Filling depressions: 31%
+Filling depressions: 32%
+Filling depressions: 33%
+Filling depressions: 34%
+Filling depressions: 35%
+Filling depressions: 36%
+Filling depressions: 37%
+Filling depressions: 38%
+Filling depressions: 39%
+Filling depressions: 40%
+Filling depressions: 41%
+Filling depressions: 42%
+Filling depressions: 43%
+Filling depressions: 44%
+Filling depressions: 45%
+Filling depressions: 46%
+Filling depressions: 47%
+Filling depressions: 48%
+Filling depressions: 49%
+Filling depressions: 50%
+Filling depressions: 51%
+Filling depressions: 52%
+Filling depressions: 53%
+Filling depressions: 54%
+Filling depressions: 55%
+Filling depressions: 56%
+Filling depressions: 57%
+Filling depressions: 58%
+Filling depressions: 59%
+Filling depressions: 60%
+Filling depressions: 61%
+Filling depressions: 62%
+Filling depressions: 63%
+Filling depressions: 64%
+Filling depressions: 65%
+Filling depressions: 66%
+Filling depressions: 67%
+Filling depressions: 68%
+Filling depressions: 69%
+Filling depressions: 70%
+Filling depressions: 71%
+Filling depressions: 72%
+Filling depressions: 73%
+Filling depressions: 74%
+Filling depressions: 75%
+Filling depressions: 76%
+Filling depressions: 77%
+Filling depressions: 78%
+Filling depressions: 79%
+Filling depressions: 80%
+Filling depressions: 81%
+Filling depressions: 82%
+Filling depressions: 83%
+Filling depressions: 84%
+Filling depressions: 85%
+Filling depressions: 86%
+Filling depressions: 87%
+Filling depressions: 88%
+Filling depressions: 89%
+Filling depressions: 90%
+Filling depressions: 91%
+Filling depressions: 92%
+Filling depressions: 93%
+Filling depressions: 94%
+Filling depressions: 95%
+Filling depressions: 96%
+Filling depressions: 97%
+Filling depressions: 98%
+Filling depressions: 99%
+Filling depressions: 100%
+Fixing flow on flats...
+Flats increment value: 0.01
+Fixing flats: 1%
+Fixing flats: 2%
+Fixing flats: 3%
+Fixing flats: 4%
+Fixing flats: 5%
+Fixing flats: 8%
+Fixing flats: 10%
+Fixing flats: 11%
+Fixing flats: 12%
+Fixing flats: 14%
+Fixing flats: 15%
+Fixing flats: 16%
+Fixing flats: 18%
+Fixing flats: 19%
+Fixing flats: 20%
+Fixing flats: 21%
+Fixing flats: 23%
+Fixing flats: 24%
+Fixing flats: 25%
+Fixing flats: 26%
+Fixing flats: 27%
+Fixing flats: 28%
+Fixing flats: 31%
+Fixing flats: 32%
+Fixing flats: 33%
+Fixing flats: 34%
+Fixing flats: 35%
+Fixing flats: 36%
+Fixing flats: 39%
+Fixing flats: 41%
+Fixing flats: 42%
+Fixing flats: 43%
+Fixing flats: 44%
+Fixing flats: 45%
+Fixing flats: 46%
+Fixing flats: 47%
+Fixing flats: 48%
+Fixing flats: 49%
+Fixing flats: 50%
+Fixing flats: 51%
+Fixing flats: 53%
+Fixing flats: 54%
+Fixing flats: 55%
+Fixing flats: 58%
+Fixing flats: 60%
+Fixing flats: 61%
+Fixing flats: 62%
+Fixing flats: 63%
+Fixing flats: 64%
+Fixing flats: 65%
+Fixing flats: 66%
+Fixing flats: 67%
+Fixing flats: 68%
+Fixing flats: 69%
+Fixing flats: 70%
+Fixing flats: 72%
+Fixing flats: 73%
+Fixing flats: 75%
+Fixing flats: 76%
+Fixing flats: 77%
+Fixing flats: 79%
+Fixing flats: 81%
+Fixing flats: 83%
+Fixing flats: 84%
+Fixing flats: 85%
+Fixing flats: 86%
+Fixing flats: 87%
+Fixing flats: 88%
+Fixing flats: 89%
+Fixing flats: 90%
+Fixing flats: 91%
+Fixing flats: 92%
+Fixing flats: 93%
+Fixing flats: 94%
+Fixing flats: 95%
+Fixing flats: 96%
+Fixing flats: 97%
+Fixing flats: 98%
+Fixing flats: 99%
+Fixing flats: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.25s
+ketinggianTengah di maintrame depression breach 912.0
+meshoption FAwatershed
+.\whitebox_tools.exe --run="MdInfFlowAccumulation" --wd="D:\maps\temp" --dem='D:\maps\temp\fileBreachDepression.tif' --output='D:\maps\temp\fileFlowAccumulationBreachMDInf.tif' --out_type=cells --exponent=1.1 -v --compress_rasters=False
+
+************************************
+* Welcome to MDInfFlowAccumulation *
+* Powered by WhiteboxTools         *
+* www.whiteboxgeo.com              *
+************************************
+Reading data...
+Num. inflowing neighbours: 0%
+Num. inflowing neighbours: 1%
+Num. inflowing neighbours: 2%
+Num. inflowing neighbours: 3%
+Num. inflowing neighbours: 4%
+Num. inflowing neighbours: 5%
+Num. inflowing neighbours: 6%
+Num. inflowing neighbours: 7%
+Num. inflowing neighbours: 8%
+Num. inflowing neighbours: 9%
+Num. inflowing neighbours: 10%
+Num. inflowing neighbours: 11%
+Num. inflowing neighbours: 12%
+Num. inflowing neighbours: 13%
+Num. inflowing neighbours: 14%
+Num. inflowing neighbours: 15%
+Num. inflowing neighbours: 16%
+Num. inflowing neighbours: 17%
+Num. inflowing neighbours: 18%
+Num. inflowing neighbours: 19%
+Num. inflowing neighbours: 20%
+Num. inflowing neighbours: 21%
+Num. inflowing neighbours: 22%
+Num. inflowing neighbours: 23%
+Num. inflowing neighbours: 24%
+Num. inflowing neighbours: 25%
+Num. inflowing neighbours: 26%
+Num. inflowing neighbours: 27%
+Num. inflowing neighbours: 28%
+Num. inflowing neighbours: 29%
+Num. inflowing neighbours: 30%
+Num. inflowing neighbours: 31%
+Num. inflowing neighbours: 32%
+Num. inflowing neighbours: 33%
+Num. inflowing neighbours: 34%
+Num. inflowing neighbours: 35%
+Num. inflowing neighbours: 36%
+Num. inflowing neighbours: 37%
+Num. inflowing neighbours: 38%
+Num. inflowing neighbours: 39%
+Num. inflowing neighbours: 40%
+Num. inflowing neighbours: 41%
+Num. inflowing neighbours: 42%
+Num. inflowing neighbours: 43%
+Num. inflowing neighbours: 44%
+Num. inflowing neighbours: 45%
+Num. inflowing neighbours: 46%
+Num. inflowing neighbours: 47%
+Num. inflowing neighbours: 48%
+Num. inflowing neighbours: 49%
+Num. inflowing neighbours: 50%
+Num. inflowing neighbours: 51%
+Num. inflowing neighbours: 52%
+Num. inflowing neighbours: 53%
+Num. inflowing neighbours: 54%
+Num. inflowing neighbours: 55%
+Num. inflowing neighbours: 56%
+Num. inflowing neighbours: 57%
+Num. inflowing neighbours: 58%
+Num. inflowing neighbours: 59%
+Num. inflowing neighbours: 60%
+Num. inflowing neighbours: 61%
+Num. inflowing neighbours: 62%
+Num. inflowing neighbours: 63%
+Num. inflowing neighbours: 64%
+Num. inflowing neighbours: 65%
+Num. inflowing neighbours: 66%
+Num. inflowing neighbours: 67%
+Num. inflowing neighbours: 68%
+Num. inflowing neighbours: 69%
+Num. inflowing neighbours: 70%
+Num. inflowing neighbours: 71%
+Num. inflowing neighbours: 72%
+Num. inflowing neighbours: 73%
+Num. inflowing neighbours: 74%
+Num. inflowing neighbours: 75%
+Num. inflowing neighbours: 76%
+Num. inflowing neighbours: 77%
+Num. inflowing neighbours: 78%
+Num. inflowing neighbours: 79%
+Num. inflowing neighbours: 80%
+Num. inflowing neighbours: 81%
+Num. inflowing neighbours: 82%
+Num. inflowing neighbours: 83%
+Num. inflowing neighbours: 84%
+Num. inflowing neighbours: 85%
+Num. inflowing neighbours: 86%
+Num. inflowing neighbours: 87%
+Num. inflowing neighbours: 88%
+Num. inflowing neighbours: 89%
+Num. inflowing neighbours: 90%
+Num. inflowing neighbours: 91%
+Num. inflowing neighbours: 92%
+Num. inflowing neighbours: 93%
+Num. inflowing neighbours: 94%
+Num. inflowing neighbours: 95%
+Num. inflowing neighbours: 96%
+Num. inflowing neighbours: 97%
+Num. inflowing neighbours: 98%
+Num. inflowing neighbours: 99%
+Num. inflowing neighbours: 100%
+Flow accumulation: 0%
+Flow accumulation: 1%
+Flow accumulation: 2%
+Flow accumulation: 3%
+Flow accumulation: 4%
+Flow accumulation: 5%
+Flow accumulation: 6%
+Flow accumulation: 7%
+Flow accumulation: 8%
+Flow accumulation: 9%
+Flow accumulation: 10%
+Flow accumulation: 11%
+Flow accumulation: 12%
+Flow accumulation: 13%
+Flow accumulation: 14%
+Flow accumulation: 15%
+Flow accumulation: 16%
+Flow accumulation: 17%
+Flow accumulation: 18%
+Flow accumulation: 19%
+Flow accumulation: 20%
+Flow accumulation: 21%
+Flow accumulation: 22%
+Flow accumulation: 23%
+Flow accumulation: 24%
+Flow accumulation: 25%
+Flow accumulation: 26%
+Flow accumulation: 27%
+Flow accumulation: 28%
+Flow accumulation: 29%
+Flow accumulation: 30%
+Flow accumulation: 31%
+Flow accumulation: 32%
+Flow accumulation: 33%
+Flow accumulation: 34%
+Flow accumulation: 35%
+Flow accumulation: 36%
+Flow accumulation: 37%
+Flow accumulation: 38%
+Flow accumulation: 39%
+Flow accumulation: 40%
+Flow accumulation: 41%
+Flow accumulation: 42%
+Flow accumulation: 43%
+Flow accumulation: 44%
+Flow accumulation: 45%
+Flow accumulation: 46%
+Flow accumulation: 47%
+Flow accumulation: 48%
+Flow accumulation: 49%
+Flow accumulation: 50%
+Flow accumulation: 51%
+Flow accumulation: 52%
+Flow accumulation: 53%
+Flow accumulation: 54%
+Flow accumulation: 55%
+Flow accumulation: 56%
+Flow accumulation: 57%
+Flow accumulation: 58%
+Flow accumulation: 59%
+Flow accumulation: 60%
+Flow accumulation: 61%
+Flow accumulation: 62%
+Flow accumulation: 63%
+Flow accumulation: 64%
+Flow accumulation: 65%
+Flow accumulation: 66%
+Flow accumulation: 67%
+Flow accumulation: 68%
+Flow accumulation: 69%
+Flow accumulation: 70%
+Flow accumulation: 71%
+Flow accumulation: 72%
+Flow accumulation: 73%
+Flow accumulation: 74%
+Flow accumulation: 75%
+Flow accumulation: 76%
+Flow accumulation: 77%
+Flow accumulation: 78%
+Flow accumulation: 79%
+Flow accumulation: 80%
+Flow accumulation: 81%
+Flow accumulation: 82%
+Flow accumulation: 83%
+Flow accumulation: 84%
+Flow accumulation: 85%
+Flow accumulation: 86%
+Flow accumulation: 87%
+Flow accumulation: 88%
+Flow accumulation: 89%
+Flow accumulation: 90%
+Flow accumulation: 91%
+Flow accumulation: 92%
+Flow accumulation: 93%
+Flow accumulation: 94%
+Flow accumulation: 95%
+Flow accumulation: 96%
+Flow accumulation: 97%
+Flow accumulation: 98%
+Flow accumulation: 99%
+Flow accumulation: 100%
+Correcting values: 0%
+Correcting values: 1%
+Correcting values: 2%
+Correcting values: 3%
+Correcting values: 4%
+Correcting values: 5%
+Correcting values: 6%
+Correcting values: 7%
+Correcting values: 8%
+Correcting values: 9%
+Correcting values: 10%
+Correcting values: 11%
+Correcting values: 12%
+Correcting values: 13%
+Correcting values: 14%
+Correcting values: 15%
+Correcting values: 16%
+Correcting values: 17%
+Correcting values: 18%
+Correcting values: 19%
+Correcting values: 20%
+Correcting values: 21%
+Correcting values: 22%
+Correcting values: 23%
+Correcting values: 24%
+Correcting values: 25%
+Correcting values: 26%
+Correcting values: 27%
+Correcting values: 28%
+Correcting values: 29%
+Correcting values: 30%
+Correcting values: 31%
+Correcting values: 32%
+Correcting values: 33%
+Correcting values: 34%
+Correcting values: 35%
+Correcting values: 36%
+Correcting values: 37%
+Correcting values: 38%
+Correcting values: 39%
+Correcting values: 40%
+Correcting values: 41%
+Correcting values: 42%
+Correcting values: 43%
+Correcting values: 44%
+Correcting values: 45%
+Correcting values: 46%
+Correcting values: 47%
+Correcting values: 48%
+Correcting values: 49%
+Correcting values: 50%
+Correcting values: 51%
+Correcting values: 52%
+Correcting values: 53%
+Correcting values: 54%
+Correcting values: 55%
+Correcting values: 56%
+Correcting values: 57%
+Correcting values: 58%
+Correcting values: 59%
+Correcting values: 60%
+Correcting values: 61%
+Correcting values: 62%
+Correcting values: 63%
+Correcting values: 64%
+Correcting values: 65%
+Correcting values: 66%
+Correcting values: 67%
+Correcting values: 68%
+Correcting values: 69%
+Correcting values: 70%
+Correcting values: 71%
+Correcting values: 72%
+Correcting values: 73%
+Correcting values: 74%
+Correcting values: 75%
+Correcting values: 76%
+Correcting values: 77%
+Correcting values: 78%
+Correcting values: 79%
+Correcting values: 80%
+Correcting values: 81%
+Correcting values: 82%
+Correcting values: 83%
+Correcting values: 84%
+Correcting values: 85%
+Correcting values: 86%
+Correcting values: 87%
+Correcting values: 88%
+Correcting values: 89%
+Correcting values: 90%
+Correcting values: 91%
+Correcting values: 92%
+Correcting values: 93%
+Correcting values: 94%
+Correcting values: 95%
+Correcting values: 96%
+Correcting values: 97%
+Correcting values: 98%
+Correcting values: 99%
+Correcting values: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.151s
+.\whitebox_tools.exe --run="D8Pointer" --wd="D:\maps\temp" --dem='D:\maps\temp\fileBreachDepression.tif' --output='D:\maps\temp\filed8pointer.tif' -v --compress_rasters=False
+
+****************************
+* Welcome to D8Pointer     *
+* Powered by WhiteboxTools *
+* www.whiteboxgeo.com      *
+****************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.9s
+.\whitebox_tools.exe --run="D8FlowAccumulation" --wd="D:\maps\temp" --input='D:\maps\temp\filed8pointer.tif' --output='D:\maps\temp\fileFlowAccumulationBreachD8.tif' --out_type=cells --pntr -v --compress_rasters=False
+
+*********************************
+* Welcome to D8FlowAccumulation *
+* Powered by WhiteboxTools      *
+* www.whiteboxgeo.com           *
+*********************************
+Reading data...
+Flow directions: 0%
+Flow directions: 1%
+Flow directions: 2%
+Flow directions: 3%
+Flow directions: 4%
+Flow directions: 5%
+Flow directions: 6%
+Flow directions: 7%
+Flow directions: 8%
+Flow directions: 9%
+Flow directions: 10%
+Flow directions: 11%
+Flow directions: 12%
+Flow directions: 13%
+Flow directions: 14%
+Flow directions: 15%
+Flow directions: 16%
+Flow directions: 17%
+Flow directions: 18%
+Flow directions: 19%
+Flow directions: 20%
+Flow directions: 21%
+Flow directions: 22%
+Flow directions: 23%
+Flow directions: 24%
+Flow directions: 25%
+Flow directions: 26%
+Flow directions: 27%
+Flow directions: 28%
+Flow directions: 29%
+Flow directions: 30%
+Flow directions: 31%
+Flow directions: 32%
+Flow directions: 33%
+Flow directions: 34%
+Flow directions: 35%
+Flow directions: 36%
+Flow directions: 37%
+Flow directions: 38%
+Flow directions: 39%
+Flow directions: 40%
+Flow directions: 41%
+Flow directions: 42%
+Flow directions: 43%
+Flow directions: 44%
+Flow directions: 45%
+Flow directions: 46%
+Flow directions: 47%
+Flow directions: 48%
+Flow directions: 49%
+Flow directions: 50%
+Flow directions: 51%
+Flow directions: 52%
+Flow directions: 53%
+Flow directions: 54%
+Flow directions: 55%
+Flow directions: 56%
+Flow directions: 57%
+Flow directions: 58%
+Flow directions: 59%
+Flow directions: 60%
+Flow directions: 61%
+Flow directions: 62%
+Flow directions: 63%
+Flow directions: 64%
+Flow directions: 65%
+Flow directions: 66%
+Flow directions: 67%
+Flow directions: 68%
+Flow directions: 69%
+Flow directions: 70%
+Flow directions: 71%
+Flow directions: 72%
+Flow directions: 73%
+Flow directions: 74%
+Flow directions: 75%
+Flow directions: 76%
+Flow directions: 77%
+Flow directions: 78%
+Flow directions: 79%
+Flow directions: 80%
+Flow directions: 81%
+Flow directions: 82%
+Flow directions: 83%
+Flow directions: 84%
+Flow directions: 85%
+Flow directions: 86%
+Flow directions: 87%
+Flow directions: 88%
+Flow directions: 89%
+Flow directions: 90%
+Flow directions: 91%
+Flow directions: 92%
+Flow directions: 93%
+Flow directions: 94%
+Flow directions: 95%
+Flow directions: 96%
+Flow directions: 97%
+Flow directions: 98%
+Flow directions: 99%
+Flow directions: 100%
+Num. inflowing neighbours: 0%
+Num. inflowing neighbours: 1%
+Num. inflowing neighbours: 2%
+Num. inflowing neighbours: 3%
+Num. inflowing neighbours: 4%
+Num. inflowing neighbours: 5%
+Num. inflowing neighbours: 6%
+Num. inflowing neighbours: 7%
+Num. inflowing neighbours: 8%
+Num. inflowing neighbours: 9%
+Num. inflowing neighbours: 10%
+Num. inflowing neighbours: 11%
+Num. inflowing neighbours: 12%
+Num. inflowing neighbours: 13%
+Num. inflowing neighbours: 14%
+Num. inflowing neighbours: 15%
+Num. inflowing neighbours: 16%
+Num. inflowing neighbours: 17%
+Num. inflowing neighbours: 18%
+Num. inflowing neighbours: 19%
+Num. inflowing neighbours: 20%
+Num. inflowing neighbours: 21%
+Num. inflowing neighbours: 22%
+Num. inflowing neighbours: 23%
+Num. inflowing neighbours: 24%
+Num. inflowing neighbours: 25%
+Num. inflowing neighbours: 26%
+Num. inflowing neighbours: 27%
+Num. inflowing neighbours: 28%
+Num. inflowing neighbours: 29%
+Num. inflowing neighbours: 30%
+Num. inflowing neighbours: 31%
+Num. inflowing neighbours: 32%
+Num. inflowing neighbours: 33%
+Num. inflowing neighbours: 34%
+Num. inflowing neighbours: 35%
+Num. inflowing neighbours: 36%
+Num. inflowing neighbours: 37%
+Num. inflowing neighbours: 38%
+Num. inflowing neighbours: 39%
+Num. inflowing neighbours: 40%
+Num. inflowing neighbours: 41%
+Num. inflowing neighbours: 42%
+Num. inflowing neighbours: 43%
+Num. inflowing neighbours: 44%
+Num. inflowing neighbours: 45%
+Num. inflowing neighbours: 46%
+Num. inflowing neighbours: 47%
+Num. inflowing neighbours: 48%
+Num. inflowing neighbours: 49%
+Num. inflowing neighbours: 50%
+Num. inflowing neighbours: 51%
+Num. inflowing neighbours: 52%
+Num. inflowing neighbours: 53%
+Num. inflowing neighbours: 54%
+Num. inflowing neighbours: 55%
+Num. inflowing neighbours: 56%
+Num. inflowing neighbours: 57%
+Num. inflowing neighbours: 58%
+Num. inflowing neighbours: 59%
+Num. inflowing neighbours: 60%
+Num. inflowing neighbours: 61%
+Num. inflowing neighbours: 62%
+Num. inflowing neighbours: 63%
+Num. inflowing neighbours: 64%
+Num. inflowing neighbours: 65%
+Num. inflowing neighbours: 66%
+Num. inflowing neighbours: 67%
+Num. inflowing neighbours: 68%
+Num. inflowing neighbours: 69%
+Num. inflowing neighbours: 70%
+Num. inflowing neighbours: 71%
+Num. inflowing neighbours: 72%
+Num. inflowing neighbours: 73%
+Num. inflowing neighbours: 74%
+Num. inflowing neighbours: 75%
+Num. inflowing neighbours: 76%
+Num. inflowing neighbours: 77%
+Num. inflowing neighbours: 78%
+Num. inflowing neighbours: 79%
+Num. inflowing neighbours: 80%
+Num. inflowing neighbours: 81%
+Num. inflowing neighbours: 82%
+Num. inflowing neighbours: 83%
+Num. inflowing neighbours: 84%
+Num. inflowing neighbours: 85%
+Num. inflowing neighbours: 86%
+Num. inflowing neighbours: 87%
+Num. inflowing neighbours: 88%
+Num. inflowing neighbours: 89%
+Num. inflowing neighbours: 90%
+Num. inflowing neighbours: 91%
+Num. inflowing neighbours: 92%
+Num. inflowing neighbours: 93%
+Num. inflowing neighbours: 94%
+Num. inflowing neighbours: 95%
+Num. inflowing neighbours: 96%
+Num. inflowing neighbours: 97%
+Num. inflowing neighbours: 98%
+Num. inflowing neighbours: 99%
+Num. inflowing neighbours: 100%
+Flow accumulation: 0%
+Flow accumulation: 1%
+Flow accumulation: 2%
+Flow accumulation: 3%
+Flow accumulation: 4%
+Flow accumulation: 5%
+Flow accumulation: 6%
+Flow accumulation: 7%
+Flow accumulation: 8%
+Flow accumulation: 9%
+Flow accumulation: 10%
+Flow accumulation: 11%
+Flow accumulation: 12%
+Flow accumulation: 13%
+Flow accumulation: 14%
+Flow accumulation: 15%
+Flow accumulation: 16%
+Flow accumulation: 17%
+Flow accumulation: 18%
+Flow accumulation: 19%
+Flow accumulation: 20%
+Flow accumulation: 21%
+Flow accumulation: 22%
+Flow accumulation: 23%
+Flow accumulation: 24%
+Flow accumulation: 25%
+Flow accumulation: 26%
+Flow accumulation: 27%
+Flow accumulation: 28%
+Flow accumulation: 29%
+Flow accumulation: 30%
+Flow accumulation: 31%
+Flow accumulation: 32%
+Flow accumulation: 33%
+Flow accumulation: 34%
+Flow accumulation: 35%
+Flow accumulation: 36%
+Flow accumulation: 37%
+Flow accumulation: 38%
+Flow accumulation: 39%
+Flow accumulation: 40%
+Flow accumulation: 41%
+Flow accumulation: 42%
+Flow accumulation: 43%
+Flow accumulation: 44%
+Flow accumulation: 45%
+Flow accumulation: 46%
+Flow accumulation: 47%
+Flow accumulation: 48%
+Flow accumulation: 49%
+Flow accumulation: 50%
+Flow accumulation: 51%
+Flow accumulation: 52%
+Flow accumulation: 53%
+Flow accumulation: 54%
+Flow accumulation: 55%
+Flow accumulation: 56%
+Flow accumulation: 57%
+Flow accumulation: 58%
+Flow accumulation: 59%
+Flow accumulation: 60%
+Flow accumulation: 61%
+Flow accumulation: 62%
+Flow accumulation: 63%
+Flow accumulation: 64%
+Flow accumulation: 65%
+Flow accumulation: 66%
+Flow accumulation: 67%
+Flow accumulation: 68%
+Flow accumulation: 69%
+Flow accumulation: 70%
+Flow accumulation: 71%
+Flow accumulation: 72%
+Flow accumulation: 73%
+Flow accumulation: 74%
+Flow accumulation: 75%
+Flow accumulation: 76%
+Flow accumulation: 77%
+Flow accumulation: 78%
+Flow accumulation: 79%
+Flow accumulation: 80%
+Flow accumulation: 81%
+Flow accumulation: 82%
+Flow accumulation: 83%
+Flow accumulation: 84%
+Flow accumulation: 85%
+Flow accumulation: 86%
+Flow accumulation: 87%
+Flow accumulation: 88%
+Flow accumulation: 89%
+Flow accumulation: 90%
+Flow accumulation: 91%
+Flow accumulation: 92%
+Flow accumulation: 93%
+Flow accumulation: 94%
+Flow accumulation: 95%
+Flow accumulation: 96%
+Flow accumulation: 97%
+Flow accumulation: 98%
+Flow accumulation: 99%
+Flow accumulation: 100%
+Correcting values: 0%
+Correcting values: 1%
+Correcting values: 2%
+Correcting values: 3%
+Correcting values: 4%
+Correcting values: 5%
+Correcting values: 6%
+Correcting values: 7%
+Correcting values: 8%
+Correcting values: 9%
+Correcting values: 10%
+Correcting values: 11%
+Correcting values: 12%
+Correcting values: 13%
+Correcting values: 14%
+Correcting values: 15%
+Correcting values: 16%
+Correcting values: 17%
+Correcting values: 18%
+Correcting values: 19%
+Correcting values: 20%
+Correcting values: 21%
+Correcting values: 22%
+Correcting values: 23%
+Correcting values: 24%
+Correcting values: 25%
+Correcting values: 26%
+Correcting values: 27%
+Correcting values: 28%
+Correcting values: 29%
+Correcting values: 30%
+Correcting values: 31%
+Correcting values: 32%
+Correcting values: 33%
+Correcting values: 34%
+Correcting values: 35%
+Correcting values: 36%
+Correcting values: 37%
+Correcting values: 38%
+Correcting values: 39%
+Correcting values: 40%
+Correcting values: 41%
+Correcting values: 42%
+Correcting values: 43%
+Correcting values: 44%
+Correcting values: 45%
+Correcting values: 46%
+Correcting values: 47%
+Correcting values: 48%
+Correcting values: 49%
+Correcting values: 50%
+Correcting values: 51%
+Correcting values: 52%
+Correcting values: 53%
+Correcting values: 54%
+Correcting values: 55%
+Correcting values: 56%
+Correcting values: 57%
+Correcting values: 58%
+Correcting values: 59%
+Correcting values: 60%
+Correcting values: 61%
+Correcting values: 62%
+Correcting values: 63%
+Correcting values: 64%
+Correcting values: 65%
+Correcting values: 66%
+Correcting values: 67%
+Correcting values: 68%
+Correcting values: 69%
+Correcting values: 70%
+Correcting values: 71%
+Correcting values: 72%
+Correcting values: 73%
+Correcting values: 74%
+Correcting values: 75%
+Correcting values: 76%
+Correcting values: 77%
+Correcting values: 78%
+Correcting values: 79%
+Correcting values: 80%
+Correcting values: 81%
+Correcting values: 82%
+Correcting values: 83%
+Correcting values: 84%
+Correcting values: 85%
+Correcting values: 86%
+Correcting values: 87%
+Correcting values: 88%
+Correcting values: 89%
+Correcting values: 90%
+Correcting values: 91%
+Correcting values: 92%
+Correcting values: 93%
+Correcting values: 94%
+Correcting values: 95%
+Correcting values: 96%
+Correcting values: 97%
+Correcting values: 98%
+Correcting values: 99%
+Correcting values: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.29s
+.\whitebox_tools.exe --run="ExtractStreams" --wd="D:\maps\temp" --flow_accum='D:\maps\temp\fileFlowAccumulationBreachD8.tif' --output='D:\maps\temp\fileExtractstreamsHulu.tif' --threshold='50' -v --compress_rasters=False
+
+*****************************
+* Welcome to ExtractStreams *
+* Powered by WhiteboxTools  *
+* www.whiteboxgeo.com       *
+*****************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.3s
+.\whitebox_tools.exe --run="TributaryIdentifier" --wd="D:\maps\temp" --d8_pntr='D:\maps\temp\filed8pointer.tif' --streams='D:\maps\temp\fileExtractstreamsHulu.tif' --output='D:\maps\temp\filetributaryidentifier.tif' -v --compress_rasters=False
+
+**********************************
+* Welcome to TributaryIdentifier *
+* Powered by WhiteboxTools       *
+* www.whiteboxgeo.com            *
+**********************************
+Reading pointer data...
+Reading streams data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.3s
+minFAD8 1.0
+sum 1 13431609.0
+sum 2 13431609.0
+fa threshold elevasi 1
+matrikOut.dtype float32, minout 0.0
+dynamicthreshold 2369.75
+matrikOut.dtype float32, minout 0.0
+.\whitebox_tools.exe --run="StreamLinkIdentifier" --wd="D:\maps\temp" --d8_pntr='D:\maps\temp\filed8pointer.tif' --streams='D:\maps\temp\fileExtractstreams.tif' --output='D:\maps\temp\fileStreamslinkidentifier.tif' --zero_background -v --compress_rasters=False
+
+***********************************
+* Welcome to StreamLinkIdentifier *
+* Powered by WhiteboxTools        *
+* www.whiteboxgeo.com             *
+***********************************
+Reading pointer data...
+Reading streams data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.4s
+[1 2 3 4 5]
+max_FA 5842.0
+max_FAMDIF 5826.901233924266
+max_FA 2817.0
+max_FAMDIF 2833.3969093255505
+max_FA 5998.0
+max_FAMDIF 5970.9708765666355
+max_FA 2593.0
+max_FAMDIF 1394.834477770326
+max_FA 2778.0
+max_FAMDIF 2812.406440409647
+
+1 Outlet sebelum diurutkan berdasarkan max_FA:
+[np.int64(253), np.int64(107), np.int64(1), np.float64(5826.901233924266), np.float64(915.0), np.float64(5.5181)]
+[np.int64(193), np.int64(130), np.int64(2), np.float64(2833.3969093255505), np.float64(915.0), np.float64(2.6833)]
+[np.int64(162), np.int64(141), np.int64(3), np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+[np.int64(108), np.int64(119), np.int64(4), np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), np.int64(5), np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+
+2 Outlet sebelum diurutkan berdasarkan cid:
+[np.int64(108), np.int64(119), np.int64(4), np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), np.int64(5), np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+[np.int64(193), np.int64(130), np.int64(2), np.float64(2833.3969093255505), np.float64(915.0), np.float64(2.6833)]
+[np.int64(253), np.int64(107), np.int64(1), np.float64(5826.901233924266), np.float64(915.0), np.float64(5.5181)]
+[np.int64(162), np.int64(141), np.int64(3), np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+
+ 3 Outlet setelah diurutkan berdasarkan max_FA:
+[np.int64(108), np.int64(119), 1, np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), 2, np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+[np.int64(193), np.int64(130), 3, np.float64(2833.3969093255505), np.float64(915.0), np.float64(2.6833)]
+[np.int64(253), np.int64(107), 4, np.float64(5826.901233924266), np.float64(915.0), np.float64(5.5181)]
+[np.int64(162), np.int64(141), 5, np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+koordinatpourpoint before
+108 119 1 1394.834477770326 919 1.3209
+0 74 2 2812.406440409647 933 2.6634
+193 130 3 2833.3969093255505 915 2.6833
+253 107 4 5826.901233924266 915 5.5181
+162 141 5 5970.9708765666355 916 5.6546
+
+Koordinat sebelum filter:
+108.0 119.0 1.0 1394.834477770326 919.0 1.3209
+0.0 74.0 2.0 2812.406440409647 933.0 2.6634
+193.0 130.0 3.0 2833.3969093255505 915.0 2.6833
+253.0 107.0 4.0 5826.901233924266 915.0 5.5181
+162.0 141.0 5.0 5970.9708765666355 916.0 5.6546
+
+Koordinat sesudah filter:
+108.0 119.0 1.0 1394.834477770326 919.0 1.3209
+0.0 74.0 2.0 2812.406440409647 933.0 2.6634
+193.0 130.0 3.0 2833.3969093255505 915.0 2.6833
+253.0 107.0 4.0 5826.901233924266 915.0 5.5181
+162.0 141.0 5.0 5970.9708765666355 916.0 5.6546
+koordinatpourpoint after
+108 119 1 1394.834477770326 919 1.3209
+0 74 2 2812.406440409647 933 2.6634
+193 130 3 2833.3969093255505 915 2.6833
+253 107 4 5826.901233924266 915 5.5181
+162 141 5 5970.9708765666355 916 5.6546
+di exportshp before max 0 min 0
+koordinat 
+slid 1.0 baris 192 kolom 119
+slid 2.0 baris 300 kolom 74
+slid 3.0 baris 107 kolom 130
+slid 4.0 baris 47 kolom 107
+slid 5.0 baris 138 kolom 141
+matrik pour point shape (301, 301)
+di exportshp after max 1 min 0
+matrikOut.dtype uint8, minout 0
+.\whitebox_tools.exe --run="RasterToVectorPoints" --input='D:\maps\temp\filepourpoint.tif' --output='D:\maps\temp\filepourpointshp.shp' -v --compress_rasters=False
+
+***********************************
+* Welcome to RasterToVectorPoints *
+* Powered by WhiteboxTools        *
+* www.whiteboxgeo.com             *
+***********************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.2s
+.\whitebox_tools.exe --run="Watershed" --d8_pntr='D:\maps\temp\filed8pointer.tif' --pour_pts='D:\maps\temp\filepourpointshp.shp' --output='D:\maps\temp\filewatershed.tif' -v --compress_rasters=False
+
+****************************
+* Welcome to Watershed     *
+* Powered by WhiteboxTools *
+* www.whiteboxgeo.com      *
+****************************
+Reading data...
+Locating pour points: 0%
+Locating pour points: 25%
+Locating pour points: 50%
+Locating pour points: 75%
+Locating pour points: 100%
+Initializing: 0%
+Initializing: 1%
+Initializing: 2%
+Initializing: 3%
+Initializing: 4%
+Initializing: 5%
+Initializing: 6%
+Initializing: 7%
+Initializing: 8%
+Initializing: 9%
+Initializing: 10%
+Initializing: 11%
+Initializing: 12%
+Initializing: 13%
+Initializing: 14%
+Initializing: 15%
+Initializing: 16%
+Initializing: 17%
+Initializing: 18%
+Initializing: 19%
+Initializing: 20%
+Initializing: 21%
+Initializing: 22%
+Initializing: 23%
+Initializing: 24%
+Initializing: 25%
+Initializing: 26%
+Initializing: 27%
+Initializing: 28%
+Initializing: 29%
+Initializing: 30%
+Initializing: 31%
+Initializing: 32%
+Initializing: 33%
+Initializing: 34%
+Initializing: 35%
+Initializing: 36%
+Initializing: 37%
+Initializing: 38%
+Initializing: 39%
+Initializing: 40%
+Initializing: 41%
+Initializing: 42%
+Initializing: 43%
+Initializing: 44%
+Initializing: 45%
+Initializing: 46%
+Initializing: 47%
+Initializing: 48%
+Initializing: 49%
+Initializing: 50%
+Initializing: 51%
+Initializing: 52%
+Initializing: 53%
+Initializing: 54%
+Initializing: 55%
+Initializing: 56%
+Initializing: 57%
+Initializing: 58%
+Initializing: 59%
+Initializing: 60%
+Initializing: 61%
+Initializing: 62%
+Initializing: 63%
+Initializing: 64%
+Initializing: 65%
+Initializing: 66%
+Initializing: 67%
+Initializing: 68%
+Initializing: 69%
+Initializing: 70%
+Initializing: 71%
+Initializing: 72%
+Initializing: 73%
+Initializing: 74%
+Initializing: 75%
+Initializing: 76%
+Initializing: 77%
+Initializing: 78%
+Initializing: 79%
+Initializing: 80%
+Initializing: 81%
+Initializing: 82%
+Initializing: 83%
+Initializing: 84%
+Initializing: 85%
+Initializing: 86%
+Initializing: 87%
+Initializing: 88%
+Initializing: 89%
+Initializing: 90%
+Initializing: 91%
+Initializing: 92%
+Initializing: 93%
+Initializing: 94%
+Initializing: 95%
+Initializing: 96%
+Initializing: 97%
+Initializing: 98%
+Initializing: 99%
+Initializing: 100%
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.11s
+1 : Baris: 108.0, Kolom: 119.0, cid 1.0,Hasil FA jumlah cells 1394.83, Luas daerah tangkapan AIR (A)    1.32 km2, Elevasi:  919.00
+2 : Baris: 0.0, Kolom: 74.0, cid 2.0,Hasil FA jumlah cells 2812.41, Luas daerah tangkapan AIR (A)    2.66 km2, Elevasi:  933.00
+3 : Baris: 193.0, Kolom: 130.0, cid 3.0,Hasil FA jumlah cells 2833.40, Luas daerah tangkapan AIR (A)    2.68 km2, Elevasi:  915.00
+4 : Baris: 253.0, Kolom: 107.0, cid 4.0,Hasil FA jumlah cells 5826.90, Luas daerah tangkapan AIR (A)    5.52 km2, Elevasi:  915.00
+5 : Baris: 162.0, Kolom: 141.0, cid 5.0,Hasil FA jumlah cells 5970.97, Luas daerah tangkapan AIR (A)    5.65 km2, Elevasi:  916.00
+oke
+min tampilflowaccum 1.0
+min tampilflowaccumelevation 0.0
+tingicone 150.0, radiuscone 3.75
+Actor saat ini: 0
+Renderer props setelah clear: 0
+max 5 min -32768
+setelah diganti max 5 min 0
+matrikOut.dtype float64, minout 0.9980077147483826, maxout 24546.0
+filehandler 3 oke
+scale 30.63, 30.92
+✅ Viewer update selesai. Siap di render
+Actor saat ini: 8
+countcllik awal 0
+countcllik 1
+poin 1 = 49.0, poin 0 = 297.00000000000006
+barisKlik = -101.0, kolomKlik 147.00000000000006
+callback barisKonversi 3494.0 kolomKonversi 2093.0
+barisFA = 251.0, kolomFA 297.00000000000006
+call back latitudePoint -7.970556 longitudePoint 112.581389 
+call back flow_accum_MDInf FA 1.0 
+call back flow_accum_D8 FA 1.0 
+luasdas sesudah pembulatan= 0.0009
+koefisien di fungsi 0.15
+curah hujan di fungsi 174.67
+matrikOut.dtype float32, minout --
+elevasiHulu : 561.0 - elevasiHilir : 561.0
+tributary id: -32768.0
+baris hulu: None
+kolom hulu: None
+elevasi hulu: 561.0
+baris hilir: 251
+kolom hilir: 297
+elevasi hilir: 561.0
+jumlah sel stream utama: 0
+tinggi1sel 30.92, lebar1sel 30.62, diagonal1sel 43.52
+jumlah sel stream utama: 0
+interval horizontal 0
+interval vertikal  0
+interval diagonal 0
+total jarak interval 0
+jarakselhorizontal 0.0
+jarakselvertikal 0.0
+jarakseldiagonal 0.0
+jarakaAliranUtama  km 0.0
+time concentration 0
+jaraktitiktengah 5.48
+titik tengah : 912.0 
+latitude longitude ketinggian link ketinggiantitiktengah
+-7.970556 112.581389 561.0 https://www.google.com/maps?q=-7.970556,112.581389 912.0
+di call back barisFA 251.0 dan  kolomFA 297.00000000000006
+koordinatpourpoint all
+titik cone baru px 297 py 49 pz 561.0
+add actor_pointer1
+--- Daftar Actor di Plotter ---
+Daftar nama actor: ['PolyData(Addr=0000016801F2FF70)', 'PolyData(Addr=0000016801F31630)', 'PolyData(Addr=0000016801F32E40)', 'PolyData(Addr=0000016801F2CBD0)', 'PolyData(Addr=0000016801F2B740)', 'PolyData(Addr=0000016801F2DFF0)', 'PolyData(Addr=0000016801F2E760)', 'StructuredGrid(Addr=000001680E753B60)', '_picked_point', 'actor_pointer1']
+countcllik 2
+poin 1 = 49.0, poin 0 = 298.0
+barisKlik = -101.0, kolomKlik 148.0
+callback barisKonversi 3494.0 kolomKonversi 2094.0
+barisFA = 251.0, kolomFA 298.0
+call back latitudePoint -7.970556 longitudePoint 112.581667 
+call back flow_accum_MDInf FA 24521.2 
+call back flow_accum_D8 FA 24503.0 
+luasdas sesudah pembulatan= 23.2203
+koefisien di fungsi 0.15
+curah hujan di fungsi 174.67
+matrikOut.dtype float32, minout 75.0
+elevasiHulu : 1504.0 - elevasiHilir : 558.0
+tributary id: 218.0
+baris hulu: 190
+kolom hulu: 5
+elevasi hulu: 1504.0
+baris hilir: 251
+kolom hilir: 298
+elevasi hilir: 558.0
+jumlah sel stream utama: 358
+tinggi1sel 30.92, lebar1sel 30.62, diagonal1sel 43.52
+jumlah sel stream utama: 358
+interval horizontal 158
+interval vertikal  52
+interval diagonal 147
+total jarak interval 357
+jarakselhorizontal 4837.96
+jarakselvertikal 1607.84
+jarakseldiagonal 6397.44
+jarakaAliranUtama  km 12.84
+time concentration 1.29
+tipe data I/jam <class 'float'>
+I_mm_per_hour 51.1
+jaraktitiktengah 5.5
+titik tengah : 912.0 
+latitude longitude ketinggian link ketinggiantitiktengah
+-7.970556 112.581667 558.0 https://www.google.com/maps?q=-7.970556,112.581667 912.0
+di call back barisFA 251.0 dan  kolomFA 298.0
+actor_pointer1 berhasil dihapus.
+koordinatpourpoint all
+titik cone baru px 298 py 49 pz 558.0
+add actor_pointer1
+--- Daftar Actor di Plotter ---
+Daftar nama actor: ['PolyData(Addr=0000016801F2FF70)', 'PolyData(Addr=0000016801F31630)', 'PolyData(Addr=0000016801F32E40)', 'PolyData(Addr=0000016801F2CBD0)', 'PolyData(Addr=0000016801F2B740)', 'PolyData(Addr=0000016801F2DFF0)', 'PolyData(Addr=0000016801F2E760)', 'StructuredGrid(Addr=000001680E753B60)', '_picked_point', 'actor_pointer1']
+=== Server berhenti: 2026-08-12T21:15:48 ===
+Traceback (most recent call last):
+  File "D:\Agung\penelitian\programtesis\mainVUEv3.py", line 713, in <module>
+    server.start(
+    ~~~~~~~~~~~~^
+        host="0.0.0.0",
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        timeout=0  # 0 = nonaktifkan auto-shutdown wslink saat client idle/terputus (default 300 detik)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Agung\penelitian\programtesis\.venv3132newfresh\Lib\site-packages\trame_server\core.py", line 725, in start
+    task = CoreServer.server_start(
+        options,
+    ...<5 lines>...
+        },
+    )
+  File "D:\Agung\penelitian\programtesis\.venv3132newfresh\Lib\site-packages\trame_server\protocol.py", line 52, in server_start
+    return server.start_webserver(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "D:\Agung\penelitian\programtesis\.venv3132newfresh\Lib\site-packages\wslink\server.py", line 298, in start_webserver
+    return exec_modes[exec_mode]()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Agung\penelitian\programtesis\.venv3132newfresh\Lib\site-packages\wslink\server.py", line 282, in main_exec
+    loop.run_until_complete(create_coroutine())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python3132baru\Lib\asyncio\base_events.py", line 712, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python3132baru\Lib\asyncio\base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python3132baru\Lib\asyncio\base_events.py", line 2002, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Program Files\Python3132baru\Lib\asyncio\windows_events.py", line 446, in select
+    self._poll(timeout)
+    ~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\Python3132baru\Lib\asyncio\windows_events.py", line 775, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+
+=== Server dimulai: 2026-08-12T21:16:32 ===
+Akses melalui web browser dari PC lain dengan link berikut : 
+ -> Wi-Fi: CTRL + klik http://192.168.3.6:80
+
+App running at:
+ - Local:   http://0.0.0.0:80/
+ - Network: http://0.0.0.0:80/
+
+Note that for multi-users you need to use and configure a launcher.
+Koefisien diselek: 0.35
+Curah hujan diselek: 174.67
+-7.942544 112.540593
+fileA1 : D:\maps\ASTGTMV003_S08E112_dem.tif
+fileA2 : D:\maps\ASTGTMV003_S08E113_dem.tif
+fileA3 : D:\maps\ASTGTMV003_S09E113_dem.tif
+fileA4 : D:\maps\ASTGTMV003_S09E112_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S08E112_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S08E113_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S09E113_dem.tif
+💾 Membaca dari HDD: D:\maps\ASTGTMV003_S09E112_dem.tif
+ketinggianmax 3667
+Waktu Proses pilih: 0.9397 detik
+ketinggianmax 2021.0
+pixelBarisAwalKoordinat 3243
+transform2 | 0.00, 0.00, 112.50|
+| 0.00, 0.00,-7.90|
+| 0.00, 0.00, 1.00|
+.\whitebox_tools.exe --run="BreachDepressionsLeastCost" --wd="D:\maps\temp" --dem='D:\maps\temp\fileSeleksiDEM.tif' --output='D:\maps\temp\fileBreachDepression.tif' --dist='2' --min_dist --flat_increment='0.01' --fill -v --compress_rasters=False
+
+*****************************************
+* Welcome to BreachDepressionsLeastCost *
+* Powered by WhiteboxTools              *
+* www.whiteboxgeo.com                   *
+*****************************************
+Reading data...
+Finding pits: 0%
+Finding pits: 1%
+Finding pits: 2%
+Finding pits: 3%
+Finding pits: 4%
+Finding pits: 5%
+Finding pits: 6%
+Finding pits: 7%
+Finding pits: 8%
+Finding pits: 9%
+Finding pits: 10%
+Finding pits: 11%
+Finding pits: 12%
+Finding pits: 13%
+Finding pits: 14%
+Finding pits: 15%
+Finding pits: 16%
+Finding pits: 17%
+Finding pits: 18%
+Finding pits: 19%
+Finding pits: 20%
+Finding pits: 21%
+Finding pits: 22%
+Finding pits: 23%
+Finding pits: 24%
+Finding pits: 25%
+Finding pits: 26%
+Finding pits: 27%
+Finding pits: 28%
+Finding pits: 29%
+Finding pits: 30%
+Finding pits: 31%
+Finding pits: 32%
+Finding pits: 33%
+Finding pits: 34%
+Finding pits: 35%
+Finding pits: 36%
+Finding pits: 37%
+Finding pits: 38%
+Finding pits: 39%
+Finding pits: 40%
+Finding pits: 41%
+Finding pits: 42%
+Finding pits: 43%
+Finding pits: 44%
+Finding pits: 45%
+Finding pits: 46%
+Finding pits: 47%
+Finding pits: 48%
+Finding pits: 49%
+Finding pits: 50%
+Finding pits: 51%
+Finding pits: 52%
+Finding pits: 53%
+Finding pits: 54%
+Finding pits: 55%
+Finding pits: 56%
+Finding pits: 57%
+Finding pits: 58%
+Finding pits: 59%
+Finding pits: 60%
+Finding pits: 61%
+Finding pits: 62%
+Finding pits: 63%
+Finding pits: 64%
+Finding pits: 65%
+Finding pits: 66%
+Finding pits: 67%
+Finding pits: 68%
+Finding pits: 69%
+Finding pits: 70%
+Finding pits: 71%
+Finding pits: 72%
+Finding pits: 73%
+Finding pits: 74%
+Finding pits: 75%
+Finding pits: 76%
+Finding pits: 77%
+Finding pits: 78%
+Finding pits: 79%
+Finding pits: 80%
+Finding pits: 81%
+Finding pits: 82%
+Finding pits: 83%
+Finding pits: 84%
+Finding pits: 85%
+Finding pits: 86%
+Finding pits: 87%
+Finding pits: 88%
+Finding pits: 89%
+Finding pits: 90%
+Finding pits: 91%
+Finding pits: 92%
+Finding pits: 93%
+Finding pits: 94%
+Finding pits: 95%
+Finding pits: 96%
+Finding pits: 97%
+Finding pits: 98%
+Finding pits: 99%
+Finding pits: 100%
+Breaching: 0%
+Breaching: 1%
+Breaching: 2%
+Breaching: 3%
+Breaching: 4%
+Breaching: 5%
+Breaching: 6%
+Breaching: 7%
+Breaching: 8%
+Breaching: 9%
+Breaching: 10%
+Breaching: 11%
+Breaching: 12%
+Breaching: 13%
+Breaching: 14%
+Breaching: 15%
+Breaching: 16%
+Breaching: 17%
+Breaching: 18%
+Breaching: 19%
+Breaching: 20%
+Breaching: 21%
+Breaching: 22%
+Breaching: 23%
+Breaching: 24%
+Breaching: 25%
+Breaching: 26%
+Breaching: 27%
+Breaching: 28%
+Breaching: 29%
+Breaching: 30%
+Breaching: 31%
+Breaching: 32%
+Breaching: 33%
+Breaching: 34%
+Breaching: 35%
+Breaching: 36%
+Breaching: 37%
+Breaching: 38%
+Breaching: 39%
+Breaching: 40%
+Breaching: 41%
+Breaching: 42%
+Breaching: 43%
+Breaching: 44%
+Breaching: 45%
+Breaching: 46%
+Breaching: 47%
+Breaching: 48%
+Breaching: 49%
+Breaching: 50%
+Breaching: 51%
+Breaching: 52%
+Breaching: 53%
+Breaching: 54%
+Breaching: 55%
+Breaching: 56%
+Breaching: 57%
+Breaching: 58%
+Breaching: 59%
+Breaching: 60%
+Breaching: 61%
+Breaching: 62%
+Breaching: 63%
+Breaching: 64%
+Breaching: 65%
+Breaching: 66%
+Breaching: 67%
+Breaching: 68%
+Breaching: 69%
+Breaching: 70%
+Breaching: 71%
+Breaching: 72%
+Breaching: 73%
+Breaching: 74%
+Breaching: 75%
+Breaching: 76%
+Breaching: 77%
+Breaching: 78%
+Breaching: 79%
+Breaching: 80%
+Breaching: 81%
+Breaching: 82%
+Breaching: 83%
+Breaching: 84%
+Breaching: 85%
+Breaching: 86%
+Breaching: 87%
+Breaching: 88%
+Breaching: 89%
+Breaching: 90%
+Breaching: 91%
+Breaching: 92%
+Breaching: 93%
+Breaching: 94%
+Breaching: 95%
+Breaching: 96%
+Breaching: 97%
+Breaching: 98%
+Breaching: 99%
+Breaching: 100%
+Num. solved pits: 2073
+Num. unsolved pits: 166
+Filling remaining depressions...
+Finding pit cells: 12%
+Finding pit cells: 25%
+Finding pit cells: 37%
+Finding pit cells: 50%
+Finding pit cells: 62%
+Finding pit cells: 75%
+Finding pit cells: 87%
+Finding pit cells: 100%
+Filling depressions: 0%
+Filling depressions: 1%
+Filling depressions: 2%
+Filling depressions: 3%
+Filling depressions: 4%
+Filling depressions: 5%
+Filling depressions: 6%
+Filling depressions: 7%
+Filling depressions: 8%
+Filling depressions: 9%
+Filling depressions: 10%
+Filling depressions: 11%
+Filling depressions: 12%
+Filling depressions: 13%
+Filling depressions: 14%
+Filling depressions: 15%
+Filling depressions: 16%
+Filling depressions: 17%
+Filling depressions: 18%
+Filling depressions: 19%
+Filling depressions: 20%
+Filling depressions: 21%
+Filling depressions: 22%
+Filling depressions: 23%
+Filling depressions: 24%
+Filling depressions: 25%
+Filling depressions: 26%
+Filling depressions: 27%
+Filling depressions: 28%
+Filling depressions: 29%
+Filling depressions: 30%
+Filling depressions: 31%
+Filling depressions: 32%
+Filling depressions: 33%
+Filling depressions: 34%
+Filling depressions: 35%
+Filling depressions: 36%
+Filling depressions: 37%
+Filling depressions: 38%
+Filling depressions: 39%
+Filling depressions: 40%
+Filling depressions: 41%
+Filling depressions: 42%
+Filling depressions: 43%
+Filling depressions: 44%
+Filling depressions: 45%
+Filling depressions: 46%
+Filling depressions: 47%
+Filling depressions: 48%
+Filling depressions: 49%
+Filling depressions: 50%
+Filling depressions: 51%
+Filling depressions: 52%
+Filling depressions: 53%
+Filling depressions: 54%
+Filling depressions: 55%
+Filling depressions: 56%
+Filling depressions: 57%
+Filling depressions: 58%
+Filling depressions: 59%
+Filling depressions: 60%
+Filling depressions: 61%
+Filling depressions: 62%
+Filling depressions: 63%
+Filling depressions: 64%
+Filling depressions: 65%
+Filling depressions: 66%
+Filling depressions: 67%
+Filling depressions: 68%
+Filling depressions: 69%
+Filling depressions: 70%
+Filling depressions: 71%
+Filling depressions: 72%
+Filling depressions: 73%
+Filling depressions: 74%
+Filling depressions: 75%
+Filling depressions: 76%
+Filling depressions: 77%
+Filling depressions: 78%
+Filling depressions: 79%
+Filling depressions: 80%
+Filling depressions: 81%
+Filling depressions: 82%
+Filling depressions: 83%
+Filling depressions: 84%
+Filling depressions: 85%
+Filling depressions: 86%
+Filling depressions: 87%
+Filling depressions: 88%
+Filling depressions: 89%
+Filling depressions: 90%
+Filling depressions: 91%
+Filling depressions: 92%
+Filling depressions: 93%
+Filling depressions: 94%
+Filling depressions: 95%
+Filling depressions: 96%
+Filling depressions: 97%
+Filling depressions: 98%
+Filling depressions: 99%
+Filling depressions: 100%
+Fixing flow on flats...
+Flats increment value: 0.01
+Fixing flats: 1%
+Fixing flats: 2%
+Fixing flats: 3%
+Fixing flats: 4%
+Fixing flats: 5%
+Fixing flats: 8%
+Fixing flats: 10%
+Fixing flats: 11%
+Fixing flats: 12%
+Fixing flats: 14%
+Fixing flats: 15%
+Fixing flats: 16%
+Fixing flats: 18%
+Fixing flats: 19%
+Fixing flats: 20%
+Fixing flats: 21%
+Fixing flats: 23%
+Fixing flats: 24%
+Fixing flats: 25%
+Fixing flats: 26%
+Fixing flats: 27%
+Fixing flats: 28%
+Fixing flats: 31%
+Fixing flats: 32%
+Fixing flats: 33%
+Fixing flats: 34%
+Fixing flats: 35%
+Fixing flats: 36%
+Fixing flats: 39%
+Fixing flats: 41%
+Fixing flats: 42%
+Fixing flats: 43%
+Fixing flats: 44%
+Fixing flats: 45%
+Fixing flats: 46%
+Fixing flats: 47%
+Fixing flats: 48%
+Fixing flats: 49%
+Fixing flats: 50%
+Fixing flats: 51%
+Fixing flats: 53%
+Fixing flats: 54%
+Fixing flats: 55%
+Fixing flats: 58%
+Fixing flats: 60%
+Fixing flats: 61%
+Fixing flats: 62%
+Fixing flats: 63%
+Fixing flats: 64%
+Fixing flats: 65%
+Fixing flats: 66%
+Fixing flats: 67%
+Fixing flats: 68%
+Fixing flats: 69%
+Fixing flats: 70%
+Fixing flats: 72%
+Fixing flats: 73%
+Fixing flats: 75%
+Fixing flats: 76%
+Fixing flats: 77%
+Fixing flats: 79%
+Fixing flats: 81%
+Fixing flats: 83%
+Fixing flats: 84%
+Fixing flats: 85%
+Fixing flats: 86%
+Fixing flats: 87%
+Fixing flats: 88%
+Fixing flats: 89%
+Fixing flats: 90%
+Fixing flats: 91%
+Fixing flats: 92%
+Fixing flats: 93%
+Fixing flats: 94%
+Fixing flats: 95%
+Fixing flats: 96%
+Fixing flats: 97%
+Fixing flats: 98%
+Fixing flats: 99%
+Fixing flats: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.23s
+ketinggianTengah di maintrame depression breach 912.0
+meshoption FAwatershed
+.\whitebox_tools.exe --run="MdInfFlowAccumulation" --wd="D:\maps\temp" --dem='D:\maps\temp\fileBreachDepression.tif' --output='D:\maps\temp\fileFlowAccumulationBreachMDInf.tif' --out_type=cells --exponent=1.1 -v --compress_rasters=False
+
+************************************
+* Welcome to MDInfFlowAccumulation *
+* Powered by WhiteboxTools         *
+* www.whiteboxgeo.com              *
+************************************
+Reading data...
+Num. inflowing neighbours: 0%
+Num. inflowing neighbours: 1%
+Num. inflowing neighbours: 2%
+Num. inflowing neighbours: 3%
+Num. inflowing neighbours: 4%
+Num. inflowing neighbours: 5%
+Num. inflowing neighbours: 6%
+Num. inflowing neighbours: 7%
+Num. inflowing neighbours: 8%
+Num. inflowing neighbours: 9%
+Num. inflowing neighbours: 10%
+Num. inflowing neighbours: 11%
+Num. inflowing neighbours: 12%
+Num. inflowing neighbours: 13%
+Num. inflowing neighbours: 14%
+Num. inflowing neighbours: 15%
+Num. inflowing neighbours: 16%
+Num. inflowing neighbours: 17%
+Num. inflowing neighbours: 18%
+Num. inflowing neighbours: 19%
+Num. inflowing neighbours: 20%
+Num. inflowing neighbours: 21%
+Num. inflowing neighbours: 22%
+Num. inflowing neighbours: 23%
+Num. inflowing neighbours: 24%
+Num. inflowing neighbours: 25%
+Num. inflowing neighbours: 26%
+Num. inflowing neighbours: 27%
+Num. inflowing neighbours: 28%
+Num. inflowing neighbours: 29%
+Num. inflowing neighbours: 30%
+Num. inflowing neighbours: 31%
+Num. inflowing neighbours: 32%
+Num. inflowing neighbours: 33%
+Num. inflowing neighbours: 34%
+Num. inflowing neighbours: 35%
+Num. inflowing neighbours: 36%
+Num. inflowing neighbours: 37%
+Num. inflowing neighbours: 38%
+Num. inflowing neighbours: 39%
+Num. inflowing neighbours: 40%
+Num. inflowing neighbours: 41%
+Num. inflowing neighbours: 42%
+Num. inflowing neighbours: 43%
+Num. inflowing neighbours: 44%
+Num. inflowing neighbours: 45%
+Num. inflowing neighbours: 46%
+Num. inflowing neighbours: 47%
+Num. inflowing neighbours: 48%
+Num. inflowing neighbours: 49%
+Num. inflowing neighbours: 50%
+Num. inflowing neighbours: 51%
+Num. inflowing neighbours: 52%
+Num. inflowing neighbours: 53%
+Num. inflowing neighbours: 54%
+Num. inflowing neighbours: 55%
+Num. inflowing neighbours: 56%
+Num. inflowing neighbours: 57%
+Num. inflowing neighbours: 58%
+Num. inflowing neighbours: 59%
+Num. inflowing neighbours: 60%
+Num. inflowing neighbours: 61%
+Num. inflowing neighbours: 62%
+Num. inflowing neighbours: 63%
+Num. inflowing neighbours: 64%
+Num. inflowing neighbours: 65%
+Num. inflowing neighbours: 66%
+Num. inflowing neighbours: 67%
+Num. inflowing neighbours: 68%
+Num. inflowing neighbours: 69%
+Num. inflowing neighbours: 70%
+Num. inflowing neighbours: 71%
+Num. inflowing neighbours: 72%
+Num. inflowing neighbours: 73%
+Num. inflowing neighbours: 74%
+Num. inflowing neighbours: 75%
+Num. inflowing neighbours: 76%
+Num. inflowing neighbours: 77%
+Num. inflowing neighbours: 78%
+Num. inflowing neighbours: 79%
+Num. inflowing neighbours: 80%
+Num. inflowing neighbours: 81%
+Num. inflowing neighbours: 82%
+Num. inflowing neighbours: 83%
+Num. inflowing neighbours: 84%
+Num. inflowing neighbours: 85%
+Num. inflowing neighbours: 86%
+Num. inflowing neighbours: 87%
+Num. inflowing neighbours: 88%
+Num. inflowing neighbours: 89%
+Num. inflowing neighbours: 90%
+Num. inflowing neighbours: 91%
+Num. inflowing neighbours: 92%
+Num. inflowing neighbours: 93%
+Num. inflowing neighbours: 94%
+Num. inflowing neighbours: 95%
+Num. inflowing neighbours: 96%
+Num. inflowing neighbours: 97%
+Num. inflowing neighbours: 98%
+Num. inflowing neighbours: 99%
+Num. inflowing neighbours: 100%
+Flow accumulation: 0%
+Flow accumulation: 1%
+Flow accumulation: 2%
+Flow accumulation: 3%
+Flow accumulation: 4%
+Flow accumulation: 5%
+Flow accumulation: 6%
+Flow accumulation: 7%
+Flow accumulation: 8%
+Flow accumulation: 9%
+Flow accumulation: 10%
+Flow accumulation: 11%
+Flow accumulation: 12%
+Flow accumulation: 13%
+Flow accumulation: 14%
+Flow accumulation: 15%
+Flow accumulation: 16%
+Flow accumulation: 17%
+Flow accumulation: 18%
+Flow accumulation: 19%
+Flow accumulation: 20%
+Flow accumulation: 21%
+Flow accumulation: 22%
+Flow accumulation: 23%
+Flow accumulation: 24%
+Flow accumulation: 25%
+Flow accumulation: 26%
+Flow accumulation: 27%
+Flow accumulation: 28%
+Flow accumulation: 29%
+Flow accumulation: 30%
+Flow accumulation: 31%
+Flow accumulation: 32%
+Flow accumulation: 33%
+Flow accumulation: 34%
+Flow accumulation: 35%
+Flow accumulation: 36%
+Flow accumulation: 37%
+Flow accumulation: 38%
+Flow accumulation: 39%
+Flow accumulation: 40%
+Flow accumulation: 41%
+Flow accumulation: 42%
+Flow accumulation: 43%
+Flow accumulation: 44%
+Flow accumulation: 45%
+Flow accumulation: 46%
+Flow accumulation: 47%
+Flow accumulation: 48%
+Flow accumulation: 49%
+Flow accumulation: 50%
+Flow accumulation: 51%
+Flow accumulation: 52%
+Flow accumulation: 53%
+Flow accumulation: 54%
+Flow accumulation: 55%
+Flow accumulation: 56%
+Flow accumulation: 57%
+Flow accumulation: 58%
+Flow accumulation: 59%
+Flow accumulation: 60%
+Flow accumulation: 61%
+Flow accumulation: 62%
+Flow accumulation: 63%
+Flow accumulation: 64%
+Flow accumulation: 65%
+Flow accumulation: 66%
+Flow accumulation: 67%
+Flow accumulation: 68%
+Flow accumulation: 69%
+Flow accumulation: 70%
+Flow accumulation: 71%
+Flow accumulation: 72%
+Flow accumulation: 73%
+Flow accumulation: 74%
+Flow accumulation: 75%
+Flow accumulation: 76%
+Flow accumulation: 77%
+Flow accumulation: 78%
+Flow accumulation: 79%
+Flow accumulation: 80%
+Flow accumulation: 81%
+Flow accumulation: 82%
+Flow accumulation: 83%
+Flow accumulation: 84%
+Flow accumulation: 85%
+Flow accumulation: 86%
+Flow accumulation: 87%
+Flow accumulation: 88%
+Flow accumulation: 89%
+Flow accumulation: 90%
+Flow accumulation: 91%
+Flow accumulation: 92%
+Flow accumulation: 93%
+Flow accumulation: 94%
+Flow accumulation: 95%
+Flow accumulation: 96%
+Flow accumulation: 97%
+Flow accumulation: 98%
+Flow accumulation: 99%
+Flow accumulation: 100%
+Correcting values: 0%
+Correcting values: 1%
+Correcting values: 2%
+Correcting values: 3%
+Correcting values: 4%
+Correcting values: 5%
+Correcting values: 6%
+Correcting values: 7%
+Correcting values: 8%
+Correcting values: 9%
+Correcting values: 10%
+Correcting values: 11%
+Correcting values: 12%
+Correcting values: 13%
+Correcting values: 14%
+Correcting values: 15%
+Correcting values: 16%
+Correcting values: 17%
+Correcting values: 18%
+Correcting values: 19%
+Correcting values: 20%
+Correcting values: 21%
+Correcting values: 22%
+Correcting values: 23%
+Correcting values: 24%
+Correcting values: 25%
+Correcting values: 26%
+Correcting values: 27%
+Correcting values: 28%
+Correcting values: 29%
+Correcting values: 30%
+Correcting values: 31%
+Correcting values: 32%
+Correcting values: 33%
+Correcting values: 34%
+Correcting values: 35%
+Correcting values: 36%
+Correcting values: 37%
+Correcting values: 38%
+Correcting values: 39%
+Correcting values: 40%
+Correcting values: 41%
+Correcting values: 42%
+Correcting values: 43%
+Correcting values: 44%
+Correcting values: 45%
+Correcting values: 46%
+Correcting values: 47%
+Correcting values: 48%
+Correcting values: 49%
+Correcting values: 50%
+Correcting values: 51%
+Correcting values: 52%
+Correcting values: 53%
+Correcting values: 54%
+Correcting values: 55%
+Correcting values: 56%
+Correcting values: 57%
+Correcting values: 58%
+Correcting values: 59%
+Correcting values: 60%
+Correcting values: 61%
+Correcting values: 62%
+Correcting values: 63%
+Correcting values: 64%
+Correcting values: 65%
+Correcting values: 66%
+Correcting values: 67%
+Correcting values: 68%
+Correcting values: 69%
+Correcting values: 70%
+Correcting values: 71%
+Correcting values: 72%
+Correcting values: 73%
+Correcting values: 74%
+Correcting values: 75%
+Correcting values: 76%
+Correcting values: 77%
+Correcting values: 78%
+Correcting values: 79%
+Correcting values: 80%
+Correcting values: 81%
+Correcting values: 82%
+Correcting values: 83%
+Correcting values: 84%
+Correcting values: 85%
+Correcting values: 86%
+Correcting values: 87%
+Correcting values: 88%
+Correcting values: 89%
+Correcting values: 90%
+Correcting values: 91%
+Correcting values: 92%
+Correcting values: 93%
+Correcting values: 94%
+Correcting values: 95%
+Correcting values: 96%
+Correcting values: 97%
+Correcting values: 98%
+Correcting values: 99%
+Correcting values: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.143s
+.\whitebox_tools.exe --run="D8Pointer" --wd="D:\maps\temp" --dem='D:\maps\temp\fileBreachDepression.tif' --output='D:\maps\temp\filed8pointer.tif' -v --compress_rasters=False
+
+****************************
+* Welcome to D8Pointer     *
+* Powered by WhiteboxTools *
+* www.whiteboxgeo.com      *
+****************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.6s
+.\whitebox_tools.exe --run="D8FlowAccumulation" --wd="D:\maps\temp" --input='D:\maps\temp\filed8pointer.tif' --output='D:\maps\temp\fileFlowAccumulationBreachD8.tif' --out_type=cells --pntr -v --compress_rasters=False
+
+*********************************
+* Welcome to D8FlowAccumulation *
+* Powered by WhiteboxTools      *
+* www.whiteboxgeo.com           *
+*********************************
+Reading data...
+Flow directions: 0%
+Flow directions: 1%
+Flow directions: 2%
+Flow directions: 3%
+Flow directions: 4%
+Flow directions: 5%
+Flow directions: 6%
+Flow directions: 7%
+Flow directions: 8%
+Flow directions: 9%
+Flow directions: 10%
+Flow directions: 11%
+Flow directions: 12%
+Flow directions: 13%
+Flow directions: 14%
+Flow directions: 15%
+Flow directions: 16%
+Flow directions: 17%
+Flow directions: 18%
+Flow directions: 19%
+Flow directions: 20%
+Flow directions: 21%
+Flow directions: 22%
+Flow directions: 23%
+Flow directions: 24%
+Flow directions: 25%
+Flow directions: 26%
+Flow directions: 27%
+Flow directions: 28%
+Flow directions: 29%
+Flow directions: 30%
+Flow directions: 31%
+Flow directions: 32%
+Flow directions: 33%
+Flow directions: 34%
+Flow directions: 35%
+Flow directions: 36%
+Flow directions: 37%
+Flow directions: 38%
+Flow directions: 39%
+Flow directions: 40%
+Flow directions: 41%
+Flow directions: 42%
+Flow directions: 43%
+Flow directions: 44%
+Flow directions: 45%
+Flow directions: 46%
+Flow directions: 47%
+Flow directions: 48%
+Flow directions: 49%
+Flow directions: 50%
+Flow directions: 51%
+Flow directions: 52%
+Flow directions: 53%
+Flow directions: 54%
+Flow directions: 55%
+Flow directions: 56%
+Flow directions: 57%
+Flow directions: 58%
+Flow directions: 59%
+Flow directions: 60%
+Flow directions: 61%
+Flow directions: 62%
+Flow directions: 63%
+Flow directions: 64%
+Flow directions: 65%
+Flow directions: 66%
+Flow directions: 67%
+Flow directions: 68%
+Flow directions: 69%
+Flow directions: 70%
+Flow directions: 71%
+Flow directions: 72%
+Flow directions: 73%
+Flow directions: 74%
+Flow directions: 75%
+Flow directions: 76%
+Flow directions: 77%
+Flow directions: 78%
+Flow directions: 79%
+Flow directions: 80%
+Flow directions: 81%
+Flow directions: 82%
+Flow directions: 83%
+Flow directions: 84%
+Flow directions: 85%
+Flow directions: 86%
+Flow directions: 87%
+Flow directions: 88%
+Flow directions: 89%
+Flow directions: 90%
+Flow directions: 91%
+Flow directions: 92%
+Flow directions: 93%
+Flow directions: 94%
+Flow directions: 95%
+Flow directions: 96%
+Flow directions: 97%
+Flow directions: 98%
+Flow directions: 99%
+Flow directions: 100%
+Num. inflowing neighbours: 0%
+Num. inflowing neighbours: 1%
+Num. inflowing neighbours: 2%
+Num. inflowing neighbours: 3%
+Num. inflowing neighbours: 4%
+Num. inflowing neighbours: 5%
+Num. inflowing neighbours: 6%
+Num. inflowing neighbours: 7%
+Num. inflowing neighbours: 8%
+Num. inflowing neighbours: 9%
+Num. inflowing neighbours: 10%
+Num. inflowing neighbours: 11%
+Num. inflowing neighbours: 12%
+Num. inflowing neighbours: 13%
+Num. inflowing neighbours: 14%
+Num. inflowing neighbours: 15%
+Num. inflowing neighbours: 16%
+Num. inflowing neighbours: 17%
+Num. inflowing neighbours: 18%
+Num. inflowing neighbours: 19%
+Num. inflowing neighbours: 20%
+Num. inflowing neighbours: 21%
+Num. inflowing neighbours: 22%
+Num. inflowing neighbours: 23%
+Num. inflowing neighbours: 24%
+Num. inflowing neighbours: 25%
+Num. inflowing neighbours: 26%
+Num. inflowing neighbours: 27%
+Num. inflowing neighbours: 28%
+Num. inflowing neighbours: 29%
+Num. inflowing neighbours: 30%
+Num. inflowing neighbours: 31%
+Num. inflowing neighbours: 32%
+Num. inflowing neighbours: 33%
+Num. inflowing neighbours: 34%
+Num. inflowing neighbours: 35%
+Num. inflowing neighbours: 36%
+Num. inflowing neighbours: 37%
+Num. inflowing neighbours: 38%
+Num. inflowing neighbours: 39%
+Num. inflowing neighbours: 40%
+Num. inflowing neighbours: 41%
+Num. inflowing neighbours: 42%
+Num. inflowing neighbours: 43%
+Num. inflowing neighbours: 44%
+Num. inflowing neighbours: 45%
+Num. inflowing neighbours: 46%
+Num. inflowing neighbours: 47%
+Num. inflowing neighbours: 48%
+Num. inflowing neighbours: 49%
+Num. inflowing neighbours: 50%
+Num. inflowing neighbours: 51%
+Num. inflowing neighbours: 52%
+Num. inflowing neighbours: 53%
+Num. inflowing neighbours: 54%
+Num. inflowing neighbours: 55%
+Num. inflowing neighbours: 56%
+Num. inflowing neighbours: 57%
+Num. inflowing neighbours: 58%
+Num. inflowing neighbours: 59%
+Num. inflowing neighbours: 60%
+Num. inflowing neighbours: 61%
+Num. inflowing neighbours: 62%
+Num. inflowing neighbours: 63%
+Num. inflowing neighbours: 64%
+Num. inflowing neighbours: 65%
+Num. inflowing neighbours: 66%
+Num. inflowing neighbours: 67%
+Num. inflowing neighbours: 68%
+Num. inflowing neighbours: 69%
+Num. inflowing neighbours: 70%
+Num. inflowing neighbours: 71%
+Num. inflowing neighbours: 72%
+Num. inflowing neighbours: 73%
+Num. inflowing neighbours: 74%
+Num. inflowing neighbours: 75%
+Num. inflowing neighbours: 76%
+Num. inflowing neighbours: 77%
+Num. inflowing neighbours: 78%
+Num. inflowing neighbours: 79%
+Num. inflowing neighbours: 80%
+Num. inflowing neighbours: 81%
+Num. inflowing neighbours: 82%
+Num. inflowing neighbours: 83%
+Num. inflowing neighbours: 84%
+Num. inflowing neighbours: 85%
+Num. inflowing neighbours: 86%
+Num. inflowing neighbours: 87%
+Num. inflowing neighbours: 88%
+Num. inflowing neighbours: 89%
+Num. inflowing neighbours: 90%
+Num. inflowing neighbours: 91%
+Num. inflowing neighbours: 92%
+Num. inflowing neighbours: 93%
+Num. inflowing neighbours: 94%
+Num. inflowing neighbours: 95%
+Num. inflowing neighbours: 96%
+Num. inflowing neighbours: 97%
+Num. inflowing neighbours: 98%
+Num. inflowing neighbours: 99%
+Num. inflowing neighbours: 100%
+Flow accumulation: 0%
+Flow accumulation: 1%
+Flow accumulation: 2%
+Flow accumulation: 3%
+Flow accumulation: 4%
+Flow accumulation: 5%
+Flow accumulation: 6%
+Flow accumulation: 7%
+Flow accumulation: 8%
+Flow accumulation: 9%
+Flow accumulation: 10%
+Flow accumulation: 11%
+Flow accumulation: 12%
+Flow accumulation: 13%
+Flow accumulation: 14%
+Flow accumulation: 15%
+Flow accumulation: 16%
+Flow accumulation: 17%
+Flow accumulation: 18%
+Flow accumulation: 19%
+Flow accumulation: 20%
+Flow accumulation: 21%
+Flow accumulation: 22%
+Flow accumulation: 23%
+Flow accumulation: 24%
+Flow accumulation: 25%
+Flow accumulation: 26%
+Flow accumulation: 27%
+Flow accumulation: 28%
+Flow accumulation: 29%
+Flow accumulation: 30%
+Flow accumulation: 31%
+Flow accumulation: 32%
+Flow accumulation: 33%
+Flow accumulation: 34%
+Flow accumulation: 35%
+Flow accumulation: 36%
+Flow accumulation: 37%
+Flow accumulation: 38%
+Flow accumulation: 39%
+Flow accumulation: 40%
+Flow accumulation: 41%
+Flow accumulation: 42%
+Flow accumulation: 43%
+Flow accumulation: 44%
+Flow accumulation: 45%
+Flow accumulation: 46%
+Flow accumulation: 47%
+Flow accumulation: 48%
+Flow accumulation: 49%
+Flow accumulation: 50%
+Flow accumulation: 51%
+Flow accumulation: 52%
+Flow accumulation: 53%
+Flow accumulation: 54%
+Flow accumulation: 55%
+Flow accumulation: 56%
+Flow accumulation: 57%
+Flow accumulation: 58%
+Flow accumulation: 59%
+Flow accumulation: 60%
+Flow accumulation: 61%
+Flow accumulation: 62%
+Flow accumulation: 63%
+Flow accumulation: 64%
+Flow accumulation: 65%
+Flow accumulation: 66%
+Flow accumulation: 67%
+Flow accumulation: 68%
+Flow accumulation: 69%
+Flow accumulation: 70%
+Flow accumulation: 71%
+Flow accumulation: 72%
+Flow accumulation: 73%
+Flow accumulation: 74%
+Flow accumulation: 75%
+Flow accumulation: 76%
+Flow accumulation: 77%
+Flow accumulation: 78%
+Flow accumulation: 79%
+Flow accumulation: 80%
+Flow accumulation: 81%
+Flow accumulation: 82%
+Flow accumulation: 83%
+Flow accumulation: 84%
+Flow accumulation: 85%
+Flow accumulation: 86%
+Flow accumulation: 87%
+Flow accumulation: 88%
+Flow accumulation: 89%
+Flow accumulation: 90%
+Flow accumulation: 91%
+Flow accumulation: 92%
+Flow accumulation: 93%
+Flow accumulation: 94%
+Flow accumulation: 95%
+Flow accumulation: 96%
+Flow accumulation: 97%
+Flow accumulation: 98%
+Flow accumulation: 99%
+Flow accumulation: 100%
+Correcting values: 0%
+Correcting values: 1%
+Correcting values: 2%
+Correcting values: 3%
+Correcting values: 4%
+Correcting values: 5%
+Correcting values: 6%
+Correcting values: 7%
+Correcting values: 8%
+Correcting values: 9%
+Correcting values: 10%
+Correcting values: 11%
+Correcting values: 12%
+Correcting values: 13%
+Correcting values: 14%
+Correcting values: 15%
+Correcting values: 16%
+Correcting values: 17%
+Correcting values: 18%
+Correcting values: 19%
+Correcting values: 20%
+Correcting values: 21%
+Correcting values: 22%
+Correcting values: 23%
+Correcting values: 24%
+Correcting values: 25%
+Correcting values: 26%
+Correcting values: 27%
+Correcting values: 28%
+Correcting values: 29%
+Correcting values: 30%
+Correcting values: 31%
+Correcting values: 32%
+Correcting values: 33%
+Correcting values: 34%
+Correcting values: 35%
+Correcting values: 36%
+Correcting values: 37%
+Correcting values: 38%
+Correcting values: 39%
+Correcting values: 40%
+Correcting values: 41%
+Correcting values: 42%
+Correcting values: 43%
+Correcting values: 44%
+Correcting values: 45%
+Correcting values: 46%
+Correcting values: 47%
+Correcting values: 48%
+Correcting values: 49%
+Correcting values: 50%
+Correcting values: 51%
+Correcting values: 52%
+Correcting values: 53%
+Correcting values: 54%
+Correcting values: 55%
+Correcting values: 56%
+Correcting values: 57%
+Correcting values: 58%
+Correcting values: 59%
+Correcting values: 60%
+Correcting values: 61%
+Correcting values: 62%
+Correcting values: 63%
+Correcting values: 64%
+Correcting values: 65%
+Correcting values: 66%
+Correcting values: 67%
+Correcting values: 68%
+Correcting values: 69%
+Correcting values: 70%
+Correcting values: 71%
+Correcting values: 72%
+Correcting values: 73%
+Correcting values: 74%
+Correcting values: 75%
+Correcting values: 76%
+Correcting values: 77%
+Correcting values: 78%
+Correcting values: 79%
+Correcting values: 80%
+Correcting values: 81%
+Correcting values: 82%
+Correcting values: 83%
+Correcting values: 84%
+Correcting values: 85%
+Correcting values: 86%
+Correcting values: 87%
+Correcting values: 88%
+Correcting values: 89%
+Correcting values: 90%
+Correcting values: 91%
+Correcting values: 92%
+Correcting values: 93%
+Correcting values: 94%
+Correcting values: 95%
+Correcting values: 96%
+Correcting values: 97%
+Correcting values: 98%
+Correcting values: 99%
+Correcting values: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.23s
+.\whitebox_tools.exe --run="ExtractStreams" --wd="D:\maps\temp" --flow_accum='D:\maps\temp\fileFlowAccumulationBreachD8.tif' --output='D:\maps\temp\fileExtractstreamsHulu.tif' --threshold='50' -v --compress_rasters=False
+
+*****************************
+* Welcome to ExtractStreams *
+* Powered by WhiteboxTools  *
+* www.whiteboxgeo.com       *
+*****************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.4s
+.\whitebox_tools.exe --run="TributaryIdentifier" --wd="D:\maps\temp" --d8_pntr='D:\maps\temp\filed8pointer.tif' --streams='D:\maps\temp\fileExtractstreamsHulu.tif' --output='D:\maps\temp\filetributaryidentifier.tif' -v --compress_rasters=False
+
+**********************************
+* Welcome to TributaryIdentifier *
+* Powered by WhiteboxTools       *
+* www.whiteboxgeo.com            *
+**********************************
+Reading pointer data...
+Reading streams data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.4s
+minFAD8 1.0
+sum 1 13414399.0
+sum 2 13414399.0
+fa threshold elevasi 1
+matrikOut.dtype float32, minout 0.0
+dynamicthreshold 2368.85
+matrikOut.dtype float32, minout 0.0
+.\whitebox_tools.exe --run="StreamLinkIdentifier" --wd="D:\maps\temp" --d8_pntr='D:\maps\temp\filed8pointer.tif' --streams='D:\maps\temp\fileExtractstreams.tif' --output='D:\maps\temp\fileStreamslinkidentifier.tif' --zero_background -v --compress_rasters=False
+
+***********************************
+* Welcome to StreamLinkIdentifier *
+* Powered by WhiteboxTools        *
+* www.whiteboxgeo.com             *
+***********************************
+Reading pointer data...
+Reading streams data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.5s
+[1 2 3 4 5]
+max_FA 5842.0
+max_FAMDIF 5826.901233924265
+max_FA 2817.0
+max_FAMDIF 2833.3969093255496
+max_FA 5998.0
+max_FAMDIF 5970.9708765666355
+max_FA 2593.0
+max_FAMDIF 1394.834477770326
+max_FA 2778.0
+max_FAMDIF 2812.406440409647
+
+1 Outlet sebelum diurutkan berdasarkan max_FA:
+[np.int64(253), np.int64(107), np.int64(1), np.float64(5826.901233924265), np.float64(915.0), np.float64(5.5181)]
+[np.int64(193), np.int64(130), np.int64(2), np.float64(2833.3969093255496), np.float64(915.0), np.float64(2.6833)]
+[np.int64(162), np.int64(141), np.int64(3), np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+[np.int64(108), np.int64(119), np.int64(4), np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), np.int64(5), np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+
+2 Outlet sebelum diurutkan berdasarkan cid:
+[np.int64(108), np.int64(119), np.int64(4), np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), np.int64(5), np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+[np.int64(193), np.int64(130), np.int64(2), np.float64(2833.3969093255496), np.float64(915.0), np.float64(2.6833)]
+[np.int64(253), np.int64(107), np.int64(1), np.float64(5826.901233924265), np.float64(915.0), np.float64(5.5181)]
+[np.int64(162), np.int64(141), np.int64(3), np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+
+ 3 Outlet setelah diurutkan berdasarkan max_FA:
+[np.int64(108), np.int64(119), 1, np.float64(1394.834477770326), np.float64(919.0), np.float64(1.3209)]
+[np.int64(0), np.int64(74), 2, np.float64(2812.406440409647), np.float64(933.0), np.float64(2.6634)]
+[np.int64(193), np.int64(130), 3, np.float64(2833.3969093255496), np.float64(915.0), np.float64(2.6833)]
+[np.int64(253), np.int64(107), 4, np.float64(5826.901233924265), np.float64(915.0), np.float64(5.5181)]
+[np.int64(162), np.int64(141), 5, np.float64(5970.9708765666355), np.float64(916.0), np.float64(5.6546)]
+koordinatpourpoint before
+108 119 1 1394.834477770326 919 1.3209
+0 74 2 2812.406440409647 933 2.6634
+193 130 3 2833.3969093255496 915 2.6833
+253 107 4 5826.901233924265 915 5.5181
+162 141 5 5970.9708765666355 916 5.6546
+
+Koordinat sebelum filter:
+108.0 119.0 1.0 1394.834477770326 919.0 1.3209
+0.0 74.0 2.0 2812.406440409647 933.0 2.6634
+193.0 130.0 3.0 2833.3969093255496 915.0 2.6833
+253.0 107.0 4.0 5826.901233924265 915.0 5.5181
+162.0 141.0 5.0 5970.9708765666355 916.0 5.6546
+
+Koordinat sesudah filter:
+108.0 119.0 1.0 1394.834477770326 919.0 1.3209
+0.0 74.0 2.0 2812.406440409647 933.0 2.6634
+193.0 130.0 3.0 2833.3969093255496 915.0 2.6833
+253.0 107.0 4.0 5826.901233924265 915.0 5.5181
+162.0 141.0 5.0 5970.9708765666355 916.0 5.6546
+koordinatpourpoint after
+108 119 1 1394.834477770326 919 1.3209
+0 74 2 2812.406440409647 933 2.6634
+193 130 3 2833.3969093255496 915 2.6833
+253 107 4 5826.901233924265 915 5.5181
+162 141 5 5970.9708765666355 916 5.6546
+di exportshp before max 0 min 0
+koordinat 
+slid 1.0 baris 192 kolom 119
+slid 2.0 baris 300 kolom 74
+slid 3.0 baris 107 kolom 130
+slid 4.0 baris 47 kolom 107
+slid 5.0 baris 138 kolom 141
+matrik pour point shape (301, 301)
+di exportshp after max 1 min 0
+matrikOut.dtype uint8, minout 0
+.\whitebox_tools.exe --run="RasterToVectorPoints" --input='D:\maps\temp\filepourpoint.tif' --output='D:\maps\temp\filepourpointshp.shp' -v --compress_rasters=False
+
+***********************************
+* Welcome to RasterToVectorPoints *
+* Powered by WhiteboxTools        *
+* www.whiteboxgeo.com             *
+***********************************
+Reading data...
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.1s
+.\whitebox_tools.exe --run="Watershed" --d8_pntr='D:\maps\temp\filed8pointer.tif' --pour_pts='D:\maps\temp\filepourpointshp.shp' --output='D:\maps\temp\filewatershed.tif' -v --compress_rasters=False
+
+****************************
+* Welcome to Watershed     *
+* Powered by WhiteboxTools *
+* www.whiteboxgeo.com      *
+****************************
+Reading data...
+Locating pour points: 0%
+Locating pour points: 25%
+Locating pour points: 50%
+Locating pour points: 75%
+Locating pour points: 100%
+Initializing: 0%
+Initializing: 1%
+Initializing: 2%
+Initializing: 3%
+Initializing: 4%
+Initializing: 5%
+Initializing: 6%
+Initializing: 7%
+Initializing: 8%
+Initializing: 9%
+Initializing: 10%
+Initializing: 11%
+Initializing: 12%
+Initializing: 13%
+Initializing: 14%
+Initializing: 15%
+Initializing: 16%
+Initializing: 17%
+Initializing: 18%
+Initializing: 19%
+Initializing: 20%
+Initializing: 21%
+Initializing: 22%
+Initializing: 23%
+Initializing: 24%
+Initializing: 25%
+Initializing: 26%
+Initializing: 27%
+Initializing: 28%
+Initializing: 29%
+Initializing: 30%
+Initializing: 31%
+Initializing: 32%
+Initializing: 33%
+Initializing: 34%
+Initializing: 35%
+Initializing: 36%
+Initializing: 37%
+Initializing: 38%
+Initializing: 39%
+Initializing: 40%
+Initializing: 41%
+Initializing: 42%
+Initializing: 43%
+Initializing: 44%
+Initializing: 45%
+Initializing: 46%
+Initializing: 47%
+Initializing: 48%
+Initializing: 49%
+Initializing: 50%
+Initializing: 51%
+Initializing: 52%
+Initializing: 53%
+Initializing: 54%
+Initializing: 55%
+Initializing: 56%
+Initializing: 57%
+Initializing: 58%
+Initializing: 59%
+Initializing: 60%
+Initializing: 61%
+Initializing: 62%
+Initializing: 63%
+Initializing: 64%
+Initializing: 65%
+Initializing: 66%
+Initializing: 67%
+Initializing: 68%
+Initializing: 69%
+Initializing: 70%
+Initializing: 71%
+Initializing: 72%
+Initializing: 73%
+Initializing: 74%
+Initializing: 75%
+Initializing: 76%
+Initializing: 77%
+Initializing: 78%
+Initializing: 79%
+Initializing: 80%
+Initializing: 81%
+Initializing: 82%
+Initializing: 83%
+Initializing: 84%
+Initializing: 85%
+Initializing: 86%
+Initializing: 87%
+Initializing: 88%
+Initializing: 89%
+Initializing: 90%
+Initializing: 91%
+Initializing: 92%
+Initializing: 93%
+Initializing: 94%
+Initializing: 95%
+Initializing: 96%
+Initializing: 97%
+Initializing: 98%
+Initializing: 99%
+Initializing: 100%
+Progress: 0%
+Progress: 1%
+Progress: 2%
+Progress: 3%
+Progress: 4%
+Progress: 5%
+Progress: 6%
+Progress: 7%
+Progress: 8%
+Progress: 9%
+Progress: 10%
+Progress: 11%
+Progress: 12%
+Progress: 13%
+Progress: 14%
+Progress: 15%
+Progress: 16%
+Progress: 17%
+Progress: 18%
+Progress: 19%
+Progress: 20%
+Progress: 21%
+Progress: 22%
+Progress: 23%
+Progress: 24%
+Progress: 25%
+Progress: 26%
+Progress: 27%
+Progress: 28%
+Progress: 29%
+Progress: 30%
+Progress: 31%
+Progress: 32%
+Progress: 33%
+Progress: 34%
+Progress: 35%
+Progress: 36%
+Progress: 37%
+Progress: 38%
+Progress: 39%
+Progress: 40%
+Progress: 41%
+Progress: 42%
+Progress: 43%
+Progress: 44%
+Progress: 45%
+Progress: 46%
+Progress: 47%
+Progress: 48%
+Progress: 49%
+Progress: 50%
+Progress: 51%
+Progress: 52%
+Progress: 53%
+Progress: 54%
+Progress: 55%
+Progress: 56%
+Progress: 57%
+Progress: 58%
+Progress: 59%
+Progress: 60%
+Progress: 61%
+Progress: 62%
+Progress: 63%
+Progress: 64%
+Progress: 65%
+Progress: 66%
+Progress: 67%
+Progress: 68%
+Progress: 69%
+Progress: 70%
+Progress: 71%
+Progress: 72%
+Progress: 73%
+Progress: 74%
+Progress: 75%
+Progress: 76%
+Progress: 77%
+Progress: 78%
+Progress: 79%
+Progress: 80%
+Progress: 81%
+Progress: 82%
+Progress: 83%
+Progress: 84%
+Progress: 85%
+Progress: 86%
+Progress: 87%
+Progress: 88%
+Progress: 89%
+Progress: 90%
+Progress: 91%
+Progress: 92%
+Progress: 93%
+Progress: 94%
+Progress: 95%
+Progress: 96%
+Progress: 97%
+Progress: 98%
+Progress: 99%
+Progress: 100%
+Saving data...
+Output file written
+Elapsed Time (excluding I/O): 0.10s
+1 : Baris: 108.0, Kolom: 119.0, cid 1.0,Hasil FA jumlah cells 1394.83, Luas daerah tangkapan AIR (A)    1.32 km2, Elevasi:  919.00
+2 : Baris: 0.0, Kolom: 74.0, cid 2.0,Hasil FA jumlah cells 2812.41, Luas daerah tangkapan AIR (A)    2.66 km2, Elevasi:  933.00
+3 : Baris: 193.0, Kolom: 130.0, cid 3.0,Hasil FA jumlah cells 2833.40, Luas daerah tangkapan AIR (A)    2.68 km2, Elevasi:  915.00
+4 : Baris: 253.0, Kolom: 107.0, cid 4.0,Hasil FA jumlah cells 5826.90, Luas daerah tangkapan AIR (A)    5.52 km2, Elevasi:  915.00
+5 : Baris: 162.0, Kolom: 141.0, cid 5.0,Hasil FA jumlah cells 5970.97, Luas daerah tangkapan AIR (A)    5.65 km2, Elevasi:  916.00
+oke
+min tampilflowaccum 1.0
+min tampilflowaccumelevation 0.0
+tingicone 150.0, radiuscone 3.75
+Actor saat ini: 0
+Renderer props setelah clear: 0
+max 5 min -32768
+setelah diganti max 5 min 0
+matrikOut.dtype float64, minout 0.9980077147483826, maxout 24546.0
+filehandler 3 oke
+scale 30.63, 30.92
+✅ Viewer update selesai. Siap di render
+Actor saat ini: 8
+countcllik awal 0
+=== Server berhenti: 2026-08-12T21:16:52 ===
