@@ -1,6 +1,8 @@
 Petunjuk Instalasi "TUTORIAL INITIAL SETUP GEOCATCH 3D.pdf"
 https://github.com/tarecha/GeoCatch3D/blob/main/TUTORIAL%20INITIAL%20SETUP%20GEOCATCH%203D.pdf
 
+download .zip kode di https://github.com/tarecha/GeoCatch3D/archive/refs/heads/main.zip
+
 demo via ngrok, jika laptop nyala InsyaAllah bisa diakses
 https://quilt-pesky-playpen.ngrok-free.dev/index.html
 
