@@ -208,7 +208,7 @@ def kirpich_tc_from_intervals(jarakintervaltotal, elevasiHulu, elevasiHilir):
 
 
     # beda elevasi
-    delta_h = float(elevasiHulu) - float(elevasiHilir)
+    delta_h = abs(float(elevasiHulu) - float(elevasiHilir))
 
     # Validasi input dasar
     # if L_m <= 0:
