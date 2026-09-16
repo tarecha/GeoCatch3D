@@ -14,10 +14,10 @@ def hitungdebit(A, baris, kolom,flow_accum_D8,matriktributaryidentifier,matrikKe
 
     tc = hitungtimeconcentration(baris, kolom,flow_accum_D8,matriktributaryidentifier,matrikKecil,state,transformasi)
     print(f"time concentration {tc}")
-    state.TC = tc
+    state.TC = str(tc)
     if tc >= cfg.threshodwaktuTC_jam:
         I = intensitasMonobe_r24(cfg.curahhujan, tc)
-        state.I_mm_perjam = I
+        state.I_mm_perjam = str(I)
         print(f"I_mm_per_hour {I}")
         Qp = round(0.278 * float(cfg.koefisien) * I * A, 2)
         return Qp
@@ -113,7 +113,7 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
     print(f"jarakseldiagonal {jarakintervaldiagonal}")
 
     jarakintervaltotal_m = jarakintervalhorizontal + jarakintervalvertikal + jarakintervaldiagonal
-    state.jarakaAliranUtama_km = round(jarakintervaltotal_m / 1000,2)
+    state.jarakaAliranUtama_km = str(round(jarakintervaltotal_m / 1000,2))
     print(f"jarakaAliranUtama  km {state.jarakaAliranUtama_km}")
 
     if jarakintervaltotal_m > 0:

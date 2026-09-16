@@ -304,7 +304,7 @@ def run_analysis(mulai_analisis, **kwargs):
         ketinggianTengah = matrikKecil[barisTengah, kolomTengah]
 
         print(f"ketinggianTengah di maintrame depression breach {ketinggianTengah}")
-        state.ketinggiantitiktengah = round(ketinggianTengah, 2)
+        state.ketinggiantitiktengah = str(round(ketinggianTengah, 2))
         print(f"meshoption {meshoption}")
 
         koordinatCekungan, flow_accum_MDInf, flow_accum_D8, matriktributaryidentifier, transformasi, matrikFAD8elevasi = analisis.importFlowAccumulation(
