@@ -68,11 +68,11 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
 
         elevasiHilir = round(matrikKecil[barishilir, kolomhilir], 2)
         elevasiHulu = elevasiHilir
-        state.ketinggianhulu = elevasiHulu
+        state.ketinggianhulu = str(elevasiHulu)
     else:
         elevasiHulu = round(matrikKecil[barishulu,kolomhulu],2)
         elevasiHilir = round(matrikKecil[barishilir,kolomhilir],2)
-        state.ketinggianhulu = elevasiHulu
+        state.ketinggianhulu = str(elevasiHulu)
 
 
     print(f"elevasiHulu : {elevasiHulu} - elevasiHilir : {elevasiHilir}")

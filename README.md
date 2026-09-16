@@ -24,8 +24,11 @@ source tools is maintained–to foster broader and more sustainable contribution
 
 bisa gunakan pycharm
 
+install dengan ini
+pip install -r requirements.txt
 
-pip install pyvista trame trame-vuetify trame-vtk rasterio whitebox matplotlib PyOpenGL PyQt5
+jika masih ada error ketika di run coba ini
+pip install pyvista trame trame-vuetify trame-vtk trame-pyvista rasterio whitebox matplotlib PyOpenGL PyQt5 psutil
 
 
 
