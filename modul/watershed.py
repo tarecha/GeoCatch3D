@@ -3,7 +3,7 @@ import rasterio
 import os
 
 #from main import state
-from modul import config as cfg, fileHandler
+from modul import config as cfg, fileHandler, plotter as pla
 from whitebox.whitebox_tools import WhiteboxTools
 
 wbt = WhiteboxTools()
@@ -108,6 +108,8 @@ def getFAwatershed(matrikFA):
 
 
 
+
+
     print(f"max {np.max(watershed)} min {np.min(watershed)}")
     watershed[watershed < 0] = 0
 
@@ -167,7 +169,13 @@ def getFAwatershedinteractive(matrikFA):
     else:
         raise FileNotFoundError("Hasil watershed tidak ditemukan")
 
+    if os.path.exists(cfg.filemaskFAhilirhulu):
+        with rasterio.open(cfg.filemaskFAhilirhulu) as src:
+            filemaskFAhilirhulu = src.read(1)  # Ambil band pertama
 
+            # transformasi = src.transform
+    else:
+        raise FileNotFoundError("Hasil filemaskFAhilirhulu tidak ditemukan")
 
     print(f"max interactive {np.max(watershed)} min interactive {np.min(watershed)}")
     watershed[watershed < 0] = 0
@@ -212,10 +220,27 @@ def getFAwatershedinteractive(matrikFA):
     #combined[watershed > 0] += watershed_norm[watershed > 0]  # nilai hanya ditambahkan jika ada DAS
 
     # Jika ingin memastikan tetap dalam skala 0-1
-    combined = combined / np.max(combined)
-
+    combined = (combined*0.85) / np.max(combined)
+    mask_hilirhulu = (filemaskFAhilirhulu > 0)
+    combined[mask_hilirhulu] = 1
     # Jika ingin mengembalikan ke skala semula seperti skala accum
     combined_scaled = combined * maxaccum
 
+
+
+
+    if combined_scaled.shape != mask_hilirhulu.shape:
+        raise ValueError(
+            f"Dimensi matriks tidak sama: "
+            f"combined_scaled {combined_scaled.shape}, "
+            f"mask {mask_hilirhulu.shape}"
+        )
+
+
+    if cfg.demomode:
+        pla.plot(filemaskFAhilirhulu, "filemaskFAhilirhulu", "Flow Accumulation Cell Count")
+        pla.plot(mask_hilirhulu, "mask_hilirhulu", "Flow Accumulation Cell Count")
+        pla.plot(combined_scaled, "combined_scaled", "Flow Accumulation Cell Count")
+    print(f"Jumlah pixel mask = 1: {np.sum(mask_hilirhulu)}")
 
     return  combined_scaled

@@ -354,7 +354,18 @@ def run_analysis(mulai_analisis, **kwargs):
                             direction=(0, 0, -1))
 
         # Setup Colormap Flow Accumulation (FA)
-        blue_red = LinearSegmentedColormap.from_list('blue_red', ['blue', 'green', 'yellow', 'red'])
+        blue_red = LinearSegmentedColormap.from_list('blue_red', ['darkblue',
+        'blue',
+        'deepskyblue',
+        'cyan',
+        'lime',
+        'green',
+        'yellow',
+        'gold',
+        'orange',
+
+        'red'
+        ])
         cmapfa = blue_red(np.linspace(0, 1, 32))
         cmapfa[0] = [1, 1, 1, 1]
         custom_cmapfa1 = LinearSegmentedColormap.from_list('custom_cmapfa1', cmapfa)
