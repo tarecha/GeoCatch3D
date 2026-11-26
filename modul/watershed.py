@@ -220,7 +220,7 @@ def getFAwatershedinteractive(matrikFA):
     #combined[watershed > 0] += watershed_norm[watershed > 0]  # nilai hanya ditambahkan jika ada DAS
 
     # Jika ingin memastikan tetap dalam skala 0-1
-    combined = (combined*0.85) / np.max(combined)
+    combined = (combined*cfg.koefisiencolormapinteraktif) / np.max(combined)
     mask_hilirhulu = (filemaskFAhilirhulu > 0)
     combined[mask_hilirhulu] = 1
     # Jika ingin mengembalikan ke skala semula seperti skala accum

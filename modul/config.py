@@ -65,7 +65,7 @@ threshodwaktuTC_jam = 0.3 # thereshold agar TC kirpich untuk mononobe masuk akal
 thresholdwatershedinteractive = 10
 snap_dist = 3
 thresholdminextractstreamshulu = 50
-
+koefisiencolormapinteraktif = 0.6
 koefisien = 0.3
 curahhujan = 5
 

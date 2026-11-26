@@ -137,7 +137,7 @@ def make_callback(latitude, longitude, radiusBaris, radiusKolom, barisMatriks, k
             #                 pickable=False)
 
             plotter.add_mesh(grid, scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True,
-                             pickable=True, show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             pickable=True, show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
            
             plotter.add_mesh(coneTengah, color="red", specular=1.0, show_edges=True, smooth_shading=False,
                              pickable=False)

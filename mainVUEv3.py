@@ -393,29 +393,29 @@ def run_analysis(mulai_analisis, **kwargs):
         if state.mesh_option == "flow":
             matrikScalar = np.flipud(np.rot90(tampilflowaccum, k=1))
             plotter.add_mesh(grid.copy(), scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
         elif state.mesh_option == "flowelevation":
             matrikScalar = np.flipud(np.rot90(tampilflowaccumelevation, k=1))
             plotter.add_mesh(grid.copy(), scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
         elif state.mesh_option == "watershed":
             watershed = wts.getwatershed()
             matrikScalar = np.rot90(watershed, k=-1)
             plotter.add_mesh(grid.copy(), scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
         elif state.mesh_option == "watershedinteractive":
             matrikScalar = np.flipud(np.rot90(tampilflowaccum, k=1))
             plotter.add_mesh(grid.copy(), scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
         elif state.mesh_option == "FAwatershed":
             watershed = wts.getFAwatershed(tampilflowaccum)
             matrikScalar = np.rot90(watershed, k=-1)
             plotter.add_mesh(grid.copy(), scalars=matrikScalar, cmap=custom_cmapfa1, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
         else:
             matrikScalar = np.flipud(np.rot90(tampilflowaccum, k=1))
             plotter.add_mesh(grid.elevation().copy(), cmap=custom_terrain, show_edges=True, pickable=True,
-                             show_scalar_bar=False, smooth_shading=False, lighting=False)
+                             show_scalar_bar=False, smooth_shading=False, lighting=False, interpolate_before_map=False)
 
         # =========================================================================
         # 6. EXPORT FILE REPORT & UPDATE SCALING VIEWER
