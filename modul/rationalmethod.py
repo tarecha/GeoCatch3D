@@ -38,6 +38,7 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
     #cari jalur aliran air berdasarkan tributaryid dari barishilir dan kolomhilir / ketika klik kanan di area visualisasi
     mask = (matriktributaryidentifier==tributaryid) & (matriktributaryidentifier>0) &  (flow_accum_D8<=thresholdFAtitik)
     jumlahselstreamutama = np.count_nonzero(mask)
+    print(f"jumlahselstreamutama {jumlahselstreamutama}")
     # ----------------------------------------------------------------------------------
     #mencari titik hulu dari jalur mask yang memiliki flow accumulaion terkecil
 
@@ -57,8 +58,9 @@ def hitungtimeconcentration(barishilir, kolomhilir, flow_accum_D8, matriktributa
 
     #
     # plt.plot_file(file=cfg.filetributaryidentifier,judul="tributaryidentifier", z="id")
-    maskelevasi = np.ma.masked_where(~mask, matrikKecil)
-    maskeFA= np.ma.masked_where(~mask, flow_accum_D8)
+    #maskelevasi = np.ma.masked_where(~mask, matrikKecil)
+    #maskeFA= np.ma.masked_where(~mask, flow_accum_D8)
+    maskeFA =mask
     #plt.plot_file(file=cfg.fileFlowAccumulationBreachD8, judul="fileFlowAccumulationBreachD8", z="upstream cell")
     if cfg.demomode:
         plt.plot(matrikplot=mask, judul="Panjang aliran utama", z="")
